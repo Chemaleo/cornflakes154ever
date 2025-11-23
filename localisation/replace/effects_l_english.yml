@@ -1,0 +1,3 @@
+﻿l_english:
+    EFFECT_DISABLE_TEMPLATE_EDITTING:0 "Disable editing of $NAME|H$ template and training or disbanding units belongs to it"
+    EFFECT_ENABLE_TEMPLATE_EDITTING:0 "Enable editing of $NAME|H$ template and training or disbanding units belongs to it"

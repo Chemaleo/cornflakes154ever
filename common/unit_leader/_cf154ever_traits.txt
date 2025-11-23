@@ -1,0 +1,32 @@
+leader_traits = {
+	
+	#ТОЛЬКО ДЛЯ ОБРАТНОЙ СОВМЕСТИМОСТИ СО СТАРЫМИ СОХРАНЕНИЯМИ, ВМЕСТО ЭТОГО ИСПОЛЬЗОВАТЬ cf154ever_kludge_admiral_trait
+	cf154ever_admiral_crutch = {
+		type = navy
+		
+		trait_type = personality_trait
+		
+		allowed = { always = no }
+		
+		ai_will_do = { factor = 0 }
+		
+		modifier = { }
+		
+		new_commander_weight = { base = 0 }
+	}
+	
+	#Всё равно не работает на сгенерированных адмиралах
+	cf154ever_kludge_admiral_trait = {
+		type = navy
+		
+		trait_type = personality_trait
+		
+		allowed = { always = yes }
+		
+		ai_will_do = { factor = 1 }
+		
+		modifier = { }
+		
+		new_commander_weight = { base = 100 }
+	}
+}

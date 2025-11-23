@@ -1,0 +1,11 @@
+﻿l_english:
+    germany.22.t:0 "Memel - [From.GetName] Folds"
+    germany.22.d:0 "The [From.GetAdjectiveCap] government has agreed to our demands, and Memel will be incorporated back into East Prussia. Yet another unlawfully stolen province has been returned to the German nation!"
+    germany.23.t:0 "Memel - [From.GetName] Refuses Demand"
+    germany.23.d:0 "The [From.GetAdjectiveCap] government has refused our demands! They are hiding behind the Klaipeda Convention, claiming that Germany has no legal right to the Memel territory. We shall have to explain our position to them by different means..."
+    germany.104.a:0 "I suppose they can have [735.GetName]."
+    germany.104.b:0 "[1.GetName] is all they are worth."
+    germany.104.c:0 "Let them have [735.GetName]."
+    soviet.5.t:0 "[From.GetNameDefCap] Refuses Our Demands"
+    soviet.5.d:0 "The [From.GetAdjectiveCap] have refused to give in to our demands! It looks like we will have to expel their occupying forces from [78.GetName] with force."
+    news.10.d:0 "After massing forces along the [From.From.GetAdjectiveCap] border, [SOV.GetNameDef] has issued an ultimatum to the government in Bucharest for the immediate transfer of [78.GetName], to their control. The region once belonged to the Russian Empire, which [SOV.GetNameDef] sees as sufficient legal basis for their demands.\n\n[From.From.GetNameDefCap] has declared that it has no choice but to accede, and its forces have been withdrawn from [78.GetName]."

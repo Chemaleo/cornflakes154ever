@@ -1,0 +1,355 @@
+CF154EVER_allies_stay_away_from_europe_until_its_time = {
+	enable = {
+		date < 1943.6.1
+		is_in_faction_with = ENG
+		has_war_with = GER
+		has_war_with = ITA
+		is_historical_focus_on = yes		
+	}
+	
+	abort = {
+		OR = {
+			date > 1943.6.1	# Сицилийская операция совсем скоро
+			any_country = {
+				is_ai = no
+				any_owned_state = {
+					is_on_continent = europe
+				}
+			}
+			ROM = {
+				is_in_faction_with = GER
+				has_war_with = SOV
+				has_capitulated = yes
+			}
+			AND = {
+				date > 1941.1.1
+				5 = { controller = { NOT = { is_in_faction_with = GER } } }	#Восточная Пруссия
+				10 = { controller = { NOT = { is_in_faction_with = GER } } }	#Варшава
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "GER"
+		value = -99999
+	}
+	ai_strategy = {
+		type = invade
+		id = "ITA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = invade
+		id = "HUN"
+		value = -99999
+	}
+	ai_strategy = {
+		type = invade
+		id = "CRO"
+		value = -99999
+	}
+	ai_strategy = {
+		type = invade
+		id = "ROM"
+		value = -99999
+	}
+	ai_strategy = {
+		type = invade
+		id = "BUL"
+		value = -99999
+	}
+}
+
+CF154EVER_axis_dont_help_ITA_before_GER_attacks_FRA = {
+	enable = {
+		date < 1941.1.1
+		is_in_faction_with = GER
+		has_war_with = FRA
+		is_historical_focus_on = yes
+	}
+	
+	abort = {
+		OR = {
+			date > 1941.1.1
+			any_country = {
+				is_ai = no
+				any_owned_state = {
+					is_on_continent = europe
+				}
+			}
+			FRA = {
+				OR = {
+					has_capitulated = yes
+					NOT = {
+						has_war_with = GER
+						has_war_with = ITA
+					}
+				}
+			}
+			ITA = {
+				surrender_progress > 0.3
+			}
+			28 = { NOT = { is_fully_controlled_by = FRA } }	#Эльзас			
+			AND = {
+				LUX = { has_capitulated = yes }
+				34 = { NOT = { is_fully_controlled_by = BEL } }	#Валлония
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ITA"
+		value = 99999
+	}
+	ai_strategy = {
+		type = support
+		id = "ITA"
+		value = -99999
+	}
+}
+
+CF154EVER_ITA_stop_attacking_FRA_before_GER = {
+	enable = {
+		date < 1941.1.1
+		original_tag = ITA
+		is_in_faction_with = GER
+		has_war_with = FRA
+		is_historical_focus_on = yes
+	}
+	
+	abort = {
+		OR = {
+			date > 1941.1.1
+			any_country = {
+				is_ai = no
+				any_owned_state = {
+					is_on_continent = europe
+				}
+			}
+			FRA = {
+				OR = {
+					has_capitulated = yes
+					NOT = {
+						has_war_with = GER
+						has_war_with = ITA
+					}
+				}
+			}
+			28 = { NOT = { is_fully_controlled_by = FRA } }	#Эльзас			
+			AND = {
+				LUX = { has_capitulated = yes }
+				34 = { NOT = { is_fully_controlled_by = owner } }	#Валлония
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = garrison
+		value = 40
+	}
+}
+
+CF154EVER_GER_dont_call_ITA_into_war_until_POL_capped = {
+	enable = {
+		date < 1940.1.1
+		original_tag = ITA
+		is_in_faction_with = GER
+		is_historical_focus_on = yes
+	}
+	
+	abort = {
+		OR = {
+			date > 1940.1.1
+			any_country = {
+				is_ai = no
+				any_owned_state = {
+					is_on_continent = europe
+				}
+			}			
+			POL = {
+				has_war_with = GER
+				has_capitulated = yes
+			}
+			ENG = {
+				OR = {
+					is_ai = no
+					any_allied_country = { is_ai = no }
+				}
+			}
+		}
+	}
+	
+	reversed = yes
+	
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = GER
+		value = 99999
+		target_country = POL
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = GER
+		value = 99999
+		target_country = ENG
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = GER
+		value = 99999
+		target_country = FRA
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = GER
+		value = 99999
+		target_country = CAN
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = GER
+		value = 99999
+		target_country = SAF
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = GER
+		value = 99999
+		target_country = RAJ
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = GER
+		value = 99999
+		target_country = MAL
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = GER
+		value = 99999
+		target_country = AST
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = GER
+		value = 99999
+		target_country = NZL
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SLO
+		value = 99999
+		target_country = POL
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SLO
+		value = 99999
+		target_country = ENG
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SLO
+		value = 99999
+		target_country = FRA
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SLO
+		value = 99999
+		target_country = CAN
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SLO
+		value = 99999
+		target_country = SAF
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SLO
+		value = 99999
+		target_country = RAJ
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SLO
+		value = 99999
+		target_country = MAL
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SLO
+		value = 99999
+		target_country = AST
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SLO
+		value = 99999
+		target_country = NZL
+	}
+}
+
+CF154EVER_axis_stop_killing_your_fleet_against_ENG = {
+	enable = {
+		date < 1945.1.1
+		is_in_faction_with = GER
+		has_war_with = ENG
+		is_historical_focus_on = yes
+	}
+	
+	abort = {
+		OR = {
+			date > 1945.1.1
+			any_country = {
+				is_ai = no
+				any_owned_state = {
+					is_on_continent = europe
+				}
+			}			
+			NOT = { has_war_with = ENG }
+			ENG = {
+				OR = {
+					any_allied_country = { is_ai = no }
+					has_capitulated = yes
+				}
+			}
+			GER = {
+				naval_strength_ratio = {
+					tag = ENG 
+					ratio < 0.5
+				}
+			}
+			ITA = {
+				naval_strength_ratio = {
+					tag = ENG 
+					ratio < 0.5
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 68
+		value = 99999
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 16
+		value = 99999
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 18
+		value = 99999
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 69
+		value = 99999
+	}
+}

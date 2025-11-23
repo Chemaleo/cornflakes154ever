@@ -1,0 +1,122 @@
+########################################################################
+# Код написан Chemaleo в мае 2025 года. Было весело и увлекательно :)
+########################################################################
+
+has_advisor_liberal_or_communist = {
+	OR = {
+		has_idea = generic_democratic_reformer # 1. Демократия, для всех стран
+		has_idea = AST_arthur_calwell # 2. Австралия
+		has_idea = clement_attlee # 3. Британия
+		has_idea = RAJ_bhimrao_ramji_ambedkar # 4. Индия
+		has_idea = CAN_robert_manion # 5. Канада
+		has_idea = CHI_kwong_jiang # 6. Китай
+		has_idea = CZE_stefan_osusky # 7. Чехословакия
+		has_idea = leon_blum # 8. Франция
+		has_idea = kurt_schumacher # 9. Германия
+		has_idea = ivanoe_bonomi # 10. Италия
+		has_idea = kijuro_shidehara # 11. Япония
+		has_idea = ROM_iuliu_maniu # 12. Румыния
+		has_idea = SAF_sir_patrick_duncan # 13. ЮАР
+		has_idea = alexander_kerensky # 14. Россия
+		has_idea = harold_ickes # 15. США
+		has_idea = YUG_milovan_djilas # 16. Югославия
+		has_idea = HUN_jozsef_szell # 17. Венгрия
+		has_idea = POL_mieczyslaw_michalowicz # 18. Польша
+		has_idea = generic_communist_revolutionary # 19. Коммунизм, для всех стран
+		has_idea = AST_lance_sharkey # 20. Австралия
+		has_idea = harry_pollitt # 21. Британия
+		has_idea = RAJ_karam_singh_mann # 22. Индия
+		has_idea = CAN_william_kashtan # 23. Канада
+		has_idea = CZE_gustav_husak # 24. Чехословакия
+		has_idea = maurice_thorez # 25. Франция
+		has_idea = ernst_thalmann # 26. Германия
+		has_idea = amadeo_bordiga # 27. Италия
+		has_idea = sanzo_nosaka # 28. Япония
+		has_idea = ROM_gheorghe_gheorghiu_dej # 29. Румыния
+		has_idea = SAF_abram_fischer # 30. ЮАР
+		has_idea = nikita_khrushchev # 31. Россия
+		has_idea = earl_browder # 32. США
+		has_idea = YUG_ivo_lola_ribar # 33. Югославия
+		has_idea = HUN_laszlo_rajk # 34. Венгрия
+		has_idea = POL_stanislaw_radkiewicz # 35. Польша
+	}
+}
+
+has_advisor_liberal_or_fascist = { # Для коммунизма
+	OR = {
+		has_idea = generic_democratic_reformer # Демократия
+		has_idea = AST_arthur_calwell
+		has_idea = clement_attlee
+		has_idea = RAJ_bhimrao_ramji_ambedkar
+		has_idea = CAN_robert_manion
+		has_idea = CHI_kwong_jiang
+		has_idea = CZE_stefan_osusky
+		has_idea = leon_blum
+		has_idea = kurt_schumacher
+		has_idea = ivanoe_bonomi
+		has_idea = kijuro_shidehara
+		has_idea = ROM_iuliu_maniu
+		has_idea = SAF_sir_patrick_duncan
+		has_idea = alexander_kerensky
+		has_idea = harold_ickes
+		has_idea = YUG_milovan_djilas
+		has_idea = HUN_jozsef_szell
+		has_idea = POL_mieczyslaw_michalowicz
+		has_idea = generic_fascist_demagogue # Фашизм
+		has_idea = AST_generic_fascist_demagogue
+		has_idea = john_beckett
+		has_idea = RAJ_subhas_chanda_bose
+		has_idea = CAN_chuck_crate
+		has_idea = CZE_konrad_henlein
+		has_idea = marcel_bucard
+		has_idea = joseph_goebbels
+		has_idea = carlo_scorza
+		has_idea = kingoro_hashimoto
+		has_idea = ROM_mihail_sturdza
+		has_idea = SAF_j_f_van_rensburg_fascist
+		has_idea = konstantin_rodzaevsky
+		has_idea = charles_coughlin
+		has_idea = YUG_dimitrije_ljotic
+		has_idea = HUN_gyula_gombos_de_jakfa
+		has_idea = POL_roman_dmowski
+	}
+}
+
+has_advisor_communist_or_fascist = { # Концлагеря? в моей HOI4?
+	OR = {
+		has_idea = generic_communist_revolutionary # Коммунизм
+		has_idea = AST_lance_sharkey
+		has_idea = harry_pollitt
+		has_idea = RAJ_karam_singh_mann
+		has_idea = CAN_william_kashtan
+		has_idea = CZE_gustav_husak
+		has_idea = maurice_thorez
+		has_idea = ernst_thalmann
+		has_idea = amadeo_bordiga
+		has_idea = sanzo_nosaka
+		has_idea = ROM_gheorghe_gheorghiu_dej
+		has_idea = SAF_abram_fischer
+		has_idea = nikita_khrushchev
+		has_idea = earl_browder
+		has_idea = YUG_ivo_lola_ribar
+		has_idea = HUN_laszlo_rajk
+		has_idea = POL_stanislaw_radkiewicz
+		has_idea = generic_fascist_demagogue # Фашизм
+		has_idea = AST_generic_fascist_demagogue
+		has_idea = john_beckett
+		has_idea = RAJ_subhas_chanda_bose
+		has_idea = CAN_chuck_crate
+		has_idea = CZE_konrad_henlein
+		has_idea = marcel_bucard
+		has_idea = joseph_goebbels
+		has_idea = carlo_scorza
+		has_idea = kingoro_hashimoto
+		has_idea = ROM_mihail_sturdza
+		has_idea = SAF_j_f_van_rensburg_fascist
+		has_idea = konstantin_rodzaevsky
+		has_idea = charles_coughlin
+		has_idea = YUG_dimitrije_ljotic
+		has_idea = HUN_gyula_gombos_de_jakfa
+		has_idea = POL_roman_dmowski
+	}
+}

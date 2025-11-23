@@ -1,0 +1,28 @@
+ideas = {
+	country = {
+		cf154ever_munich_allied_betrayal = {
+			
+			picture = CZE_divided_nation
+			
+			allowed = {
+				original_tag = ENG
+				original_tag = FRA
+			}
+			
+			modifier = { guarantee_cost = 80 }
+		}
+		
+		#БОЛЬШЕ НЕ НУЖНА
+		cf154ever_PRC_civil_war_prevent_comintern = {
+			
+			picture = FRA_matignon_agreements
+			
+			allowed = { original_tag = PRC }
+			
+			modifier = {
+				ai_get_ally_desire_factor = -200
+				join_faction_tension = 1
+			}
+		}
+	}
+}
