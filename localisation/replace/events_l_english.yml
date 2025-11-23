@@ -9,3 +9,4 @@
     soviet.5.t:0 "[From.GetNameDefCap] Refuses Our Demands"
     soviet.5.d:0 "The [From.GetAdjectiveCap] have refused to give in to our demands! It looks like we will have to expel their occupying forces from [78.GetName] with force."
     news.10.d:0 "After massing forces along the [From.From.GetAdjectiveCap] border, [SOV.GetNameDef] has issued an ultimatum to the government in Bucharest for the immediate transfer of [78.GetName], to their control. The region once belonged to the Russian Empire, which [SOV.GetNameDef] sees as sufficient legal basis for their demands.\n\n[From.From.GetNameDefCap] has declared that it has no choice but to accede, and its forces have been withdrawn from [78.GetName]."
+    

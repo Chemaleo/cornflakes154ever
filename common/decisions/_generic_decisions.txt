@@ -5,7 +5,7 @@ political_actions = {
 		icon = generic_research
 
 		allowed = {
-			always = no
+			always = yes
 		}
 
 		available = {
@@ -60,7 +60,7 @@ political_actions = {
 		icon = generic_industry
 
 		available = {
-			
+			has_stability < 1
 		}
 
 		visible = {
@@ -89,6 +89,7 @@ political_actions = {
 			modifier = {
 				add = 1
 				has_stability < 0.6
+				has_political_power > 155 #Spend on other things first
 			}
 		}
 	}
@@ -145,7 +146,12 @@ economy_decisions = {
 		icon = generic_construction
 
 		allowed = {
-			NOT = { OR = { tag = GER tag = FRA } }
+			NOT = {
+				OR = {
+					original_tag = GER
+					original_tag = FRA
+				}
+			}
 		}
 
 		cost = 50
@@ -165,9 +171,10 @@ economy_decisions = {
 		}
 
 		visible = {
-			any_state = {
-				is_owned_by = FRA
-				is_controlled_by = ROOT
+			FRA = {
+				any_owned_state = {
+					is_controlled_by = ROOT
+				}
 			}
 			NOT = { is_in_faction_with = FRA }
 		}
@@ -407,6 +414,10 @@ operations = {
 
 		icon = GFX_decision_generic_ignite_civil_war
 
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
 		available = {
 			OR = {
 				has_full_control_of_state = 446
@@ -417,8 +428,7 @@ operations = {
 					owns_state = 446
 					owns_state = 453
 				}
-				any_country = {
-					has_war_with = ROOT
+				any_enemy_country = {
 					OR = {
 						controls_state = 452
 						controls_state = 447
@@ -500,38 +510,46 @@ operations = {
 				}
 			}
 		}
+
 		ai_will_do = {
-			factor = 1
+			base = 0
 			modifier = {
-				factor = 0
-				any_country = {
-					is_in_faction_with = ROOT
-					NOT = {
-						OR = {
-							has_full_control_of_state = 457
-							has_full_control_of_state = 456
-						}
-						has_full_control_of_state = 551
-					}
-					OR = {
-						divisions_in_state = { state = 550 size > 0 }
-						divisions_in_state = { state = 268 size > 0 }
-						divisions_in_state = { state = 269 size > 0 }
-						divisions_in_state = { state = 559 size > 0 }
-					}
-				}
-			}
-			modifier = {
-				factor = 200
+				add = 200 # Try to cut the enemy off from the mediterranean if you also occupy Gibraltar
 				OR = {
 					has_full_control_of_state = 118
-					any_other_country = {
-						is_in_faction_with = ROOT
+					any_allied_country = {
 						has_full_control_of_state = 118
 					}
 				}
 				has_war = yes
 				NOT = { tag = ENG }
+			}
+			modifier = {
+				add = 51 # Somewhat important if the baddies are coming
+				446 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+				OR = {
+					454 = {
+						NOT = { controller = { tag = ROOT } }
+						controller = { has_war_with = ROOT }
+					}
+					907 = {
+						NOT = { controller = { tag = ROOT } }
+						controller = { has_war_with = ROOT }
+					}
+					447 = {
+						NOT = { controller = { tag = ROOT } }
+						controller = { has_war_with = ROOT }
+					}
+				}
+				has_war = yes
+				is_in_faction_with = ENG
 			}
 		}
 	}
@@ -539,6 +557,10 @@ operations = {
 	blow_panama_canal = {
 
 		icon = GFX_decision_generic_ignite_civil_war
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
 
 		available = {
 			OR = {
@@ -617,6 +639,31 @@ operations = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0 # Don't blow up the canal as USA. Ever.
+				tag = USA
+			}
+			modifier = {
+				factor = 0 # Don't blow up the canal if enemies have weak navies but you are a strong naval power
+				has_navy_size = {
+					size > 50
+				}
+				NOT = {
+					any_enemy_country = {
+						has_navy_size = {
+							size > 50
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 200 # Always blow up the canal as JAP or GER when at war with USA (priority)
+				OR = {
+					is_in_faction_with = JAP
+					is_in_faction_with = GER
+				}
+				has_war_with = USA
+			}
 		}
 	}
 }
@@ -630,23 +677,23 @@ special_projects = {
 		available = {
 			has_full_control_of_state = 446
 			has_full_control_of_state = 453
-			num_of_civilian_factories > 50
+			num_of_civilian_factories > 15
 		}
 	
 		visible = {
 			has_global_flag = SUEZ_CANAL_BLOCKED
-			has_full_control_of_state = 446
-			has_full_control_of_state = 453
+			controls_state = 446
+			controls_state = 453
 		}
 	
 		fire_only_once = no
 	
 		days_remove = 365
 	
-		cost = 250
+		cost = 120
 	
 		modifier = {
-			civilian_factory_use = 50
+			civilian_factory_use = 15
 		}
 	
 		remove_effect = {
@@ -664,30 +711,37 @@ special_projects = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0
+				factor = 0 # Don't bother if your navy is weak AND not ENG
 				has_navy_size = { size < 100 }
+				NOT = { tag = ENG }
 			}
 			modifier = {
-				factor = 200
+				factor = 200 # Prioritize if Italy is being invaded and you can't get to the battlefront (no control of Gibraltar strait)
 				NOT = {
 					OR = {
 						has_full_control_of_state = 118
-						any_other_country = {
-							is_in_faction_with = ROOT
+						any_allied_country = {
+								
 							has_full_control_of_state = 118
 						}
 					}
 				}
-				OR = {
-					ITA = { surrender_progress < 0.1 }
-					NOT = { tag = ENG }
-				}
+				has_war_with = ITA
+				ITA = { surrender_progress > 0.1 }
 				has_full_control_of_state = 447
 				has_full_control_of_state = 454
 				has_full_control_of_state = 452
 				has_full_control_of_state = 456
 				has_full_control_of_state = 457
 				NOT = { has_country_flag = blew_up_suez }
+			}
+			modifier = {
+				factor = 200 # Prioritize if UK
+				tag = ENG
+			}
+			modifier = {
+				factor = 10 # Prioritize if not at war
+				has_war = no
 			}
 		}
 	}
@@ -699,12 +753,12 @@ special_projects = {
 		available = {
 			has_full_control_of_state = 685
 			NOT = {
-				any_country = {
-					has_war_with = ROOT
+				any_enemy_country = {
+						
 					controls_state = 304
 				}
 			}
-			num_of_civilian_factories > 80
+			num_of_civilian_factories > 25
 		}
 	
 		visible = {
@@ -718,12 +772,12 @@ special_projects = {
 	
 		fire_only_once = no
 	
-		days_remove = 550
+		days_remove = 180
 	
 		cost = 400
 	
 		modifier = {
-			civilian_factory_use = 80
+			civilian_factory_use = 25
 		}
 	
 		remove_effect = {
@@ -731,26 +785,38 @@ special_projects = {
 				limit = {
 					has_full_control_of_state = 685
 					NOT = {
-						any_country = {
-							has_war_with = ROOT
+						any_enemy_country = {
 							controls_state = 304
 						}
 					}
 				}
 				set_country_flag = rebuilt_panama
 				clr_global_flag = PANAMA_CANAL_BLOCKED
-				country_event = { id = wtt_news.43 hours = 6}
+				country_event = { id = wtt_news.43 hours = 6 }
 			}
 		}
+
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0
-				has_navy_size = { size < 100 }
+				factor = 0 # Don't bother if your navy is weak AND not USA
+				has_navy_size = { size < 50 }
+				NOT = { tag = USA }
+				has_war = yes
 			}
 			modifier = {
-				factor = 0
-				has_country_flag = blew_up_panama
+				factor = 200 # Prioritize if you decisively beat USA's navy
+				has_war_with = USA
+				USA = { has_navy_size = { size < 50 } }
+				has_navy_size = { size > 100 }
+			}
+			modifier = {
+				factor = 200 # Prioritize if USA
+				tag = USA
+			}
+			modifier = {
+				factor = 10 # Prioritize if not at war
+				has_war = no
 			}
 		}
 	}
@@ -768,7 +834,8 @@ war_measures = {
 
 		visible = {
 			has_defensive_war = yes
-			has_offensive_war = no			
+			has_offensive_war = no
+			num_of_controlled_states > 0
 		}
 
 		fire_only_once = no
@@ -832,11 +899,16 @@ war_measures = {
 		days_re_enable = 360
 
 		cost = 50
+		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				surrender_progress > 0.6
 				factor = 10
+			}
+			modifier = {
+				has_capitulated = yes
+				factor = 0
 			}
 		}
 
@@ -890,7 +962,10 @@ war_measures = {
         cost = 100
         days_remove = -1
         remove_trigger = {
-            has_war = no
+			OR = {
+				has_war = no
+				NOT = { has_idea = tot_economic_mobilisation }
+			}
         }
         modifier = {
             conscription = 0.03
@@ -898,6 +973,11 @@ war_measures = {
         }
         ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 3
+				has_manpower < 100000
+			}
 		}
 		complete_effect = {
 			if = {
@@ -959,7 +1039,7 @@ war_measures = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_political_power < 150
+				has_political_power < 100
 				factor = 0 #use as pp dump
 			}
 		}
@@ -1036,7 +1116,7 @@ foreign_politics = {
 	object_to_attaches = {
 
 		allowed = {
-            always = yes
+            has_dlc = "Waking the Tiger"
         }
 
         cost = 50
@@ -1082,6 +1162,7 @@ foreign_politics = {
 }
 
 economy_decisions = {
+
 	infrastructure_building_slot = {
 
 		icon = generic_construction
@@ -1095,28 +1176,28 @@ economy_decisions = {
 
         days_re_enable = 30
 
-        available = {
-            any_state = {
-            	NOT = { has_state_flag = infrastructure_building_slot_flag }
-            	is_fully_controlled_by = ROOT
-            	is_owned_by = ROOT
+		available = {
+			any_owned_state = {
+				NOT = { has_state_flag = infrastructure_building_slot_flag }
+				is_fully_controlled_by = ROOT
+							   
 				free_building_slots = {
 					building = infrastructure
 					size < 1
 				}
-            }
-        }
-
-        visible = {
-			any_state = {
-            	NOT = { has_state_flag = infrastructure_building_slot_flag }
-            	is_fully_controlled_by = ROOT
-            	is_owned_by = ROOT
+			}
+		}
+	
+		visible = {
+			any_owned_state = {
+				NOT = { has_state_flag = infrastructure_building_slot_flag }
+				is_fully_controlled_by = ROOT
+							   
 				free_building_slots = {
 					building = infrastructure
 					size < 1
 				}
-            }
+			}
 		}
 
         complete_effect = {
@@ -1160,46 +1241,103 @@ economy_decisions = {
         fire_only_once = no
 
         available = {
-            any_state = {
-            	NOT = { has_state_flag = war_building_slot_flag }
-            	is_fully_controlled_by = ROOT
-            	is_owned_by = ROOT
-            }
+			any_owned_state = {
+				NOT = { has_state_flag = war_building_slot_flag }
+				is_fully_controlled_by = ROOT
+							   
+			}
             has_war = yes
         }
 
         visible = {
-        	any_state = {
-            	NOT = { has_state_flag = war_building_slot_flag }
-            	is_fully_controlled_by = ROOT
-            	is_owned_by = ROOT
-            }
-            has_war = yes
+			has_war = yes
+			any_owned_state = {
+				NOT = { has_state_flag = war_building_slot_flag }
+				is_fully_controlled_by = ROOT
+			}
 		}
 
         complete_effect = {
         	add_war_support = -0.025
 			add_stability = -0.025
-			random_owned_state = {
+			if = {
 				limit = {
-					is_fully_controlled_by = ROOT
-					is_owned_by = ROOT
-            		free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					NOT = { has_state_flag = war_building_slot_flag }
+					any_owned_state = {
+						is_fully_controlled_by = ROOT
+            			free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = war_building_slot_flag }
+						infrastructure > 4
+					}							  
 				}
-				add_extra_state_shared_building_slots = 1
-				set_state_flag = war_building_slot_flag
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+            			free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = war_building_slot_flag }
+						infrastructure > 4
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = war_building_slot_flag
+				}
+			}
+			else_if = {
+				limit = {
+					any_owned_state = {
+						is_fully_controlled_by = ROOT
+            			free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = war_building_slot_flag }
+						infrastructure > 2
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+            			free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = war_building_slot_flag }
+						infrastructure > 2
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = war_building_slot_flag
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+            			free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = war_building_slot_flag }
+						infrastructure > 4
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = war_building_slot_flag
+				}
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			base = 0
 			modifier = {
-				factor = 10
-				any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
+				add = 1
+				all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
 			}
 		}
     }
@@ -1260,7 +1398,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 0
 				any_country = {
@@ -1371,7 +1509,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 200
 				any_country = {
@@ -1504,7 +1642,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 0
 				any_country = {
@@ -1615,7 +1753,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 200
 				any_country = {
@@ -1746,7 +1884,7 @@ foreign_support = {
  		}
 
  		ai_will_do = {
- 			factor = 1
+ 			base = 1
 			modifier = {
 				factor = 0
 				any_country = {
@@ -1857,7 +1995,7 @@ foreign_support = {
  		}
 
  		ai_will_do = {
- 			factor = 1
+ 			base = 1
 			modifier = {
 				factor = 200
 				any_country = {
@@ -1990,7 +2128,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 0
 				any_country = {
