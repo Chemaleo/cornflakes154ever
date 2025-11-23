@@ -48,6 +48,7 @@ CF154EVER_germany_badass = {
 			size > 10
 			type = armor
 		}
+		has_manpower > 100000
 		OR = {
 			has_equipment = {
 				fighter_equipment > 5000
