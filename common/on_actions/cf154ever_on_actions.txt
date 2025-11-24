@@ -2,6 +2,9 @@ on_actions = {
     on_startup = {
         effect = {
 			every_country = {
+				#limit = { is_ai = no }
+				#country_event = { id = cf154ever_startup.1 }
+				set_global_flag = CF154EVER_DEV_SETTINGS_TRUE
 				enable_kludge_admirals_for_everyone_NOT_majors = yes
 			}
 		}
