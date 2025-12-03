@@ -1,6 +1,7 @@
+
 ideas = {
 	country = {
-		cf154ever_munich_allied_betrayal = {
+		cf154ever_idea_munich_allied_betrayal = {
 			
 			picture = CZE_divided_nation
 			
@@ -13,7 +14,7 @@ ideas = {
 		}
 		
 		#БОЛЬШЕ НЕ НУЖНА
-		cf154ever_PRC_civil_war_prevent_comintern = {
+		cf154ever_idea_PRC_civil_war_prevent_comintern = {
 			
 			picture = FRA_matignon_agreements
 			
@@ -24,5 +25,14 @@ ideas = {
 				join_faction_tension = 1
 			}
 		}
+		
+		#cf154ever_idea_fast_wargoals = {
+		#	
+		#	picture = chi_war_of_resistance
+		#	
+		#	allowed = { always = no }
+		#	
+		#	modifier = { justify_war_goal_time = -100 }
+		#}
 	}
 }

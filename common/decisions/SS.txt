@@ -650,7 +650,7 @@ SS_recruitment = {
 		}
 	}
 		
-	cf154ever_SS_unlock_divisions = {
+	cf154ever_decision_SS_unlock_divisions = {
 			
 		icon = generic_army_support
 		

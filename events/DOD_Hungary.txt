@@ -3681,13 +3681,13 @@ country_event = {
 	option = {# hand over Slovakia
 		name = DOD_hungary.100.a
 		ai_chance = {
-			factor = 30
+			factor = 35
 			modifier = {
 				strength_ratio = { tag = HUN ratio < 1 }
 				factor = 2
 			}
 		}
-		HUN = { country_event = DOD_hungary.101 }
+		FROM = { country_event = { id = DOD_hungary.101 hours = 3 } }
 		hidden_effect = {
 			news_event = { id = news.310 days = 1 }
 		}
@@ -3696,7 +3696,7 @@ country_event = {
 	option = {# refuse
 		name = DOD_hungary.100.b
 		ai_chance = {
-			factor = 70
+			factor = 65
 			modifier = {
 				has_war = yes
 				factor = 0.5
@@ -3706,7 +3706,7 @@ country_event = {
 				factor = 5
 			}
 		}
-		HUN = { country_event = DOD_hungary.102 }
+		HUN = { country_event = { id = DOD_hungary.102 hours = 4 } }
 	}
 }
 
@@ -3730,9 +3730,20 @@ country_event = {
 		}
 		HUN = {
 			transfer_state = 70
-			transfer_state = 71
-			transfer_state = 72
+			transfer_state = 71  
 			transfer_state = 73
+		}
+		if = { #If Zaolzie is not in Polish hands
+			limit = {
+				FROM = { owns_state = 72 }
+			}
+			HUN = { transfer_state = 72 }
+		}
+		if = { #In case Demand Southern Slovakia Bypasses, this will transfer it.  
+			limit = {
+				FROM = { owns_state = 664 }
+			}
+			HUN = { transfer_state = 664 }
 		}
 		if = {
 			limit = {
@@ -3791,17 +3802,17 @@ country_event = {
 			HUN = { transfer_state = 664 }
 		}
 		every_state = {
-				limit = {
-					is_owned_by = SLO
-				}
-				add_core_of = SLO
+			limit = {
+				is_owned_by = SLO
 			}
-		SLO = {
+			add_core_of = SLO
+		}
+		hidden_effect = {
+			SLO = {
 				load_oob = SLO_1939
-				add_manpower = 9876
-				add_state_core = 664
-				add_state_core = 73
+				add_manpower = 9876 
 			}
+		}
 		puppet = SLO
 		if = {
 			limit = {
@@ -3839,6 +3850,11 @@ country_event = {
 
 	option = {# ask Germany to participate in the split
 		name = DOD_hungary.102.b
+
+		trigger = {
+			GER = { exists = yes }
+		}
+
 		ai_chance = {
 			factor = 90
 			modifier = {
@@ -3994,6 +4010,12 @@ country_event = {
 		name = DOD_hungary.107.a
 		ai_chance = {
 			factor = 50
+			modifier = {
+				factor = 2
+				HUN = {
+					is_ai = no
+				}
+			}
 		}
 		HUN = { country_event = DOD_hungary.108 }
 		hidden_effect = {
@@ -4068,7 +4090,7 @@ country_event = {
 	option = {# agree 
 		name = DOD_hungary.110.a
 		ai_chance = {
-			factor = 75
+			base = 75
 			modifier = { 
 				NOT = { has_completed_focus = SOV_great_purge } 
 				factor = 0.6
@@ -4081,6 +4103,10 @@ country_event = {
 				has_government = democratic
 				factor = 0.25
 			}
+			modifier = {
+				ROM = { is_ai = no }
+				factor = 0.5
+			}
 		}
 		add_threat = 3
 		ROM = { country_event = DOD_hungary.111 }
@@ -4089,9 +4115,9 @@ country_event = {
 	option = {# refuse
 		name = DOD_hungary.110.b
 		ai_chance = {
-			factor = 25
+			base = 10
 			modifier = {
-				ROM = { is_ai = no }
+				ROM = { is_ai = yes }
 				factor = 0 #not bothering with redesigning this
 			}
 		}
@@ -4294,16 +4320,16 @@ country_event = {
 			has_country_flag = ROM_refused_once
 		}
 		HUN = {
-		create_wargoal = {
+			create_wargoal = {
 				type = take_state_focus
 				target = ROM
 				generator = { 83 84 76 }
 			}
 		}
 		create_wargoal = {
-				type = take_state_focus
-				target = ROM
-				generator = { 80 78 }
+			type = take_state_focus
+			target = ROM
+			generator = { 80 78 }
 		}
 	}	
 }
@@ -4419,7 +4445,7 @@ country_event = {
 	option = {# okay
 		name = DOD_hungary.120.a
 		ai_chance = {
-			factor = 80
+			base = 95
 			modifier = {
 				CZE = {
 					has_government = communism
@@ -4435,7 +4461,13 @@ country_event = {
 	option = {# rather not
 		name = DOD_hungary.120.b
 		ai_chance = {
-			factor = 20
+			base = 5
+			modifier = {
+				factor = 0
+				HUN = {
+					is_ai = no
+				}
+			}
 		}
 		HUN = { country_event = DOD_hungary.123 }
 	}
@@ -4453,7 +4485,7 @@ country_event = {
 	option = {# okay
 		name = DOD_hungary.121.a
 		ai_chance = {
-			factor = 75
+			base = 75
 			modifier = {
 				is_in_faction = yes
 				factor = 0.25
@@ -4467,8 +4499,18 @@ country_event = {
 				country_event = DOD_hungary.81
 			}
 		}
-		
-		SOV = { give_guarantee = CZE } 
+		if = {
+			limit = {
+				73 = {
+					is_owned_by = CZE
+				}
+			}
+			HUN = {
+				transfer_state = 73
+			}
+		}
+		SOV = { give_guarantee = CZE }
+		HUN = { give_guarantee = CZE }
 		if = {
 			limit = {
 				NOT = {
@@ -4481,7 +4523,13 @@ country_event = {
 	option = {# rather not
 		name = DOD_hungary.121.b
 		ai_chance = {
-			factor = 25
+			base = 15
+			modifier = {
+				factor = 0
+				HUN = {
+					is_ai = no
+				}
+			}
 		}
 		SOV = { country_event = DOD_hungary.122 }
 		HUN = { country_event = DOD_hungary.126 }
@@ -4694,7 +4742,7 @@ country_event = {
 	option = {# okay
 		name = DOD_hungary.129.a
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				is_in_faction = no
 				factor = 3
@@ -4715,6 +4763,7 @@ country_event = {
 		}
 		HUN = {
 			transfer_state = 664
+			transfer_state = 73
 		}
 		if = {
 			limit = {
@@ -4736,7 +4785,6 @@ country_event = {
 				transfer_state = 70
 				transfer_state = 71
 				transfer_state = 72
-				transfer_state = 73
 			}
 			SLO = {
 				add_state_core = 70
@@ -4750,7 +4798,7 @@ country_event = {
 	option = {# refuse
 		name = DOD_hungary.129.b
 		ai_chance = {
-			factor = 70
+			base = 70
 			modifier = {
 				is_puppet_of = GER
 				factor = 0
@@ -4811,7 +4859,7 @@ country_event = {
 	option = {# allow
 		name = DOD_hungary.140.a
 		ai_chance = {
-			factor = 75
+			base = 75
 			modifier = {
 				threat < 0.5
 				factor = 2 #what's the worst that could happen
@@ -4832,12 +4880,26 @@ country_event = {
 			set_global_flag = HUN_FRA_engaged
 			ROM = { country_event = { id = DOD_hungary.141 days = 4 } }
 			YUG = { country_event = { id = DOD_hungary.141 days = 4 } }
-			CZE = { country_event = { id = DOD_hungary.141 days = 4 } }
+			if = {
+				limit = {
+					CZE = {
+						is_subject = no
+					}
+				}
+				CZE = { country_event = { id = DOD_hungary.141 days = 4 } }
+			}
 		}
 		if = { 
 			limit = { tag = ROM }
 			YUG = { country_event = { id = DOD_hungary.141 days = 4 } }
-			CZE = { country_event = { id = DOD_hungary.141 days = 4 } }
+			if = {
+				limit = {
+					CZE = {
+						is_subject = no
+					}
+				}
+				CZE = { country_event = { id = DOD_hungary.141 days = 4 } }
+			}
 		}
 		HUN = {
 			country_event = { id = DOD_hungary.142 days = 3 }
@@ -4847,7 +4909,7 @@ country_event = {
 	option = {# refuse
 		name = DOD_hungary.140.b
 		ai_chance = {
-			factor = 25
+			base = 25
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 0

@@ -296,35 +296,39 @@ focus_tree = {
 
 		available = {
 			4 = {
-				is_controlled_by = OWNER
+				OWNER = {
+					controls_state = PREV
+					NOT = { tag = ROOT }
+				}
 			}
 			is_subject = no
 		}
 
 		bypass = {
-
+			HUN = {
+				owns_state = 4
+				owns_state = 152
+				owns_state = 153
+			}
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
-			random_country = {
-				limit = {
-					owns_state = 4
-				}
-				HUN = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						generator = { 4 152 153 }
+			hidden_effect = {
+				random_country = {
+					limit = {
+						owns_state = 4   
 					}
+					save_event_target_as = state_owner_4
 				}
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = event_target:state_owner_4
+				generator = { 4 152 153 }
 			}
 			add_state_claim = 152
 			add_state_claim = 153
@@ -407,8 +411,8 @@ focus_tree = {
 		}
 
 		bypass = {
-			CZE = {
-				OR = {
+			OR = {
+				CZE = {
 					exists = no
 					is_subject = yes
 				}
@@ -418,10 +422,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			CZE = { country_event = { id = DOD_hungary.10 } }
@@ -461,10 +461,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_state_claim = 76
 			add_state_claim = 83
@@ -486,7 +482,14 @@ focus_tree = {
 					}
 				}
 				ROM = { country_event = DOD_hungary.50 }
-			}	
+			}
+			else = {
+				add_ai_strategy = {
+					type = conquer
+  					id = ROM
+  					value = 200
+				}
+			}
 		}
 	}
 
@@ -523,10 +526,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_state_claim = 102
 			add_state_claim = 103
@@ -534,6 +533,20 @@ focus_tree = {
 			add_state_claim = 104
 			add_state_claim = 45
 			add_state_claim = 163
+			if = {
+				limit = {
+					OR = {
+						103 = { is_controlled_by = YUG }
+						103 = { controller = { is_subject_of = YUG } }
+						103 = { controller = { is_in_faction_with = YUG } }
+					}
+				}
+				add_ai_strategy = {
+					type = conquer
+  					id = YUG
+  					value = 200
+				}
+			}			
 		}
 	}
 
@@ -575,6 +588,16 @@ focus_tree = {
 			add_state_claim = 736
 			add_state_claim = 160
 			add_state_claim = 39
+			if = {
+				limit = {
+					160 = { is_controlled_by = ITA }
+				}
+				add_ai_strategy = {
+					type = conquer
+  					id = ITA
+  					value = 200
+				}
+			}			
 		}
 	}
 
@@ -617,6 +640,26 @@ focus_tree = {
 			add_state_claim = 88
 			add_state_claim = 89
 			add_state_claim = 91
+			if = {
+				limit = {
+					89 = {
+						OWNER = {
+							NOT = { is_guaranteed_by = GER }
+						}
+					}
+				}
+				89 = {
+					OWNER = {
+						ROOT = {
+							add_ai_strategy = {
+								type = conquer
+								id = PREV
+								value = 200
+							}
+						}
+					}
+				}
+			}			
 		}
 	}
 
@@ -645,10 +688,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_state_claim = 80
@@ -695,31 +734,11 @@ focus_tree = {
 					controls_state = 161
 				}
 			}
-			else = {
-				OR = {
-					controls_state = 455
-					controls_state = 454
-					controls_state = 66 
-					controls_state = 67 
-					controls_state = 162
-					controls_state = 17 
-					controls_state = 159
-					controls_state = 161
-				}
-			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_state_claim = 455
@@ -2123,10 +2142,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = HUN_demands_tt
 			if = {
@@ -2150,7 +2165,7 @@ focus_tree = {
 				}
 				70 = {
 					controller = {
-						country_event = DOD_hungary.100
+						country_event = { id = DOD_hungary.100 hours = 5 } 
 					}
 				}
 			}
@@ -2164,7 +2179,7 @@ focus_tree = {
 						}
 					}
 				}
-				SLO = { country_event = DOD_hungary.107 }
+				SLO = { country_event = { id = DOD_hungary.107 hours = 3 } }
 			}
 			if = {
 				limit = {
@@ -2176,17 +2191,17 @@ focus_tree = {
 						}
 					}
 				}
-				SLO = { OVERLORD = { country_event = DOD_hungary.107 } }
+				SLO = { OVERLORD = { country_event = { id = DOD_hungary.107 hours = 4 } } }
 			}
 			hidden_effect = {
-				news_event = { id = news.309 }
+				news_event = { id = news.309 hours = 8 }
 			}
 		}
 	}
 
 	focus = {
 		id = HUN_proclaim_greater_hungary
-		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		icon = GFX_focus_proclaim_the_restauration_of_austria_hungary
 		prerequisite = { focus = HUN_demand_the_vojvodina }
 		x = 0
 		y = 3

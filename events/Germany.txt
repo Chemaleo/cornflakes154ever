@@ -1027,7 +1027,7 @@ country_event = {
 					value = -100
 				}
 				add_timed_idea = {
-					idea = cf154ever_munich_allied_betrayal
+					idea = cf154ever_idea_munich_allied_betrayal
 					days = 30
 				}
 			}
@@ -1168,7 +1168,7 @@ country_event = {
 					value = -100
 				}
 				add_timed_idea = {
-					idea = cf154ever_munich_allied_betrayal
+					idea = cf154ever_idea_munich_allied_betrayal
 					days = 30
 				}
 			}
@@ -1403,7 +1403,7 @@ country_event = {
 					value = -100
 				}
 				add_timed_idea = {
-					idea = cf154ever_munich_allied_betrayal
+					idea = cf154ever_idea_munich_allied_betrayal
 					days = 30
 				}
 			}
