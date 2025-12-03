@@ -26,13 +26,13 @@ ideas = {
 			}
 		}
 		
-		#cf154ever_idea_fast_wargoals = {
-		#	
-		#	picture = chi_war_of_resistance
-		#	
-		#	allowed = { always = no }
-		#	
-		#	modifier = { justify_war_goal_time = -100 }
-		#}
+		cf154ever_idea_fast_wargoals = {
+			
+			picture = chi_war_of_resistance
+			
+			allowed = { always = no }
+			
+			modifier = { justify_war_goal_time = -100 }
+		}
 	}
 }
