@@ -38,16 +38,17 @@ rtn_com_category = {
 	#}
 }
 
-#cf154ever_decisions_category = {
-#	icon = "GFX_decision_category_border_conflicts"
-#	
-#	priority = -1
-#	
-#	allowed = {
-#		always = yes
-#	}
-#	
-#	visible = {
-#		has_global_flag = enable_cf154ever_decisions
-#	}
-#}
+cf154ever_decisions_category = {
+	icon = "GFX_decision_category_border_conflicts"	#ЗАМЕНИТЬ
+	
+	priority = -1
+	
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		has_global_flag = ENABLE_CF154EVER_DECISIONS
+		is_ai = no
+	}
+}
