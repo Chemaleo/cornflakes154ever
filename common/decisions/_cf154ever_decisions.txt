@@ -1,53 +1,5 @@
 
 cf154ever_decisions_category = {
-	cf154ever_decision_disable_sad_music = {
-		
-		priority = -1
-		
-		icon = GFX_decision_generic_ignite_civil_war
-		
-		fire_only_once = no
-		
-		visible = {
-			NOT = {
-				has_country_flag = CF154EVER_NO_SAD_MUSIC
-			}
-		}
-		
-		available = {
-			ENG = {
-				OR = {
-					NOT = {
-						controls_state = 126
-					}
-					surrender_progress > 0.7
-				}
-			}
-		}
-				
-		complete_effect = {
-			custom_effect_tooltip = cf154ever_decision_disable_sad_music_tt
-			set_country_flag = CF154EVER_NO_SAD_MUSIC
-		}
-	}
-	
-	cf154ever_decision_enable_sad_music = {
-		
-		priority = -1		
-		
-		icon = GFX_decision_generic_ignite_civil_war
-		
-		fire_only_once = no
-		
-		visible = {
-			has_country_flag = CF154EVER_NO_SAD_MUSIC
-		}
-		
-		complete_effect = {
-			custom_effect_tooltip = cf154ever_decision_enable_sad_music_tt
-			clr_country_flag = CF154EVER_NO_SAD_MUSIC
-		}
-	}
 
 	cf154ever_decision_fast_wargoals = {
 		
@@ -309,7 +261,56 @@ cf154ever_decisions_category = {
 		}
 	}
 	
-	cf154ever_decision_br_test = {
+	cf154ever_decision_disable_sad_music = {
+		
+		priority = -1
+		
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		fire_only_once = no
+		
+		visible = {
+			NOT = {
+				has_country_flag = CF154EVER_NO_SAD_MUSIC
+			}
+		}
+		
+		available = {
+			ENG = {
+				OR = {
+					NOT = {
+						controls_state = 126
+					}
+					surrender_progress > 0.7
+				}
+			}
+		}
+				
+		complete_effect = {
+			custom_effect_tooltip = cf154ever_decision_disable_sad_music_tt
+			set_country_flag = CF154EVER_NO_SAD_MUSIC
+		}
+	}
+	
+	cf154ever_decision_enable_sad_music = {
+		
+		priority = -1		
+		
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		fire_only_once = no
+		
+		visible = {
+			has_country_flag = CF154EVER_NO_SAD_MUSIC
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = cf154ever_decision_enable_sad_music_tt
+			clr_country_flag = CF154EVER_NO_SAD_MUSIC
+		}
+	}	
+	
+	cf154ever_decision_br_test = {	#Потом нужно всё закомментить, как перенесу в ивенты содержимое
 		icon = GFX_decision_generic_ignite_civil_war
 		
 		allowed = { always = yes }
