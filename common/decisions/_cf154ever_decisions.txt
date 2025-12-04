@@ -54,31 +54,45 @@ cf154ever_decisions_category = {
 					OR = {
 						FRA = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						ENG = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						USA = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						GER = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						ITA = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						JAP = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						SOV = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 					}
 				}
@@ -126,31 +140,45 @@ cf154ever_decisions_category = {
 					OR = {
 						FRA = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						ENG = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						USA = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						GER = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						ITA = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						JAP = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 						SOV = {
 							exists = yes
-							is_subject = no
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 					}
 				}
