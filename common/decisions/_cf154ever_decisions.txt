@@ -288,7 +288,7 @@ cf154ever_decisions_category = {
 		
 		complete_effect = {
 			custom_effect_tooltip = cf154ever_decision_enable_sad_music_tt
-			clr_country_flag = CF154EVER_NO_SAD_MUSIC
+			clr_global_flag = CF154EVER_NO_SAD_MUSIC
 		}
 	}	
 	
