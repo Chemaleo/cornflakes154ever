@@ -20,15 +20,6 @@ cf154ever_decisions_category = {
 		available = {
 			if = {
 				limit = {
-					NOT = {
-						original_tag = FRA
-						original_tag = ENG
-						original_tag = USA
-						original_tag = GER
-						original_tag = ITA
-						original_tag = JAP
-						original_tag = SOV
-					}
 					capital_scope = {
 						OR = {
 							is_on_continent = south_america
@@ -59,22 +50,37 @@ cf154ever_decisions_category = {
 						original_tag = ITA
 						original_tag = JAP
 						original_tag = SOV
-						capital_scope = {
-							OR = {
-								is_on_continent = south_america
-								is_on_continent = middle_east
-							}
-						}				
 					}
 					OR = {
-						country_exists = FRA
-						country_exists = ENG
-						country_exists = USA
-						country_exists = GER
-						country_exists = ITA
-						country_exists = JAP
-						country_exists = SOV
-					}						
+						FRA = {
+							exists = yes
+							is_subject = no
+						}
+						ENG = {
+							exists = yes
+							is_subject = no
+						}
+						USA = {
+							exists = yes
+							is_subject = no
+						}
+						GER = {
+							exists = yes
+							is_subject = no
+						}
+						ITA = {
+							exists = yes
+							is_subject = no
+						}
+						JAP = {
+							exists = yes
+							is_subject = no
+						}
+						SOV = {
+							exists = yes
+							is_subject = no
+						}
+					}
 				}
 				OR = {
 					AND = {
@@ -108,88 +114,6 @@ cf154ever_decisions_category = {
 			}
 			else_if = {
 				limit = {
-					FRA = {
-						OR = {
-							exists = no
-							is_subject = yes
-						}
-						NOT = { is_subject_of = ROOT }
-					}
-					ENG = {
-						OR = {
-							exists = no
-							is_subject = yes
-						}
-						NOT = { is_subject_of = ROOT }
-					}
-					USA = {
-						OR = {
-							exists = no
-							is_subject = yes
-						}
-						NOT = { is_subject_of = ROOT }
-					}
-					GER = {
-						OR = {
-							exists = no
-							is_subject = yes
-						}
-						NOT = { is_subject_of = ROOT }
-					}					
-					ITA = {
-						OR = {
-							exists = no
-							is_subject = yes
-						}
-						NOT = { is_subject_of = ROOT }
-					}
-					JAP = {
-						OR = {
-							exists = no
-							is_subject = yes
-						}
-						NOT = { is_subject_of = ROOT }
-					}
-					SOV = {
-						OR = {
-							exists = no
-							is_subject = yes
-						}
-						NOT = { is_subject_of = ROOT }
-					}
-					NOT = {
-						controls_state = 16	#	Париж
-						controls_state = 126	#	Лондон
-						controls_state = 361	# Вашингтон
-						controls_state = 64	# Берлин
-						controls_state = 2	# Рим
-						controls_state = 282	# Токио
-						controls_state = 219	# Москва
-						capital_scope = {
-							OR = {
-								is_on_continent = south_america
-								is_on_continent = middle_east
-							}
-						}
-					}
-				}
-				OR = {
-					AND = {
-						has_tech = basic_medium_tank
-						has_template_majority_unit = medium_armor
-						has_army_size = {
-							size > 9
-							type = armor
-						}
-						has_army_size = {
-							size > 49
-						}
-					}
-					date > 1942.1.1
-				}
-			}
-			else_if = {
-				limit = {
 					OR = {
 						original_tag = FRA
 						original_tag = ENG
@@ -198,6 +122,36 @@ cf154ever_decisions_category = {
 						original_tag = ITA
 						original_tag = JAP
 						original_tag = SOV
+					}
+					OR = {
+						FRA = {
+							exists = yes
+							is_subject = no
+						}
+						ENG = {
+							exists = yes
+							is_subject = no
+						}
+						USA = {
+							exists = yes
+							is_subject = no
+						}
+						GER = {
+							exists = yes
+							is_subject = no
+						}
+						ITA = {
+							exists = yes
+							is_subject = no
+						}
+						JAP = {
+							exists = yes
+							is_subject = no
+						}
+						SOV = {
+							exists = yes
+							is_subject = no
+						}
 					}
 				}
 				OR = {
@@ -252,7 +206,7 @@ cf154ever_decisions_category = {
 				}
 			}
 			else = {
-				always = yes
+				date > 1942.1.1					
 			}
 		}
 			
