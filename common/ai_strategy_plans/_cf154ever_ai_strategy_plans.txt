@@ -1,0 +1,21 @@
+
+test_plan = {
+	name = "test plan"
+	desc = "this is a test plan"
+	
+	enable = {
+		original_tag = PRU
+		has_country_flag = our_war_is_not_yours
+		has_war = yes
+	}
+	
+	abort = {
+		always = no
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 111
+	}
+}
