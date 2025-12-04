@@ -14,6 +14,17 @@ cf154ever_decisions_category = {
 			}
 		}
 		
+		available = {
+			ENG = {
+				OR = {
+					NOT = {
+						controls_state = 126
+					}
+					surrender_progress > 0.7
+				}
+			}
+		}
+				
 		complete_effect = {
 			custom_effect_tooltip = cf154ever_decision_disable_sad_music_tt
 			set_country_flag = CF154EVER_NO_SAD_MUSIC
@@ -229,19 +240,22 @@ cf154ever_decisions_category = {
 	cf154ever_decision_battle_royale_test = {
 		icon = GFX_decision_generic_ignite_civil_war
 		
-		fire_only_once = yes
-		
 		allowed = { always = yes }
 		
-		visible = { is_ai = no }
+		visible = {
+			NOT = { has_global_flag = CF154EVER_BATTLE_ROYALE_ON }			
+			date < 1936.1.31
+		}
 		
 		available = {
 			has_start_date < 1936.01.02
+			date < 1936.1.31
 		}
 		
-		days_remove = 35
+		days_remove = 40
 		
 		complete_effect = {
+			set_global_flag = CF154EVER_BATTLE_ROYALE_ON			
 			every_country = {
 				limit = {
 					original_tag = ARG
@@ -269,9 +283,12 @@ cf154ever_decisions_category = {
 			
 		
 		remove_effect = {
-			mffa_SA_initial_settings = yes
-			mffa_NA_initial_settings = yes
-			country_event = { id = mffa.1 }
+			custom_effect_tooltip = cf154ever_decision_battle_royale_test_start_tt
+			hidden_effect = {
+				mffa_SA_initial_settings = yes
+				mffa_NA_initial_settings = yes
+				country_event = { id = mffa.1 }
+			}
 		}
 	}
 }
