@@ -253,7 +253,7 @@ cf154ever_decisions_category = {
 		
 		visible = {
 			NOT = {
-				has_country_flag = CF154EVER_NO_SAD_MUSIC
+				has_global_flag = CF154EVER_NO_SAD_MUSIC
 			}
 		}
 		
@@ -283,7 +283,7 @@ cf154ever_decisions_category = {
 		fire_only_once = no
 		
 		visible = {
-			has_country_flag = CF154EVER_NO_SAD_MUSIC
+			has_global_flag = CF154EVER_NO_SAD_MUSIC
 		}
 		
 		complete_effect = {
