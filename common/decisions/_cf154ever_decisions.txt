@@ -309,7 +309,7 @@ cf154ever_decisions_category = {
 		}
 	}
 	
-	cf154ever_decision_battle_royale_test = {
+	cf154ever_decision_br_test = {
 		icon = GFX_decision_generic_ignite_civil_war
 		
 		allowed = { always = yes }
@@ -355,7 +355,7 @@ cf154ever_decisions_category = {
 			
 		
 		remove_effect = {
-			custom_effect_tooltip = cf154ever_decision_battle_royale_test_start_tt
+			custom_effect_tooltip = cf154ever_decision_br_test_start_tt
 			hidden_effect = {
 				mffa_SA_initial_settings = yes
 				mffa_NA_initial_settings = yes
