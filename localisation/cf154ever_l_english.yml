@@ -24,4 +24,5 @@
     cf154ever_decision_enable_sad_music_tt:0 "§GEnables§! random playing of §YLondon in Flames§! track"
     cf154ever_major_defeated_by_player_tt:0 "At least one §Ystarter major power§! is defeated by you (you are their master or own their capital)"
     cf154ever_decision_battle_royale_test:0 "Battle Royale (NOT READY YET)"
-    cf154ever_decision_battle_royale_test_desc:0 "By clicking this decision, you acknowledge that the game may go haywire. §RProceed at your own risk!§!"
+    cf154ever_decision_battle_royale_test_desc:0 "By clicking this decision, you acknowledge that the game may go haywire. §RProceed at your own risk!§! Only available for the §Yfirst 30 days§! from starting the game."
+    cf154ever_decision_battle_royale_test_start_tt:0 "Starts battle royale in §YNorth & South America§!."
