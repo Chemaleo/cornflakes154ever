@@ -39,7 +39,7 @@ rtn_com_category = {
 }
 
 cf154ever_decisions_category = {
-	icon = "GFX_decision_category_border_conflicts"	#ЗАМЕНИТЬ
+	icon = GFX_category_icon	#ЗАМЕНИТЬ
 	
 	priority = -1
 	
