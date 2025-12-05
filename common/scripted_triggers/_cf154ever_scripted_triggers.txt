@@ -8,286 +8,160 @@ check_if_only_one_china_left = {
 			original_tag = CHI
 		}
 		SIK = {
-			OR = {
-				exists = no
-				is_subject_of = CHI
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		XSM = {
-			OR = {
-				exists = no
-				is_subject_of = CHI
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		PRC = {
-			OR = {
-				exists = no
-				is_subject_of = CHI
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SHX = {
-			OR = {
-				exists = no
-				is_subject_of = CHI
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		YUN = {
-			OR = {
-				exists = no
-				is_subject_of = CHI
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		GXC = {
-			OR = {
-				exists = no
-				is_subject_of = CHI
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			original_tag = PRC
 		}
 		SIK = {
-			OR = {
-				exists = no
-				is_subject_of = PRC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		XSM = {
-			OR = {
-				exists = no
-				is_subject_of = PRC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		CHI = {
-			OR = {
-				exists = no
-				is_subject_of = PRC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SHX = {
-			OR = {
-				exists = no
-				is_subject_of = PRC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		YUN = {
-			OR = {
-				exists = no
-				is_subject_of = PRC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		GXC = {
-			OR = {
-				exists = no
-				is_subject_of = PRC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			original_tag = SIK
 		}
 		CHI = {
-			OR = {
-				exists = no
-				is_subject_of = SIK
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		XSM = {
-			OR = {
-				exists = no
-				is_subject_of = SIK
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		PRC = {
-			OR = {
-				exists = no
-				is_subject_of = SIK
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SHX = {
-			OR = {
-				exists = no
-				is_subject_of = SIK
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		YUN = {
-			OR = {
-				exists = no
-				is_subject_of = SIK
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		GXC = {
-			OR = {
-				exists = no
-				is_subject_of = SIK
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			original_tag = XSM
 		}
 		CHI = {
-			OR = {
-				exists = no
-				is_subject_of = XSM
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SIK = {
-			OR = {
-				exists = no
-				is_subject_of = XSM
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		PRC = {
-			OR = {
-				exists = no
-				is_subject_of = XSM
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SHX = {
-			OR = {
-				exists = no
-				is_subject_of = XSM
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		YUN = {
-			OR = {
-				exists = no
-				is_subject_of = XSM
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		GXC = {
-			OR = {
-				exists = no
-				is_subject_of = XSM
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			original_tag = SHX
 		}
 		CHI = {
-			OR = {
-				exists = no
-				is_subject_of = SHX
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SIK = {
-			OR = {
-				exists = no
-				is_subject_of = SHX
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		PRC = {
-			OR = {
-				exists = no
-				is_subject_of = SHX
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		XSM = {
-			OR = {
-				exists = no
-				is_subject_of = SHX
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		YUN = {
-			OR = {
-				exists = no
-				is_subject_of = SHX
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		GXC = {
-			OR = {
-				exists = no
-				is_subject_of = SHX
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			original_tag = YUN
 		}
 		CHI = {
-			OR = {
-				exists = no
-				is_subject_of = YUN
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SIK = {
-			OR = {
-				exists = no
-				is_subject_of = YUN
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		PRC = {
-			OR = {
-				exists = no
-				is_subject_of = YUN
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		XSM = {
-			OR = {
-				exists = no
-				is_subject_of = YUN
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SHX = {
-			OR = {
-				exists = no
-				is_subject_of = YUN
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		GXC = {
-			OR = {
-				exists = no
-				is_subject_of = YUN
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			original_tag = GXC
 		}
 		CHI = {
-			OR = {
-				exists = no
-				is_subject_of = GXC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SIK = {
-			OR = {
-				exists = no
-				is_subject_of = GXC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		PRC = {
-			OR = {
-				exists = no
-				is_subject_of = GXC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		XSM = {
-			OR = {
-				exists = no
-				is_subject_of = GXC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		SHX = {
-			OR = {
-				exists = no
-				is_subject_of = GXC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 		YUN = {
-			OR = {
-				exists = no
-				is_subject_of = GXC
-			}
+			country_does_NOT_exist_OR_is_subject_of_ROOT = yes
 		}
 	}
 }
@@ -318,6 +192,13 @@ country_exists_AND_is_independent_from_ROOT = {
 	NOT = { is_subject_of = ROOT }
 }
 
+country_does_NOT_exist_OR_is_subject_of_ROOT = {
+	OR = {
+		exists = no
+		is_subject_of = ROOT
+	}
+}
+
 country_capitulated_or_lost_its_capital_to_ROOT = {
 	OR = {
 		has_capitulated = yes		
@@ -329,4 +210,3 @@ country_capitulated_or_lost_its_capital_to_ROOT = {
 		}
 	}
 }
-
