@@ -31,46 +31,25 @@ cf154ever_decisions_category = {
 					}
 					OR = {
 						FRA = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						ENG = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						USA = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						GER = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						ITA = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						JAP = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						SOV = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 					}
 				}
@@ -136,46 +115,25 @@ cf154ever_decisions_category = {
 					}
 					OR = {
 						FRA = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						ENG = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						USA = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						GER = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						ITA = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						JAP = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 						SOV = {
-							exists = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
+							country_exists_and_is_independent_from_ROOT = yes
 						}
 					}
 				}
@@ -222,12 +180,12 @@ cf154ever_decisions_category = {
 				}
 				OR = {
 					AND = {
-						has_army_size = {
-							size > 23
-						}
 						has_war = yes
 						any_enemy_country = {
 							is_major = yes
+						}
+						has_army_size = {
+							size > 23
 						}
 					}
 					date > 1942.1.1					
