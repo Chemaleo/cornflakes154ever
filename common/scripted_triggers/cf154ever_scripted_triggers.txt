@@ -312,3 +312,8 @@ check_if_cf154ever_crutches_enabled = {	#TODO
 		has_global_flag = CF154EVER_DEV_SETTINGS_TRUE
 	}
 }
+
+country_exists_and_is_independent_from_ROOT = {
+	exists = yes
+	NOT = { is_subject_of = ROOT }
+}
