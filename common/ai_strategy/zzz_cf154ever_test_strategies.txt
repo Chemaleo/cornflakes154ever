@@ -1,5 +1,7 @@
-CF154EVER_germany_badass = {
+
+germany_badass = {
 	enable = {
+		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES		
 		date > 1945.1.1		
 		original_tag = GER
 		has_government = fascism
@@ -33,13 +35,12 @@ CF154EVER_germany_badass = {
 				219 = { controller = { is_in_faction_with = GER } }
 			}
 		}
-		has_global_flag = cf154ever_enable_test_strategies
 	}
 	
 	abort = {
 		OR = {
+			NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES }			
 			date < 1945.1.1
-			NOT = { has_global_flag = cf154ever_enable_test_strategies }
 		}
 	}
 	
@@ -52,5 +53,195 @@ CF154EVER_germany_badass = {
 		type = antagonize
 		id = SWE
 		value = 99999
+	}
+}
+
+majors_stay_away_from_br_conflicts = {
+	enable = {
+		date < 1945.1.1
+		has_country_flag = our_war_is_not_yours
+		has_war = yes
+	}
+	
+	abort = {
+		date > 1945.1.1
+		has_war = no
+	}
+	
+	reversed = yes
+	
+	ai_strategy = {
+		type = alliance
+		id = "USA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ENG"
+		value = -99999
+	}
+	ai_strategy = {
+		type = alliance
+		id = "FRA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = alliance
+		id = "GER"
+		value = -99999
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ITA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = -99999
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SOV"
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "USA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = support
+		id = "ENG"
+		value = -99999
+	}
+	ai_strategy = {
+		type = support
+		id = "FRA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = support
+		id = "GER"
+		value = -99999
+	}
+	ai_strategy = {
+		type = support
+		id = "ITA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = support
+		id = "JAP"
+		value = -99999
+	}
+	ai_strategy = {
+		type = support
+		id = "SOV"
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "USA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = protect
+		id = "ENG"
+		value = -99999
+	}
+	ai_strategy = {
+		type = protect
+		id = "FRA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = protect
+		id = "GER"
+		value = -99999
+	}
+	ai_strategy = {
+		type = protect
+		id = "ITA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = protect
+		id = "JAP"
+		value = -99999
+	}
+	ai_strategy = {
+		type = protect
+		id = "SOV"
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "USA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ENG"
+		value = -99999
+	}
+	ai_strategy = {
+		type = befriend
+		id = "FRA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = befriend
+		id = "GER"
+		value = -99999
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ITA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = befriend
+		id = "JAP"
+		value = -99999
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SOV"
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ENG"
+		value = -99999
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "FRA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GER"
+		value = -99999
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ITA"
+		value = -99999
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "JAP"
+		value = -99999
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SOV"
+		value = -99999
 	}
 }
