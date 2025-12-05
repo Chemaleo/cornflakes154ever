@@ -12,3 +12,14 @@ on_actions = {
 		}
 	}
 }
+
+#on_actions = {
+ #   on_startup = {
+  #      effect = {
+   #         every_country = {
+	#			limit = { is_ai = no }
+     #           country_event = mffa.1
+		#	}
+		#}
+	#}
+#}
