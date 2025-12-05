@@ -6,18 +6,18 @@ germany_badass = {
 		original_tag = GER
 		has_government = fascism
 		is_neighbor_of = SWE
-		num_divisions > 200
+		num_divisions > 199
 		has_army_size = {
-			size > 10
+			size > 9
 			type = armor
 		}
-		has_manpower > 100000
+		has_manpower > 99999
 		OR = {
 			has_equipment = {
-				fighter_equipment > 5000
+				fighter_equipment > 4999
 			}
 			has_equipment = {
-				CAS_equipment > 5000
+				CAS_equipment > 4999
 			}
 		}
 		OR = {
@@ -60,12 +60,14 @@ majors_stay_away_from_br_conflicts = {
 	enable = {
 		date < 1945.1.1
 		has_country_flag = our_war_is_not_yours
-		has_war = yes
 	}
 	
 	abort = {
 		date > 1945.1.1
 		has_war = no
+		NOT = {
+			has_country_flag = our_war_is_not_yours
+		}
 	}
 	
 	reversed = yes
