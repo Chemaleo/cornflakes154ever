@@ -101,7 +101,7 @@ cf154ever_decisions_category = {
 							}
 						}
 					}
-					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }					
+					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
 					date > 1942.1.1
 				}
 			}
@@ -165,8 +165,8 @@ cf154ever_decisions_category = {
 							type = armor
 						}
 					}
-					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }					
-					date > 1942.1.1					
+					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					date > 1942.1.1
 				}
 			}
 			else_if = {
