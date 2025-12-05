@@ -31,25 +31,25 @@ cf154ever_decisions_category = {
 					}
 					OR = {
 						FRA = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						ENG = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						USA = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						GER = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						ITA = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						JAP = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						SOV = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 					}
 				}
@@ -66,8 +66,9 @@ cf154ever_decisions_category = {
 								original_tag = JAP
 								original_tag = SOV
 							}
-							capital_scope = {
-								is_controlled_by = ROOT
+							custom_trigger_tooltip = {
+								tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
+								country_capitulated_or_lost_its_capital_to_ROOT = yes
 							}
 						}
 					}
@@ -98,7 +99,7 @@ cf154ever_decisions_category = {
 							has_equipment = {
 								strat_bomber_equipment > 999
 							}
-						}						
+						}
 					}
 					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }					
 					date > 1942.1.1
@@ -115,25 +116,25 @@ cf154ever_decisions_category = {
 					}
 					OR = {
 						FRA = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						ENG = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						USA = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						GER = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						ITA = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						JAP = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 						SOV = {
-							country_exists_and_is_independent_from_ROOT = yes
+							country_exists_AND_is_independent_from_ROOT = yes
 						}
 					}
 				}
@@ -150,8 +151,9 @@ cf154ever_decisions_category = {
 								original_tag = JAP
 								original_tag = SOV
 							}
-							capital_scope = {
-								is_controlled_by = ROOT
+							custom_trigger_tooltip = {
+								tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
+								country_capitulated_or_lost_its_capital_to_ROOT = yes
 							}
 						}
 					}
