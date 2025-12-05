@@ -16,6 +16,6 @@ test_plan = {
 	ai_strategy = {
 		type = template_prio
 		id = light_armor
-		value = 111
+		value = 500
 	}
 }
