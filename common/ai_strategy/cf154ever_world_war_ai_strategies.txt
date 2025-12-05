@@ -1,4 +1,5 @@
-CF154EVER_allies_stay_away_from_europe_until_its_time = {
+
+allies_stay_away_from_europe_until_its_time = {
 	enable = {
 		date < 1943.6.1
 		is_in_faction_with = ENG
@@ -61,7 +62,7 @@ CF154EVER_allies_stay_away_from_europe_until_its_time = {
 	}
 }
 
-CF154EVER_axis_dont_help_ITA_before_GER_attacks_FRA = {
+axis_dont_help_ITA_before_GER_attacks_FRA = {
 	enable = {
 		date < 1941.1.1
 		is_in_faction_with = GER
@@ -110,7 +111,7 @@ CF154EVER_axis_dont_help_ITA_before_GER_attacks_FRA = {
 	}
 }
 
-CF154EVER_ITA_stop_attacking_FRA_before_GER = {
+ITA_stop_attacking_FRA_before_GER = {
 	enable = {
 		date < 1941.1.1
 		original_tag = ITA
@@ -151,7 +152,7 @@ CF154EVER_ITA_stop_attacking_FRA_before_GER = {
 	}
 }
 
-CF154EVER_GER_dont_call_ITA_into_war_until_POL_capped = {
+GER_dont_call_ITA_into_war_until_POL_capped = {
 	enable = {
 		date < 1940.1.1
 		original_tag = ITA
@@ -167,7 +168,7 @@ CF154EVER_GER_dont_call_ITA_into_war_until_POL_capped = {
 				any_owned_state = {
 					is_on_continent = europe
 				}
-			}			
+			}
 			POL = {
 				has_war_with = GER
 				has_capitulated = yes
@@ -293,7 +294,7 @@ CF154EVER_GER_dont_call_ITA_into_war_until_POL_capped = {
 	}
 }
 
-CF154EVER_axis_stop_killing_your_fleet_against_ENG = {
+axis_stop_killing_your_fleet_against_ENG = {
 	enable = {
 		date < 1945.1.1
 		is_in_faction_with = GER
