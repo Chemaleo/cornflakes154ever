@@ -257,7 +257,7 @@ enable_kludge_admirals_for_coastal_only_NOT_majors = {
 	every_country = {
 		limit = {
 			any_state = {
-				is_owned_by = PREV.PREV.PREV
+				is_owned_by = PREV
 				is_coastal = yes
 			}
 			NOT = {
@@ -307,7 +307,7 @@ enable_kludge_admirals_for_coastal_only_also_majors = {
 	every_country = {
 		limit = {
 			any_state = {
-				is_owned_by = PREV.PREV.PREV
+				is_owned_by = PREV
 				is_coastal = yes
 			}
 		}
