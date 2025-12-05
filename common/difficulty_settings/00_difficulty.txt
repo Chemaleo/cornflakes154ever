@@ -1,3 +1,4 @@
+
 difficulty_settings = {
 	difficulty_setting = {
 		key = "custom_diff_strong_ger"
@@ -473,5 +474,4 @@ difficulty_settings = {
 		countries = { YUN }
 		multiplier = 2.0
 	}
-	
 }
