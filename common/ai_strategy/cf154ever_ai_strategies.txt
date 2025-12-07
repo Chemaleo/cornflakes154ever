@@ -31,12 +31,12 @@ PRC_dont_join_comintern_when_in_a_civil_war = {
 	ai_strategy = {
 		type = alliance
 		id = "SOV"
-		value = -99999
+		value = -1000
 	}
 	
 	ai_strategy = {
 		type = protect
 		id = "SOV"
-		value = -99999
+		value = -1000
 	}
 }
