@@ -1182,16 +1182,16 @@ form_european_union_category = {
 	cf154ever_decision_unlock_form_eu = {
 		
 		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-		
-		visible = {
 			OR = {
 				original_tag = HOL
 				original_tag = BEL
 				original_tag = LUX
 				original_tag = WGR
-			}
+			}			
+			has_dlc = "Waking the Tiger"
+		}
+		
+		visible = {
 			NOT = {
 				has_government = democratic
 				has_global_flag = form_european_union_flag
