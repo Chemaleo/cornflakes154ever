@@ -1,0 +1,160 @@
+
+cf154ever_br_politics_effect = {
+	every_country = {
+		limit = {
+			OR = {
+				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+				original_tag = CHL
+				original_tag = BRA
+				original_tag = BOL
+				original_tag = PRU
+				original_tag = ECU
+				original_tag = COL
+				original_tag = VEN
+				original_tag = MEX
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+				original_tag = PAN
+				original_tag = HAI
+				original_tag = DOM
+				original_tag = SAU
+				original_tag = OMA
+				original_tag = YEM
+				original_tag = TIB
+				original_tag = NEP
+				original_tag = BHU
+			}
+			NOT = { has_government = neutrality }
+		}
+		set_politics = { ruling_party = neutrality }
+		add_popularity = { ideology = neutrality popularity = 1 }
+	}
+}
+
+
+cf154ever_br_all_effect = {
+	every_country = {
+		limit = {
+			OR = {
+				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+				original_tag = CHL
+				original_tag = BRA
+				original_tag = BOL
+				original_tag = PRU
+				original_tag = ECU
+				original_tag = COL
+				original_tag = VEN
+				original_tag = MEX
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+				original_tag = PAN
+				original_tag = HAI
+				original_tag = DOM
+				original_tag = SAU
+				original_tag = OMA
+				original_tag = YEM
+				original_tag = TIB
+				original_tag = NEP
+				original_tag = BHU
+			}
+		}
+		add_political_power = 150	#2000
+		set_stability = 1
+		set_war_support = 1
+		add_command_power = 100
+		army_experience = 500
+		air_experience = 500
+		# navy_experience = 500
+		# add_manpower = 1000000
+		add_ideas = { tot_economic_mobilisation closed_economy cf154ever_idea_us_influence_shield }	
+		
+		set_technology = {
+			# motorised_infantry = 1
+			# tech_support = 1
+			# tech_engineers = 1
+			# tech_recon = 1
+			# tech_military_police = 1
+			# tech_logistics_company = 1
+			# gw_artillery = 1
+			# interwar_antiair = 1
+			# gwtank = 1
+			# basic_light_tank = 1
+			early_bomber = 1
+			heavy_fighter1 = 1			
+			# electronic_mechanical_engineering = 1
+			# radio = 1
+			# radio_detection = 1
+			# decimetric_radar = 1
+			# improved_decimetric_radar = 1
+			# centimetric_radar = 1
+			# improved_centimetric_radar = 1
+			# advanced_centimetric_radar = 1
+		}
+		
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 5000 # 50000
+		}
+		# add_equipment_to_stockpile = {
+			# type = artillery_equipment_1
+			# amount = 50000
+		# }
+		# add_equipment_to_stockpile = {
+			# type = support_equipment_1
+			# amount = 50000
+		# }
+		# add_equipment_to_stockpile = {
+			# type = light_tank_equipment_1
+			# amount = 50000
+		# }
+		# add_equipment_to_stockpile = {
+			# type = motorized_equipment_1
+			# amount = 50000
+		# }
+		add_equipment_to_stockpile = {
+			type = heavy_fighter_equipment_1
+			amount = 1000 # 50000, 10000
+		}
+		add_equipment_to_stockpile = {
+			type = tac_bomber_equipment_0
+			amount = 1000 # 50000, 10000
+		}
+		# add_equipment_to_stockpile = {
+			# type = convoy_1
+			# amount = 1000 # 10000
+		# }
+		
+		every_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 10
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = air_base
+				level = 10
+				instant_build = yes
+			}
+			# add_building_construction = {
+				# type = anti_air_building
+				# level = 5
+				# instant_build = yes
+			# }
+			# add_building_construction = {
+				# type = radar_station
+				# level = 6
+				# instant_build = yes
+			# }
+		}
+	}
+}
