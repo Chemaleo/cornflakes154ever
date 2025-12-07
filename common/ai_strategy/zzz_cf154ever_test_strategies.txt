@@ -38,10 +38,7 @@ germany_badass = {
 	}
 	
 	abort = {
-		OR = {
-			NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES }			
-			date < 1945.1.1
-		}
+		NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES }
 	}
 	
 	ai_strategy = {
@@ -68,9 +65,7 @@ SAU_test_strategy_1 = {
 	}
 	
 	abort = {
-		OR = {
-			NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES }
-		}
+		NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES }
 	}
 	
 	ai_strategy = {
@@ -193,7 +188,8 @@ BR_test_strategy = {
 		type = antagonize
 		id = PAN
 		value = 99999
-	}	
+	}
+}
 
 # majors_stay_away_from_br_conflicts = {
 	# enable = {
