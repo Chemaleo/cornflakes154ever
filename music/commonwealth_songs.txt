@@ -45,7 +45,7 @@ music = {
 		}
 		modifier = {
 			factor = 0
-			has_global_flag = CF154EVER_NO_SAD_MUSIC
+			has_global_flag = NO_SAD_MUSIC
 		}
 	}
 }
