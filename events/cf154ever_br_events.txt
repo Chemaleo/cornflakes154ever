@@ -1,0 +1,532 @@
+﻿add_namespace = cf154ever_br
+
+country_event = {
+	id = cf154ever_br.1
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_threat = -15
+	}
+	
+	option = { name = cf154ever_br.1.a }
+}
+
+country_event = {
+	id = cf154ever_br.2
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 2 }	
+	
+	trigger = {
+		OR = {
+			original_tag = ARG
+			original_tag = URG
+			original_tag = PAR
+			original_tag = CHL
+			original_tag = BRA
+			original_tag = BOL
+			original_tag = PRU
+			original_tag = ECU
+			original_tag = COL
+			original_tag = VEN
+		}
+		has_war = no
+		date > 1936.4.1
+	}
+	
+	immediate = {
+		every_state = {
+			remove_claim_by = ARG
+			remove_claim_by = URG
+			remove_claim_by = PAR
+			remove_claim_by = CHL
+			remove_claim_by = BRA
+			remove_claim_by = BOL
+			remove_claim_by = PRU
+			remove_claim_by = ECU
+			remove_claim_by = COL
+			remove_claim_by = VEN
+		}
+		
+		if = {
+			limit = {
+				country_exists = ARG
+				299 = { NOT = { is_owned_by = ARG } }
+				720 = { NOT = { is_owned_by = ARG } }
+			}
+			every_owned_state = {
+				add_core_of = ARG
+			}
+			ARG = {
+				add_state_claim = 299 # Фолклендские острова
+				add_state_claim = 720 # Остров Южная Георгия
+			}			
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = ARG
+			}
+			every_owned_state = {
+				add_core_of = ARG
+			}		
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = URG
+			}
+			every_owned_state = {
+				add_core_of = URG
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = PAR
+			}
+			every_owned_state = {
+				add_core_of = PAR
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = CHL
+			}
+			every_owned_state = {
+				add_core_of = CHL
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = BRA
+			}
+			every_owned_state = {
+				add_core_of = BRA
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}		
+		else_if = {
+			limit = {
+				country_exists = BOL
+			}
+			every_owned_state = {
+				add_core_of = BOL
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = PRU
+			}
+			every_owned_state = {
+				add_core_of = PRU
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = ECU
+			}
+			every_owned_state = {
+				add_core_of = ECU
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = COL
+			}
+			every_owned_state = {
+				add_core_of = COL
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = VEN
+			}
+			every_owned_state = {
+				add_core_of = VEN
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = cf154ever_idea_us_influence_shield
+			}
+			remove_ideas = cf154ever_idea_us_influence_shield
+		}
+	}
+	
+	option = { name = cf154ever_br.1.a }
+}
+
+country_event = {
+	id = cf154ever_br.3
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 2 }	
+	
+	trigger = {
+		OR = {
+			original_tag = MEX
+			original_tag = GUA
+			original_tag = ELS
+			original_tag = HON
+			original_tag = NIC
+			original_tag = COS
+			original_tag = PAN
+		}
+		has_war = no
+		date > 1936.4.1
+	}
+	
+	immediate = {
+		every_state = {
+			remove_claim_by = MEX
+			remove_claim_by = GUA
+			remove_claim_by = ELS
+			remove_claim_by = HON
+			remove_claim_by = NIC
+			remove_claim_by = COS
+			remove_claim_by = PAN
+		}
+		
+		if = {
+			limit = {
+				country_exists = MEX
+			}
+			every_owned_state = {
+				add_core_of = MEX
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}			
+		}
+		else_if = {
+			limit = {
+				country_exists = GUA
+			}
+			every_owned_state = {
+				add_core_of = GUA
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = ELS
+			}
+			every_owned_state = {
+				add_core_of = ELS
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = HON
+			}
+			every_owned_state = {
+				add_core_of = HON
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = NIC
+			}
+			every_owned_state = {
+				add_core_of = NIC
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = COS
+			}
+			every_owned_state = {
+				add_core_of = COS
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = PAN
+			}
+			every_owned_state = {
+				add_core_of = PAN
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = cf154ever_idea_us_influence_shield
+			}
+			remove_ideas = cf154ever_idea_us_influence_shield
+		}
+	}
+	
+	option = { name = cf154ever_br.1.a }
+}
+
+#	Временно
+
+country_event = {
+	id = cf154ever_br.4
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 2 }
+	
+	trigger = {
+		OR = {
+			original_tag = HAI
+			original_tag = DOM
+		}
+		has_war = no
+
+		date > 1936.4.1
+	}
+	
+	immediate = {
+		every_state = {
+			remove_claim_by = HAI
+			remove_claim_by = DOM
+		}
+		
+		if = {
+			limit = {
+				country_exists = HAI
+			}
+			every_owned_state = {
+				add_core_of = HAI
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = DOM
+			}
+			every_owned_state = {
+				add_core_of = DOM
+			}
+			random_list = {
+				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
+				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = cf154ever_idea_us_influence_shield
+			}
+			remove_ideas = cf154ever_idea_us_influence_shield
+		}
+		
+
+	}
+	
+	option = { name = cf154ever_br.1.a }
+}
+
+country_event = {
+	id = cf154ever_br.5
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 2 }
+	
+	trigger = {
+		OR = {
+			original_tag = SAU
+			original_tag = OMA
+			original_tag = YEM
+		}
+		has_war = no
+		date > 1936.4.1
+	}
+	
+	immediate = {
+		every_state = {
+			remove_claim_by = SAU
+			remove_claim_by = OMA
+			remove_claim_by = YEM
+		}
+		
+		if = {
+			limit = {
+				country_exists = SAU
+			}
+			every_owned_state = {
+				add_core_of = SAU
+			}
+			set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 }
+		}
+		else_if = {
+			limit = {
+				country_exists = OMA
+			}
+			every_owned_state = {
+				add_core_of = OMA
+			}
+			set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 }
+		}
+		else_if = {
+			limit = {
+				country_exists = YEM
+			}
+			every_owned_state = {
+				add_core_of = YEM
+			}
+			set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 }
+		}
+		
+		if = {
+			limit = {
+				has_idea = cf154ever_idea_us_influence_shield
+			}
+			remove_ideas = cf154ever_idea_us_influence_shield
+		}
+	}
+	
+	option = { name = cf154ever_br.1.a }
+}
+
+country_event = {
+	id = cf154ever_br.6
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 2 }
+	
+	trigger = {
+		OR = {
+			original_tag = TIB
+			original_tag = NEP
+			original_tag = BHU
+		}
+		has_war = no
+		date > 1936.4.1
+	}
+	
+	immediate = {
+		every_state = {
+			remove_claim_by = TIB
+			remove_claim_by = NEP
+			remove_claim_by = BHU
+		}
+		
+		if = {
+			limit = {
+				country_exists = TIB
+			}
+			every_owned_state = {
+				add_core_of = TIB
+			}
+			set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 }
+		}
+		else_if = {
+			limit = {
+				country_exists = NEP
+			}
+			every_owned_state = {
+				add_core_of = NEP
+			}
+			set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 }
+		}
+		else_if = {
+			limit = {
+				country_exists = BHU
+			}
+			every_owned_state = {
+				add_core_of = BHU
+			}
+			set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 }
+		}
+		
+		if = {
+			limit = {
+				has_idea = cf154ever_idea_us_influence_shield
+			}
+			remove_ideas = cf154ever_idea_us_influence_shield
+		}
+	}
+	
+	option = { name = cf154ever_br.1.a }
+}
