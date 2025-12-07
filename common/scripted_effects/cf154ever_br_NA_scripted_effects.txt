@@ -1,0 +1,394 @@
+
+cf154ever_br_start_NA = {	
+
+	#	Мексика
+	
+	MEX = {
+
+		
+		every_owned_state = {
+			add_claim_by = GUA
+			add_claim_by = ELS
+			add_claim_by = HON
+			add_claim_by = NIC
+			add_claim_by = COS
+			add_claim_by = PAN
+		}
+		
+		declare_war_on = {
+			target = GUA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ELS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = HON
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = NIC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAN
+			type = annex_everything
+		}
+		#declare_war_on = {
+		#	target = HAI
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+			#target = DOM
+			#type = annex_everything
+		#}		
+	}
+	
+	# Гватемала
+	
+	GUA = {
+
+		
+		every_owned_state = {
+			add_claim_by = MEX
+			add_claim_by = ELS
+			add_claim_by = HON
+			add_claim_by = NIC
+			add_claim_by = COS
+			add_claim_by = PAN
+		}
+		
+		declare_war_on = {
+			target = MEX
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ELS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = HON
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = NIC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAN
+			type = annex_everything
+		}
+		#declare_war_on = {
+		#	target = HAI
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+			#target = DOM
+			#type = annex_everything
+		#}
+	}
+	
+	#	Никарагуа
+	
+	NIC = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			
+			set_politics = { ruling_party = neutrality }
+			add_popularity = { ideology = neutrality popularity = 1 }
+		}
+		
+		every_owned_state = {
+			add_claim_by = GUA
+			add_claim_by = ELS
+			add_claim_by = HON
+			add_claim_by = MEX
+			add_claim_by = COS
+			add_claim_by = PAN
+		}
+		
+		declare_war_on = {
+			target = GUA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ELS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = HON
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MEX
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAN
+			type = annex_everything
+		}
+		#declare_war_on = {
+		#	target = HAI
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+			#target = DOM
+			#type = annex_everything
+		#}
+	}
+	
+	#	Гондурас
+	
+	HON = {
+
+		
+		every_owned_state = {
+			add_claim_by = GUA
+			add_claim_by = ELS
+			add_claim_by = MEX
+			add_claim_by = NIC
+			add_claim_by = COS
+			add_claim_by = PAN
+		}
+		
+		declare_war_on = {
+			target = GUA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ELS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MEX
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = NIC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAN
+			type = annex_everything
+		}
+		#declare_war_on = {
+		#	target = HAI
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+			#target = DOM
+			#type = annex_everything
+		#}
+	}
+	
+	#	Сальвадор
+	
+	ELS = {
+
+		
+		every_owned_state = {
+			add_claim_by = GUA
+			add_claim_by = MEX
+			add_claim_by = HON
+			add_claim_by = NIC
+			add_claim_by = COS
+			add_claim_by = PAN
+		}
+		
+		declare_war_on = {
+			target = GUA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MEX
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = HON
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = NIC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAN
+			type = annex_everything
+		}
+		#declare_war_on = {
+		#	target = HAI
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+			#target = DOM
+			#type = annex_everything
+		#}
+	}
+	
+	#	Коста-Рика
+	
+	COS = {
+
+		
+		every_owned_state = {
+			add_claim_by = GUA
+			add_claim_by = ELS
+			add_claim_by = HON
+			add_claim_by = NIC
+			add_claim_by = MEX
+			add_claim_by = PAN
+		}
+		
+		declare_war_on = {
+			target = GUA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ELS
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = HON
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = NIC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MEX
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAN
+			type = annex_everything
+		}
+		#declare_war_on = {
+		#	target = HAI
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+			#target = DOM
+			#type = annex_everything
+		#}
+	}
+	
+	#	Гаити
+	
+	HAI = {
+
+		
+		every_owned_state = {
+			#add_claim_by = GUA
+			#add_claim_by = ELS
+			#add_claim_by = HON
+			#add_claim_by = NIC
+			#add_claim_by = MEX
+			#add_claim_by = PAN
+			add_claim_by = DOM
+		}
+		
+		#declare_war_on = {
+		#	target = GUA
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = ELS
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = HON
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = NIC
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = MEX
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = PAN
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = HAI
+		#	type = annex_everything
+		#}
+		declare_war_on = {
+			target = DOM
+			type = annex_everything
+		}
+	}
+
+	DOM = {
+
+		
+		every_owned_state = {
+			#add_claim_by = GUA
+			#add_claim_by = ELS
+			#add_claim_by = HON
+			#add_claim_by = NIC
+			#add_claim_by = MEX
+			#add_claim_by = PAN
+			add_claim_by = HAI
+		}
+		
+		#declare_war_on = {
+		#	target = GUA
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = ELS
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = HON
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = NIC
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = MEX
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = PAN
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+		#	target = HAI
+		#	type = annex_everything
+		#}
+		#declare_war_on = {
+			#target = DOM
+			#type = annex_everything
+		#}
+	}
+}
