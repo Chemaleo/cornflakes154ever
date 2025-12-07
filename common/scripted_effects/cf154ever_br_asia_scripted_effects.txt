@@ -1,0 +1,84 @@
+
+cf154ever_br_start_asia = {
+	
+	#	Саудиты
+	
+	SAU = {
+		every_owned_state = {
+			add_claim_by = OMA
+			add_claim_by = YEM
+		}
+		
+		declare_war_on = {
+			target = OMA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = YEM
+			type = annex_everything
+		}
+	}
+	
+	#	Оман
+	
+	OMA = {
+		every_owned_state = {
+			add_claim_by = SAU
+			add_claim_by = YEM
+		}
+		declare_war_on = {
+			target = YEM
+			type = annex_everything
+		}		
+	}
+	
+	# Йемен
+	
+	YEM = {
+		every_owned_state = {
+			add_claim_by = SAU
+			add_claim_by = OMA
+		}
+	}
+	
+	#	Тибет
+	
+	TIB = {
+		every_owned_state = {
+			add_claim_by = NEP
+			add_claim_by = BHU
+		}
+		
+		declare_war_on = {
+			target = NEP
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BHU
+			type = annex_everything
+		}
+	}
+	
+	#	Непал
+	
+	NEP = {
+		every_owned_state = {
+			add_claim_by = TIB
+			add_claim_by = BHU
+		}
+		
+		declare_war_on = {
+			target = BHU
+			type = annex_everything
+		}
+	}
+
+	#	Бутан
+	
+	BHU = {
+		every_owned_state = {
+			add_claim_by = TIB
+			add_claim_by = NEP
+		}
+	}
+}
