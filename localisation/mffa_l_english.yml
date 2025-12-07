@@ -6,7 +6,6 @@
     mffa.1.c:0 "Run the mod with author's options"
     mffa.1.e:0 "Exit"
     mffa_author_choice:0 "This option will use author's parameters"
-    mffa_us_influence_shield:0 "US influence shield"
     mffa_faction_1:0 "MFFA Side 1"
     mffa_faction_2:0 "MFFA Side 2"
     mffa_faction_3:0 "MFFA Side 3"
