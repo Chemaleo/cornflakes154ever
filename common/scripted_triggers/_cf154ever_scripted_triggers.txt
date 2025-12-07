@@ -166,12 +166,12 @@ check_if_only_one_china_left = {
 	}
 }
 
-ai_strategy_check_if_has_no_war_with_GER_AND_ITA = {
-	NOT = {
-		has_war_with = GER
-		has_war_with = ITA
-	}
-}
+# ai_strategy_check_if_has_no_war_with_GER_AND_ITA = {
+	# NOT = {
+		# has_war_with = GER
+		# has_war_with = ITA
+	# }
+# }
 
 check_if_all_allies_are_ai = {
 	ENG = {
