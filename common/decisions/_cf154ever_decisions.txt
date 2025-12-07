@@ -213,7 +213,7 @@ cf154ever_decisions_category = {
 		
 		visible = {
 			NOT = {
-				has_global_flag = CF154EVER_NO_SAD_MUSIC
+				has_global_flag = NO_SAD_MUSIC
 			}
 		}
 		
@@ -230,7 +230,7 @@ cf154ever_decisions_category = {
 				
 		complete_effect = {
 			custom_effect_tooltip = cf154ever_decision_disable_sad_music_tt
-			set_global_flag = CF154EVER_NO_SAD_MUSIC
+			set_global_flag = NO_SAD_MUSIC
 		}
 	}
 	
@@ -243,12 +243,12 @@ cf154ever_decisions_category = {
 		fire_only_once = no
 		
 		visible = {
-			has_global_flag = CF154EVER_NO_SAD_MUSIC
+			has_global_flag = NO_SAD_MUSIC
 		}
 		
 		complete_effect = {
 			custom_effect_tooltip = cf154ever_decision_enable_sad_music_tt
-			clr_global_flag = CF154EVER_NO_SAD_MUSIC
+			clr_global_flag = NO_SAD_MUSIC
 		}
 	}	
 	
@@ -258,7 +258,7 @@ cf154ever_decisions_category = {
 		allowed = { always = yes }
 		
 		visible = {
-			NOT = { has_global_flag = CF154EVER_BATTLE_ROYALE_ON }			
+			NOT = { has_global_flag = BATTLE_ROYALE_ON }
 			date < 1936.1.31
 		}
 		
@@ -267,42 +267,21 @@ cf154ever_decisions_category = {
 			date < 1936.1.31
 		}
 		
-		days_remove = 40
+		days_remove = 30
 		
 		complete_effect = {
-			set_global_flag = CF154EVER_BATTLE_ROYALE_ON			
-			every_country = {
-				limit = {
-					original_tag = ARG
-					original_tag = URG
-					original_tag = PAR
-					original_tag = CHL
-					original_tag = BRA
-					original_tag = BOL
-					original_tag = PRU
-					original_tag = ECU
-					original_tag = COL
-					original_tag = VEN
-					original_tag = MEX
-					original_tag = GUA
-					original_tag = NIC
-					original_tag = HON
-					original_tag = ELS
-					original_tag = COS
-					original_tag = HAI
-					original_tag = DOM
-				}
-				set_country_flag = our_war_is_not_yours
-			}
+			set_global_flag = BATTLE_ROYALE_ON			
+			cf154ever_br_politics_effect = yes
 		}
-			
 		
 		remove_effect = {
 			custom_effect_tooltip = cf154ever_decision_br_test_start_tt
 			hidden_effect = {
-				mffa_SA_initial_settings = yes
-				mffa_NA_initial_settings = yes
-				country_event = { id = mffa.1 }
+				cf154ever_br_start_NA = yes
+				cf154ever_br_start_SA = yes
+				cf154ever_br_start_asia = yes
+				cf154ever_br_all_effect = yes
+				country_event = { id = cf154ever_br.1 }
 			}
 		}
 	}
