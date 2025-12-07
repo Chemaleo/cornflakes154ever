@@ -1,0 +1,552 @@
+
+cf154ever_br_start_SA = {
+	
+	#	Аргентина
+	ARG = {
+
+		
+		every_owned_state = {
+			add_claim_by = URG
+			add_claim_by = PAR
+			add_claim_by = CHL
+			add_claim_by = BRA
+			add_claim_by = BOL
+			add_claim_by = PRU
+			add_claim_by = ECU
+			add_claim_by = COL
+			add_claim_by = VEN
+		}
+		
+		declare_war_on = {
+			target = URG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CHL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BOL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PRU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ECU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+	}
+	
+	#	Уругвай
+	
+	URG = {
+
+		
+		every_owned_state = {
+			add_claim_by = ARG
+			add_claim_by = PAR
+			add_claim_by = CHL
+			add_claim_by = BRA
+			add_claim_by = BOL
+			add_claim_by = PRU
+			add_claim_by = ECU
+			add_claim_by = COL
+			add_claim_by = VEN
+		}
+		
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CHL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BOL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PRU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ECU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+	}
+	
+	#	Парагвай
+	
+	PAR = {
+
+		
+		every_owned_state = {
+			add_claim_by = ARG
+			add_claim_by = URG
+			add_claim_by = CHL
+			add_claim_by = BRA
+			add_claim_by = BOL
+			add_claim_by = PRU
+			add_claim_by = ECU
+			add_claim_by = COL
+			add_claim_by = VEN
+		}
+		
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = URG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CHL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BOL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PRU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ECU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+	}
+	
+	#	Чили
+	
+	CHL = {
+
+		
+		every_owned_state = {
+			add_claim_by = ARG
+			add_claim_by = URG
+			add_claim_by = PAR
+			add_claim_by = BRA
+			add_claim_by = BOL
+			add_claim_by = PRU
+			add_claim_by = ECU
+			add_claim_by = COL
+			add_claim_by = VEN
+		}
+		
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = URG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BOL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PRU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ECU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+	}
+	
+	#	Бразилия	
+	
+	BRA = {
+
+		
+		every_owned_state = {
+			add_claim_by = ARG
+			add_claim_by = URG
+			add_claim_by = PAR
+			add_claim_by = CHL
+			add_claim_by = BOL
+			add_claim_by = PRU
+			add_claim_by = ECU
+			add_claim_by = COL
+			add_claim_by = VEN
+		}
+		
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = URG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CHL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BOL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PRU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ECU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+	}
+	
+	#	Боливия	
+	
+	BOL = {
+
+		
+		every_owned_state = {
+			add_claim_by = ARG
+			add_claim_by = URG
+			add_claim_by = PAR
+			add_claim_by = CHL
+			add_claim_by = BRA
+			add_claim_by = PRU
+			add_claim_by = ECU
+			add_claim_by = COL
+			add_claim_by = VEN
+		}
+		
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = URG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CHL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PRU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ECU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+	}
+	
+	#	Перу	
+	
+	PRU = {
+
+		
+		every_owned_state = {
+			add_claim_by = ARG
+			add_claim_by = URG
+			add_claim_by = PAR
+			add_claim_by = CHL
+			add_claim_by = BRA
+			add_claim_by = BOL
+			add_claim_by = ECU
+			add_claim_by = COL
+			add_claim_by = VEN
+		}
+		
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = URG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CHL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BOL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ECU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+	}
+	
+	#	Эквадор	
+	
+	ECU = {
+
+		
+		every_owned_state = {
+			add_claim_by = ARG
+			add_claim_by = URG
+			add_claim_by = PAR
+			add_claim_by = CHL
+			add_claim_by = BRA
+			add_claim_by = BOL
+			add_claim_by = PRU
+			add_claim_by = COL
+			add_claim_by = VEN
+		}
+		
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = URG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CHL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BOL
+			type = annex_everything
+		}		
+		declare_war_on = {
+			target = PRU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+	}
+	
+	#	Колумбия	
+	
+	COL = {
+
+		
+		every_owned_state = {
+			add_claim_by = ARG
+			add_claim_by = URG
+			add_claim_by = PAR
+			add_claim_by = CHL
+			add_claim_by = BRA
+			add_claim_by = BOL
+			add_claim_by = PRU
+			add_claim_by = ECU
+			add_claim_by = VEN
+		}
+		
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = URG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CHL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BOL
+			type = annex_everything
+		}		
+		declare_war_on = {
+			target = PRU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ECU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+	}
+	
+	#	Венесуэла	
+	
+	VEN = {
+
+		
+		every_owned_state = {
+			add_claim_by = ARG
+			add_claim_by = URG
+			add_claim_by = PAR
+			add_claim_by = CHL
+			add_claim_by = BRA
+			add_claim_by = BOL
+			add_claim_by = PRU
+			add_claim_by = ECU
+			add_claim_by = COL
+		}
+		
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = URG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = PAR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CHL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BOL
+			type = annex_everything
+		}		
+		declare_war_on = {
+			target = PRU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ECU
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = COL
+			type = annex_everything
+		}
+	}
+}
