@@ -1,21 +1,26 @@
 
-test_plan = {
-	name = "test plan"
-	desc = "this is a test plan"
+# test_plan = {
+	# name = "test plan"
+	# desc = "this is a test plan"
 	
-	enable = {
-		original_tag = PRU
-		has_country_flag = our_war_is_not_yours
-		has_war = yes
-	}
+	# enable = {
+		# original_tag = SAU
+		# has_war = no
+		# date > 1936.4.1
+	# }
 	
-	abort = {
-		always = no
-	}
+	# abort = {
+		# always = no
+	# }
 	
-	ai_strategy = {
-		type = template_prio
-		id = light_armor
-		value = 500
-	}
-}
+	# ai_strategy = {
+		# type = conquer
+		# id = IRQ
+		# value = 100
+	# }
+	# ai_strategy = {
+		# type = antagonize
+		# id = IRQ
+		# value = 100
+	# }
+# }
