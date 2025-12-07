@@ -1,7 +1,7 @@
 
 germany_badass = {
 	enable = {
-		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES		
+		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES
 		date > 1945.1.1		
 		original_tag = GER
 		has_government = fascism
@@ -56,194 +56,333 @@ germany_badass = {
 	}
 }
 
-majors_stay_away_from_br_conflicts = {
+
+SAU_test_strategy_1 = {
+	
 	enable = {
-		date < 1945.1.1
-		has_country_flag = our_war_is_not_yours
+		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES		
+		original_tag = SAU
+		NOT = { has_government = neutrality }		
+		has_war = no
+		date > 1936.4.1
 	}
 	
 	abort = {
-		date > 1945.1.1
-		has_war = no
-		NOT = {
-			has_country_flag = our_war_is_not_yours
+		OR = {
+			NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES }
 		}
 	}
 	
-	reversed = yes
-	
 	ai_strategy = {
-		type = alliance
-		id = "USA"
-		value = -99999
+		type = conquer
+		id = IRQ
+		value = 99999
 	}
 	ai_strategy = {
-		type = alliance
-		id = "ENG"
-		value = -99999
+		type = consider_weak
+		id = IRQ
+		value = 99999
 	}
 	ai_strategy = {
-		type = alliance
-		id = "FRA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = alliance
-		id = "GER"
-		value = -99999
-	}
-	ai_strategy = {
-		type = alliance
-		id = "ITA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = alliance
-		id = "JAP"
-		value = -99999
-	}
-	ai_strategy = {
-		type = alliance
-		id = "SOV"
-		value = -99999
-	}
-	
-	ai_strategy = {
-		type = support
-		id = "USA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = support
-		id = "ENG"
-		value = -99999
-	}
-	ai_strategy = {
-		type = support
-		id = "FRA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = support
-		id = "GER"
-		value = -99999
-	}
-	ai_strategy = {
-		type = support
-		id = "ITA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = support
-		id = "JAP"
-		value = -99999
-	}
-	ai_strategy = {
-		type = support
-		id = "SOV"
-		value = -99999
-	}
-	
-	ai_strategy = {
-		type = protect
-		id = "USA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = protect
-		id = "ENG"
-		value = -99999
-	}
-	ai_strategy = {
-		type = protect
-		id = "FRA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = protect
-		id = "GER"
-		value = -99999
-	}
-	ai_strategy = {
-		type = protect
-		id = "ITA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = protect
-		id = "JAP"
-		value = -99999
-	}
-	ai_strategy = {
-		type = protect
-		id = "SOV"
-		value = -99999
-	}
-	
-	ai_strategy = {
-		type = befriend
-		id = "USA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = befriend
-		id = "ENG"
-		value = -99999
-	}
-	ai_strategy = {
-		type = befriend
-		id = "FRA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = befriend
-		id = "GER"
-		value = -99999
-	}
-	ai_strategy = {
-		type = befriend
-		id = "ITA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = befriend
-		id = "JAP"
-		value = -99999
-	}
-	ai_strategy = {
-		type = befriend
-		id = "SOV"
-		value = -99999
-	}
-	
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "ENG"
-		value = -99999
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "FRA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "GER"
-		value = -99999
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "ITA"
-		value = -99999
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "JAP"
-		value = -99999
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "SOV"
-		value = -99999
+		type = antagonize
+		id = IRQ
+		value = 99999
 	}
 }
+
+SAU_test_strategy_2 = {
+	
+	enable = {
+		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES		
+		original_tag = SAU
+		NOT = { has_government = neutrality }
+		has_war = no
+		date > 1936.4.1
+		IRQ = {
+			OR = {
+				exists = no
+				is_subject_of = SAU
+			}
+		}
+	}
+	
+	abort = {
+		NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES }
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = PER
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = PER
+		value = 100
+	}
+}
+
+SAU_test_strategy_3 = {
+	
+	enable = {
+		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES		
+		original_tag = SAU
+		NOT = { has_government = neutrality }
+		has_war = no
+		date > 1936.4.1
+		PER = {
+			OR = {
+				exists = no
+				is_subject_of = SAU
+			}
+		}
+	}
+	
+	abort = {
+		NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES }
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = AFG
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = AFG
+		value = 100
+	}
+}
+
+BR_test_strategy = {
+	enable = {
+		OR = {
+			original_tag = ARG
+			original_tag = URG
+			original_tag = PAR
+			original_tag = CHL
+			original_tag = BRA
+			original_tag = BOL
+			original_tag = PRU
+			original_tag = ECU
+			original_tag = COL
+			original_tag = VEN
+		}
+		NOT = { has_government = neutrality }
+		has_war = no
+		date > 1936.4.1
+		country_exists = PAN
+		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES		
+	}
+	
+	abort = {
+		NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES }
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = PAN
+		value = 99999
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = PAN
+		value = 99999
+	}
+	ai_strategy = {
+		type = antagonize
+		id = PAN
+		value = 99999
+	}	
+
+# majors_stay_away_from_br_conflicts = {
+	# enable = {
+		# date < 1945.1.1
+		# has_country_flag = our_war_is_not_yours
+	# }
+	
+	# abort = {
+		# date > 1945.1.1
+		# has_war = no
+		# NOT = {
+			# has_country_flag = our_war_is_not_yours
+		# }
+	# }
+	
+	# reversed = yes
+	
+	# ai_strategy = {
+		# type = alliance
+		# id = "USA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = alliance
+		# id = "ENG"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = alliance
+		# id = "FRA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = alliance
+		# id = "GER"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = alliance
+		# id = "ITA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = alliance
+		# id = "JAP"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = alliance
+		# id = "SOV"
+		# value = -99999
+	# }
+	
+	# ai_strategy = {
+		# type = support
+		# id = "USA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = support
+		# id = "ENG"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = support
+		# id = "FRA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = support
+		# id = "GER"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = support
+		# id = "ITA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = support
+		# id = "JAP"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = support
+		# id = "SOV"
+		# value = -99999
+	# }
+	
+	# ai_strategy = {
+		# type = protect
+		# id = "USA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = protect
+		# id = "ENG"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = protect
+		# id = "FRA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = protect
+		# id = "GER"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = protect
+		# id = "ITA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = protect
+		# id = "JAP"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = protect
+		# id = "SOV"
+		# value = -99999
+	# }
+	
+	# ai_strategy = {
+		# type = befriend
+		# id = "USA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = befriend
+		# id = "ENG"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = befriend
+		# id = "FRA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = befriend
+		# id = "GER"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = befriend
+		# id = "ITA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = befriend
+		# id = "JAP"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = befriend
+		# id = "SOV"
+		# value = -99999
+	# }
+	
+	# ai_strategy = {
+		# type = send_volunteers_desire
+		# id = "ENG"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = send_volunteers_desire
+		# id = "FRA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = send_volunteers_desire
+		# id = "GER"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = send_volunteers_desire
+		# id = "ITA"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = send_volunteers_desire
+		# id = "JAP"
+		# value = -99999
+	# }
+	# ai_strategy = {
+		# type = send_volunteers_desire
+		# id = "SOV"
+		# value = -99999
+	# }
+# }
