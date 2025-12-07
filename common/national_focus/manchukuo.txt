@@ -63,21 +63,9 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			unlock_decision_category_tooltip = MAN_banditry_category
@@ -1219,10 +1207,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-
 		}
 
 		bypass = {
