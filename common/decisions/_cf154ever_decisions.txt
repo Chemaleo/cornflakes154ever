@@ -83,12 +83,21 @@ cf154ever_decisions_category = {
 						OR = {
 							has_equipment = {
 								CAS_equipment > 999
+							}
+							has_equipment = {
+								cv_CAS_equipment > 999
 							}							
 							has_equipment = {
 								fighter_equipment > 999
 							}
 							has_equipment = {
+								cv_fighter_equipment > 999
+							}							
+							has_equipment = {
 								nav_bomber_equipment > 999
+							}
+							has_equipment = {
+								cv_nav_bomber_equipment > 999
 							}
 							has_equipment = {
 								heavy_fighter_equipment > 999
