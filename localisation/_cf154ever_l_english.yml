@@ -6,7 +6,7 @@
     rtn_dem_category_desc:0 "After the civil war, the time has now come to rebuild our ruined nation."
     rtn_fas_category:0 "Rebuild the Nation"
     rtn_fas_category_desc:0 "After the civil war, the time has now come to rebuild our ruined nation."
-    cf154ever_idea_PRC_civil_war_prevent_comintern:0 "Chinese Civil War AI faction crutch"
+    cf154ever_idea_PRC_civil_war_prevent_comintern:0 "Chinese Civil War AI faction kludge"
     cf154ever_idea_PRC_civil_war_prevent_comintern_desc:0 "Stops the AI from joining Comintern while in the Civil War"
     cf154ever_kludge_admiral_trait:0 "Admiral kludge trait"
     cf154ever_kludge_admiral_trait_desc:0 "Fixes newly-generated admirals not gaining traits"
