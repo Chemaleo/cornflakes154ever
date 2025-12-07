@@ -68,7 +68,7 @@ cf154ever_br_all_effect = {
 				original_tag = BHU
 			}
 		}
-		add_political_power = 150	#2000
+		add_political_power = 150	#set_political_power = 2000
 		set_stability = 1
 		set_war_support = 1
 		add_command_power = 100
