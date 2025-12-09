@@ -619,7 +619,12 @@ country_event = {
 		}
 		random_other_country = {
 			limit = { original_tag = FRA has_government = fascism }
-			ROOT = { puppet = PREV }
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_puppet
+				}
+			}
 			set_capital = 26
 			set_politics = {
 				ruling_party = fascism
@@ -910,7 +915,12 @@ country_event = {
 		}
 		random_other_country = {
 			limit = { original_tag = FRA has_government = neutrality }
-			ROOT = { puppet = PREV }
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_puppet
+				}
+			}
 			set_capital = 26
 			set_politics = {
 				ruling_party = neutrality
