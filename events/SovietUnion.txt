@@ -1347,7 +1347,12 @@ country_event = {
 			limit = {
 				FROM = { is_puppet = no }
 			}
-			SOV = { puppet = FROM }
+			SOV = {
+				set_autonomy = {
+					target = FROM
+					autonomous_state = autonomy_puppet
+				}
+			}
 		}
 		ai_chance = { factor = 100 }
 			if = {
