@@ -1,0 +1,60 @@
+﻿
+division_template = {
+	name = "ideal 40-width armor"
+	
+	regiments = {
+		modern_armor = { x = 0 y = 0 }
+		modern_armor = { x = 0 y = 1 }
+		modern_armor = { x = 0 y = 2 }
+		modern_armor = { x = 0 y = 3 }
+		modern_armor = { x = 0 y = 4 }
+		modern_armor = { x = 1 y = 0 }
+		modern_armor = { x = 1 y = 1 }
+		modern_armor = { x = 1 y = 2 }
+		modern_armor = { x = 1 y = 3 }
+		modern_armor = { x = 1 y = 4 }
+		modern_armor = { x = 2 y = 0 }
+		modern_armor = { x = 2 y = 1 }		
+		modern_armor = { x = 2 y = 2 }
+		modern_armor = { x = 2 y = 3 }
+		modern_armor = { x = 2 y = 4 }
+		mechanized = { x = 3 y = 0 }	
+		mechanized = { x = 3 y = 1 }		
+		mechanized = { x = 3 y = 2 }		
+		mechanized = { x = 3 y = 3 }	
+		mechanized = { x = 3 y = 4 }			
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }		
+        recon = { x = 0 y = 1 }
+        engineer = { x = 0 y = 2 }
+		maintenance_company	= { x = 0 y = 3 }
+		logistics_company = { x = 0 y = 4 }
+	}
+	
+	# division_names_group = AST_INF_01
+
+	# is_locked = yes	
+
+	# force_allow_recruiting = yes
+
+	# division_cap = 12
+
+	priority = 2
+	
+	# template_counter = 10
+	
+	# override_model = GER_infantry_entity
+}
+
+units = {
+	division = {
+		name = "40-width armor"
+		location = 3522	#	Магдебург, Германия
+		division_template = "ideal 40-width armor"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+}
