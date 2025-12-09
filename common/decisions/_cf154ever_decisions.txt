@@ -261,7 +261,7 @@ cf154ever_decisions_category = {
 		}
 	}	
 	
-	cf154ever_decision_br_test = {	#Потом нужно всё закомментить, как перенесу в ивенты содержимое
+	cf154ever_decision_br = {	#Потом нужно всё закомментить, как перенесу в ивенты содержимое
 		icon = GFX_decision_generic_ignite_civil_war
 		
 		allowed = { always = yes }
@@ -284,7 +284,7 @@ cf154ever_decisions_category = {
 		}
 		
 		remove_effect = {
-			custom_effect_tooltip = cf154ever_decision_br_test_start_tt
+			custom_effect_tooltip = cf154ever_decision_br_start_tt
 			hidden_effect = {
 				cf154ever_br_start_NA = yes
 				cf154ever_br_start_SA = yes
