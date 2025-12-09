@@ -27,15 +27,23 @@ country_event = {
 			base = 10
 		}
 		if = {
-			limit = { ROOT = { tag = HOL }
+			limit = { ROOT = { tag = HOL } }
+			FROM = {
+				set_autonomy = {
+					target = INS
+					autonomous_state = autonomy_puppet
+				}
 			}
-			FROM = { puppet = INS }
 		}
 
 		if = {
-			limit = { ROOT = { tag = ENG }
+			limit = { ROOT = { tag = ENG } }
+			FROM = {
+				set_autonomy = {
+					target = MAL
+					autonomous_state = autonomy_puppet
+				}
 			}
-			FROM = { puppet = MAL }
 		}
 
 		if = {
@@ -869,7 +877,12 @@ country_event = {
 				limit = {
 					MEN = { is_subject_of = ROOT }
 				}
-				MAN = { puppet = MEN }
+				MAN = {
+					set_autonomy = {
+						target = MEN
+						autonomous_state = autonomy_puppet
+					}
+				}
 			}
 			MAN = {
 				set_cosmetic_tag = MAN_kwantung_army
