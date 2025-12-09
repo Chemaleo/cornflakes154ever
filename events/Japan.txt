@@ -440,7 +440,10 @@ country_event = {
 	
 	option = {
 		name = japan.13.a
-		puppet = SIA
+		set_autonomy = {
+			target = SIA
+			autonomous_state = autonomy_puppet
+		}
 	}
 }
 
@@ -558,7 +561,10 @@ country_event = {
 	
 	option = {
 		name = japan.17.a
-		puppet = CHI
+		set_autonomy = {
+			target = CHI
+			autonomous_state = autonomy_puppet
+		}
 		add_named_threat = { threat = 20 name = chinese_puppet_focus }
 		hidden_effect = {
 			news_event = { hours = 6 id = news.210 }
