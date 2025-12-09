@@ -130,7 +130,10 @@ country_event = {
 					is_subject_of = YUG
 				}
 			}
-			puppet = CRO
+			set_autonomy = {
+				target = CRO
+				autonomous_state = autonomy_puppet
+			}
 		}
 	}
 }
