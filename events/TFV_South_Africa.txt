@@ -104,7 +104,10 @@ country_event = {
 			limit = { 
 				ZIM = { exists = yes }	
 					}
-			puppet = ZIM
+			set_autonomy = {
+				target = ZIM
+				autonomous_state = autonomy_puppet
+			}
 		}
 
 		if = {
@@ -120,7 +123,10 @@ country_event = {
 			limit = { 
 				KEN = { exists = yes } 
 			}
-			puppet = KEN
+			set_autonomy = {
+				target = KEN
+				autonomous_state = autonomy_puppet
+			}
 		}
 		transfer_state = 542
 		hidden_effect = {
@@ -156,31 +162,37 @@ country_event = {
 		name = tfv_south_africa.4.a
 
 		if = {
-		limit = { 
-			ZIM = { exists = no }	
+			limit = {
+				ZIM = { exists = no }	
 			}
 
 			ZIM = { transfer_state = 545 }
 
 			ENG = {
-			puppet = ZIM 
+				set_autonomy = {
+					target = ZIM
+					autonomous_state = autonomy_puppet
 				}
 			}
+		}
 
 		if = {
-		limit = { 
-			KEN = { exists = no } 
-				}
+			limit = { 
+				KEN = { exists = no } 
+			}
 			KEN = {
 				transfer_state = 546
 				transfer_state = 547
 				transfer_state = 548
-				}
-			
-			ENG = { 
-				puppet = KEN 
+			}
+		
+			ENG = {
+				set_autonomy = {
+					target = KEN
+					autonomous_state = autonomy_puppet
 				}
 			}
+		}
 
 		SAF = { transfer_state = 542 }
 		hidden_effect = {
@@ -1174,7 +1186,12 @@ country_event = {
 					transfer_state = 540
 					}
 				}
-			SAF = { puppet = ANG }
+			SAF = {
+				set_autonomy = {
+					target = ANG
+					autonomous_state = autonomy_puppet
+				}
+			}
 			set_country_flag = SAF_released_ANG
 	}
 
@@ -1235,7 +1252,12 @@ country_event = {
 					transfer_state = 544
 					}
 				}
-			SAF = { puppet = MZB }
+			SAF = {
+				set_autonomy = {
+					target = MZB
+					autonomous_state = autonomy_puppet
+				}
+			}
 			set_country_flag = SAF_released_MZB
 	}
 
@@ -1304,7 +1326,12 @@ country_event = {
 							transfer_state = 718
 					}
 				}
-			SAF = { puppet = COG }
+			SAF = {
+				set_autonomy = {
+					target = COG
+					autonomous_state = autonomy_puppet
+				}
+			}
 			set_country_flag = SAF_released_COG
 	}
 
@@ -1377,7 +1404,12 @@ country_event = {
 						transfer_state = 545
 					}
 				}
-			SAF = { puppet = ZIM }
+			SAF = {
+				set_autonomy = {
+					target = ZIM
+					autonomous_state = autonomy_puppet
+				}
+			}
 			set_country_flag = SAF_released_ZIM
 	}
 
@@ -1451,7 +1483,12 @@ country_event = {
 						transfer_state = 548
 					}
 				}
-			SAF = { puppet = KEN }
+			SAF = {
+				set_autonomy = {
+					target = KEN
+					autonomous_state = autonomy_puppet
+				}
+			}
 			set_country_flag = SAF_released_KEN
 	}
 
