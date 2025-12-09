@@ -20,7 +20,10 @@ country_event = {
 			}
 		}
 		FROM = {
-			puppet = ROOT
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_puppet
+			}
 			country_event = { id = wtt_manchukou.2 }
 		}
 	}
