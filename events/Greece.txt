@@ -266,7 +266,12 @@ country_event = {
 			}
 			factor = 100	
 		}
-		GER = { puppet = GRE }
+		GER = {
+			set_autonomy = {
+				target = GRE
+				autonomous_state = autonomy_puppet
+			}			
+		}
 		hidden_effect = {
 			news_event = { id = news.172 hours = 2 }
 		}
