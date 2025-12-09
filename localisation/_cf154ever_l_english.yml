@@ -26,4 +26,11 @@
     cf154ever_decision_br_test_desc:0 "By clicking this decision, you acknowledge that the game may go haywire. §RProceed at your own risk!§! Only available for the §Yfirst 30 days§! from starting the game."
     cf154ever_decision_br_test_start_tt:0 "Starts battle royale in §YAsia§! and §YNorth & South America§!."
     country_capitulated_or_lost_its_capital_to_ROOT_tt:0 "Capitulated or lost its capital to you"
-    cf154ever_idea_us_influence_shield:0 "U.S. influence shield"
+    cf154ever_idea_us_influence_shield:0 "U.S. influence shield"   
+    cf154ever_event.2.t:0 "POTUS is replaced by a Martian!"
+    cf154ever_event.2.d:0 "For some reason martians attacked [USA.GetNameDef] and killed the President to take over the nation and wage total war against us!"
+    cf154ever_event.2.a:0 "All according to secret martian documents! Get Stalin on the line!"
+    hates_ussr:0 "Hates Soviet Union"
+    USA_martial_order_long:0 "Martial Order of Tom Blaine"
+    USA_martial_order:0 "Martial Order"
+    
