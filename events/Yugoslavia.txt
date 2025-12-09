@@ -397,7 +397,10 @@ country_event = {
 					transfer_state = 109
 				}						
 			}
-			puppet = CRO
+			set_autonomy = {
+				target = CRO
+				autonomous_state = autonomy_puppet
+			}
 			annex_country = { target = YUG transfer_troops = no }
 
 			hidden_effect = {
@@ -473,8 +476,14 @@ country_event = {
 					transfer_state = 109
 				}						
 			}
-			puppet = CRO
-			puppet = YUG
+			set_autonomy = {
+				target = CRO
+				autonomous_state = autonomy_puppet
+			}
+			set_autonomy = {
+				target = YUG
+				autonomous_state = autonomy_puppet
+			}
 
 
 			hidden_effect = {
