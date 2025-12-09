@@ -1,0 +1,17 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_trait_cf154ever_kludge_admiral_trait"
+		texturefile = "gfx/interface/traits/trait_cf154ever_kludge_admiral_trait.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_stalin_vs_martians"
+		texturefile = "gfx/event_pictures/report_event_stalin_vs_martians.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_martian"
+		texturefile = "gfx/leaders/Portrait_Martian.dds"
+	}
+}
