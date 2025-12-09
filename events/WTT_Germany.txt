@@ -323,14 +323,14 @@ country_event = {
 					tag = ROM
 				}
 				GER = { puppet = ROM }
-			}
-			every_state = {
-				limit = { has_state_flag = GER_integrate_war_economies }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+				every_state = {
+					limit = { has_state_flag = GER_integrate_war_economies }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
 		}
