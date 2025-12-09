@@ -1442,6 +1442,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		
+		available = {
+			NOT = {
+				has_war_with = HUN
+			}
+		}
 
 		bypass = {
 			HUN = {
@@ -1500,6 +1506,12 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = ROM
+			}
 		}
 
 		bypass = {
