@@ -2035,7 +2035,10 @@ country_event = {
 			annex_country = { target = CZE }
 			add_war_support = 0.1
 		}
-		puppet = SLO
+		set_autonomy = {
+			target = SLO
+			autonomous_state = autonomy_puppet
+		}
 		if = {
 			limit = {
 				72 = {
@@ -3215,7 +3218,12 @@ country_event = {
 				factor = 0.5
 			}
 		}
-		GER = { puppet = TUR }
+		GER = {
+			set_autonomy = {
+				target = TUR
+				autonomous_state = autonomy_puppet
+			}			
+		}
 		SOV = {
 			transfer_state = 354
 			transfer_state = 353
@@ -4216,7 +4224,7 @@ country_event = {
 						transfer_state = 109
 					}						
 				}
-				puppet = CRO
+				puppet = SLO
 				annex_country = { target = YUG transfer_troops = no }
 			}
 		}
@@ -4249,7 +4257,10 @@ country_event = {
 					transfer_state = 109
 				}						
 			}
-			puppet = CRO
+			set_autonomy = {
+				target = CRO
+				autonomous_state = autonomy_puppet
+			}
 			annex_country = { target = YUG transfer_troops = no }
 
 			hidden_effect = {
@@ -4297,9 +4308,8 @@ country_event = {
 						transfer_state = 109
 					}						
 				}
-				puppet = CRO
+				puppet = SLO
 				puppet = YUG
-
 
 				hidden_effect = {
 					set_global_flag = GER_fate_of_yugoslavia_puppet_CRO_YUG
@@ -4336,8 +4346,14 @@ country_event = {
 					transfer_state = 109
 				}						
 			}
-			puppet = CRO
-			puppet = YUG
+			set_autonomy = {
+				target = CRO
+				autonomous_state = autonomy_puppet
+			}
+			set_autonomy = {
+				target = YUG
+				autonomous_state = autonomy_puppet
+			}
 
 
 			hidden_effect = {
@@ -5316,7 +5332,10 @@ country_event = {
 				}
 				#If SOV decided to puppet GER in peace, they now get DDR instead.
 				SOV = {
-					puppet = DDR
+					set_autonomy = {
+						target = DDR
+						autonomous_state = autonomy_puppet
+					}
 				}
 			}
 		}
