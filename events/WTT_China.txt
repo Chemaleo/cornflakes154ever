@@ -22,7 +22,10 @@ country_event = {
 			}
 		}
 		FROM = {
-			puppet = ROOT
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_puppet
+			}
 			country_event = { id = wtt_china.2 }
 		}
 	}
@@ -88,7 +91,10 @@ country_event = {
 		name = wtt_china.10.a
 		ai_chance = { base = 10 }
 		FROM = {
-			puppet = ROOT
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_puppet
+			}
 			country_event = { id = wtt_china.11 }
 		}
 	}
@@ -1840,7 +1846,10 @@ country_event = {
 			base = 10
 		}
 		FROM = { country_event = { id = wtt_warlord.2 } }
-		puppet = FROM
+		set_autonomy = {
+			target = FROM
+			autonomous_state = autonomy_puppet
+		}
 	}
 
 	#Never
