@@ -484,7 +484,10 @@ country_event = {
 			}
 		}
 		name = czech.1.a #yes
-		puppet = CZE
+		set_autonomy = {
+			target = CZE
+			autonomous_state = autonomy_puppet
+		}
 		CZE = {
 			country_event = { id = czech.20 hours = 6 }
 		}
