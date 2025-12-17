@@ -44,7 +44,17 @@ cf154ever_decisions_category = {
 		}
 		
 		complete_effect = {
-			load_oob = cf154ever_oob_test
+			if = {
+				limit = {
+					NOT = {
+						has_template = "ideal 40-width armor"
+					}
+				}
+				load_oob = cf154ever_oob_test_1
+			}
+			else = {
+				load_oob = cf154ever_oob_test_2
+			}
 		}
 	}
 
