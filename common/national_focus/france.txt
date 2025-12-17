@@ -930,7 +930,7 @@ focus_tree = {
 		}
 	}
 	
-		focus = {
+	focus = {
 		id = FRA_extra_research_slot_2
 		icon = GFX_focus_research
 		prerequisite = { 
