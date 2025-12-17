@@ -18,7 +18,7 @@ country_event = {
 		NOT = { has_government = fascism }
 	}
 	
-	mean_time_to_happen = { days = 2 }	
+	mean_time_to_happen = { days = 2 }
 	
 	immediate = {
 		ROM = {
@@ -45,8 +45,8 @@ country_event = {
 		is_historical_focus_on = no		
 		has_war = no
 		has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
-		has_full_control_of_state = 516	#	Северозападная Сибирь	
-		has_full_control_of_state = 644	#	Северовосточная Сибирь		
+		has_full_control_of_state = 516	#	Северозападная Сибирь
+		has_full_control_of_state = 644	#	Северовосточная Сибирь
 		has_tech = mechanised_infantry2
 		has_tech = improved_medium_tank
 		has_tech = advanced_centimetric_radar
@@ -92,7 +92,7 @@ country_event = {
 			USA = {
 				set_politics = { ruling_party = fascism }
 				set_party_name = { ideology = fascism long_name = USA_martial_order_long name = USA_martial_order }
-				add_popularity = { ideology = fascism popularity = 100 }
+				add_popularity = { ideology = fascism popularity = 1 }
 				kill_country_leader = yes
 				create_country_leader = {
 					name = "Green Martian"
@@ -108,6 +108,39 @@ country_event = {
 						ENG = { NOT = { has_government = fascism } }
 					}
 					leave_faction = yes
+				}
+				if = {
+					limit = {
+						has_war_with = GER
+						GER = { has_government = fascism }
+						ENG = { NOT = { has_government = fascism } }						
+					}
+					white_peace = {
+						tag = GER
+						message = cf154ever_easter_egg_activated_tt
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = ITA
+						ITA = { has_government = fascism }
+						ENG = { NOT = { has_government = fascism } }						
+					}
+					white_peace = {
+						tag = ITA
+						message = cf154ever_easter_egg_activated_tt
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = JAP
+						JAP = { has_government = fascism }
+						ENG = { NOT = { has_government = fascism } }						
+					}
+					white_peace = {
+						tag = JAP
+						message = cf154ever_easter_egg_activated_tt
+					}
 				}
 			}
 		}
