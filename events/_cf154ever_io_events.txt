@@ -36,7 +36,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -71,7 +71,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -106,7 +106,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment_1
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -141,7 +141,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -176,7 +176,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_1
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -211,7 +211,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = light_tank_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -246,7 +246,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = medium_tank_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -281,7 +281,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = heavy_tank_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -316,7 +316,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = modern_tank_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -355,7 +355,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = fighter_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -390,7 +390,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = cv_fighter_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -425,7 +425,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = jet_fighter_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -460,7 +460,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = CAS_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -495,7 +495,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = cv_CAS_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -530,7 +530,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = tac_bomber_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -565,7 +565,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = jet_tac_bomber_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -600,7 +600,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = strat_bomber_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -635,7 +635,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = jet_strat_bomber_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -670,7 +670,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = nav_bomber_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
@@ -704,7 +704,7 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = cv_nav_bomber_equipment
-				amount = -199000
+				amount = -1990000
 			}
 		}
 	}
