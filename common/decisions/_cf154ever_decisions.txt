@@ -1,6 +1,53 @@
 
 cf154ever_decisions_category = {
 
+	cf154ever_decision_oob_test = {
+		priority = 9
+		
+		icon = GFX_decision_icon_default
+		
+		fire_only_once = no
+		
+		allowed = {
+			original_tag = GER
+		}
+		
+		visible = {
+			has_global_flag = CF154EVER_ENABLE_TEST_DECISIONS
+		}
+		
+		available = {
+			has_full_control_of_state = 64
+			has_manpower > 15599
+			has_tech = main_battle_tank
+			has_tech = mechanised_infantry3
+			has_tech = tech_maintenance_company4			
+			has_tech = tech_logistics_company4
+			has_equipment = {
+				modern_tank_equipment > 749
+			}
+			has_equipment = {
+				infantry_equipment > 549
+			}			
+			has_equipment = {
+				mechanized_equipment > 249
+			}
+			has_equipment = {
+				support_equipment > 84
+			}			
+			has_equipment = {
+				artillery_equipment > 11
+			}
+			has_equipment = {
+				motorized_equipment > 9
+			}
+		}
+		
+		complete_effect = {
+			load_oob = cf154ever_oob_test
+		}
+	}
+
 	cf154ever_decision_fast_wargoals = {
 		
 		icon = GFX_decision_generic_ignite_civil_war
@@ -290,7 +337,9 @@ cf154ever_decisions_category = {
 				cf154ever_br_start_SA = yes
 				cf154ever_br_start_asia = yes
 				cf154ever_br_all_effect = yes
-				country_event = { id = cf154ever_br.1 }
+				LIB = {
+					country_event = { id = cf154ever_br.1 }
+				}
 			}
 		}
 	}
