@@ -9,7 +9,7 @@ add_namespace = cf154ever_io
 #					АРМИЯ							#
 #####################################################
 
-# Пехотное снаряжение
+#	Пехотное снаряжение
 country_event = {
 	id = cf154ever_io.1
 	
@@ -44,114 +44,9 @@ country_event = {
 	option = { name = cf154ever_io.1.a }
 }
 
-# Артиллерия
+#	Машинки
 country_event = {
 	id = cf154ever_io.2
-	
-	hidden = yes
-	
-	fire_only_once = no
-	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				artillery_equipment > 2000000
-			}
-		}
-	}
-	
-	mean_time_to_happen = { days = 2 }
-	
-	immediate = {
-		every_country = {
-			limit = {
-				has_equipment = {
-					artillery_equipment > 2000000
-				}
-			}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = -1990000
-			}
-		}
-	}
-	
-	option = { name = cf154ever_io.1.a }
-}
-
-# Доп оснащение
-country_event = {
-	id = cf154ever_io.3
-	
-	hidden = yes
-	
-	fire_only_once = no
-	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				support_equipment_1 > 2000000
-			}
-		}
-	}
-	
-	mean_time_to_happen = { days = 2 }
-	
-	immediate = {
-		every_country = {
-			limit = {
-				has_equipment = {
-					support_equipment_1 > 2000000
-				}
-			}
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = -1990000
-			}
-		}
-	}
-	
-	option = { name = cf154ever_io.1.a }
-}
-
-# ПТ пушки
-country_event = {
-	id = cf154ever_io.4
-	
-	hidden = yes
-	
-	fire_only_once = no
-	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				anti_tank_equipment > 2000000
-			}
-		}
-	}
-	
-	mean_time_to_happen = { days = 2 }
-	
-	immediate = {
-		every_country = {
-			limit = {
-				has_equipment = {
-					anti_tank_equipment > 2000000
-				}
-			}
-			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
-				amount = -1990000
-			}
-		}
-	}
-	
-	option = { name = cf154ever_io.1.a }
-}
-
-# Машинки
-country_event = {
-	id = cf154ever_io.5
 	
 	hidden = yes
 	
@@ -184,9 +79,254 @@ country_event = {
 	option = { name = cf154ever_io.1.a }
 }
 
-# Лёгкие танки
+#	Машинки РСЗО
+country_event = {
+	id = cf154ever_io.3
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				motorized_rocket_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					motorized_rocket_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_rocket_equipment_1
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Мех пехота
+country_event = {
+	id = cf154ever_io.4
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				mechanized_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					mechanized_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Доп оснащение
+country_event = {
+	id = cf154ever_io.5
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				support_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					support_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Зенитки
 country_event = {
 	id = cf154ever_io.6
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				anti_air_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					anti_air_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Артиллерия
+country_event = {
+	id = cf154ever_io.7
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				artillery_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					artillery_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Реактивная артиллерия
+country_event = {
+	id = cf154ever_io.8
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				rocket_artillery_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					rocket_artillery_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = rocket_artillery_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	ПТ пушки
+country_event = {
+	id = cf154ever_io.9
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				anti_tank_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					anti_tank_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Лёгкие танки
+country_event = {
+	id = cf154ever_io.10
 	
 	hidden = yes
 	
@@ -219,9 +359,114 @@ country_event = {
 	option = { name = cf154ever_io.1.a }
 }
 
-# Средние танки
+#	Лёгкие ПТ-САУ
 country_event = {
-	id = cf154ever_io.7
+	id = cf154ever_io.11
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				light_tank_destroyer_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					light_tank_destroyer_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_destroyer_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Лёгкие САУ
+country_event = {
+	id = cf154ever_io.12
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				light_tank_artillery_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					light_tank_artillery_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_artillery_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Лёгкие ЗСУ
+country_event = {
+	id = cf154ever_io.13
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				light_tank_aa_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					light_tank_aa_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_aa_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Средние танки
+country_event = {
+	id = cf154ever_io.14
 	
 	hidden = yes
 	
@@ -254,9 +499,114 @@ country_event = {
 	option = { name = cf154ever_io.1.a }
 }
 
-# Тяжёлые танки
+#	Средние ПТ-САУ
 country_event = {
-	id = cf154ever_io.8
+	id = cf154ever_io.15
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				medium_tank_destroyer_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					medium_tank_destroyer_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = medium_tank_destroyer_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Средние САУ
+country_event = {
+	id = cf154ever_io.16
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				medium_tank_artillery_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					medium_tank_artillery_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = medium_tank_artillery_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Средние ЗСУ
+country_event = {
+	id = cf154ever_io.17
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				medium_tank_aa_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					medium_tank_aa_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = medium_tank_aa_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Тяжёлые танки
+country_event = {
+	id = cf154ever_io.18
 	
 	hidden = yes
 	
@@ -289,9 +639,9 @@ country_event = {
 	option = { name = cf154ever_io.1.a }
 }
 
-# Основные боевые танки (ОБТ)
+#	Тяжёлые ПТ-САУ
 country_event = {
-	id = cf154ever_io.9
+	id = cf154ever_io.19
 	
 	hidden = yes
 	
@@ -300,7 +650,7 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				modern_tank_equipment > 2000000
+				heavy_tank_destroyer_equipment > 2000000
 			}
 		}
 	}
@@ -311,11 +661,361 @@ country_event = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					modern_tank_equipment > 2000000
+					heavy_tank_destroyer_equipment > 2000000
 				}
 			}
 			add_equipment_to_stockpile = {
-				type = modern_tank_equipment
+				type = heavy_tank_destroyer_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Тяжёлые САУ
+country_event = {
+	id = cf154ever_io.20
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				heavy_tank_artillery_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					heavy_tank_artillery_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = heavy_tank_artillery_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Тяжёлые ЗСУ
+country_event = {
+	id = cf154ever_io.21
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				heavy_tank_aa_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					heavy_tank_aa_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = heavy_tank_aa_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Сверхтяжёлые танки
+country_event = {
+	id = cf154ever_io.22
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				super_heavy_tank_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					super_heavy_tank_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = super_heavy_tank_equipment_1
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Сверхтяжёлые ПТ-САУ
+country_event = {
+	id = cf154ever_io.23
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				super_heavy_tank_destroyer_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					super_heavy_tank_destroyer_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = super_heavy_tank_destroyer_equipment_1
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Сверхтяжёлые САУ
+country_event = {
+	id = cf154ever_io.24
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				super_heavy_tank_artillery_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					super_heavy_tank_artillery_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = super_heavy_tank_artillery_equipment_1
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Сверхтяжёлые ЗСУ
+country_event = {
+	id = cf154ever_io.25
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				super_heavy_tank_aa_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					super_heavy_tank_aa_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = super_heavy_tank_aa_equipment_1
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Основные боевые танки (ОБТ)
+country_event = {
+	id = cf154ever_io.26
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				modern_tank_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					modern_tank_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = modern_tank_equipment_1
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Современная ПТ-САУ
+country_event = {
+	id = cf154ever_io.27
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				modern_tank_destroyer_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					modern_tank_destroyer_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = modern_tank_destroyer_equipment_1
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Современная САУ
+country_event = {
+	id = cf154ever_io.28
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				modern_tank_artillery_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					modern_tank_artillery_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = modern_tank_artillery_equipment_1
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Современная ЗСУ
+country_event = {
+	id = cf154ever_io.29
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				modern_tank_aa_equipment_1 > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					modern_tank_aa_equipment_1 > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = modern_tank_aa_equipment_1
 				amount = -1990000
 			}
 		}
@@ -328,114 +1028,9 @@ country_event = {
 #					АВИАЦИЯ							#
 #####################################################
 
-#	Истребители
-country_event = {
-	id = cf154ever_io.10
-	
-	hidden = yes
-	
-	fire_only_once = no
-	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				fighter_equipment > 2000000
-			}
-		}
-	}
-	
-	mean_time_to_happen = { days = 2 }
-	
-	immediate = {
-		every_country = {
-			limit = {
-				has_equipment = {
-					fighter_equipment > 2000000
-				}
-			}
-			add_equipment_to_stockpile = {
-				type = fighter_equipment
-				amount = -1990000
-			}
-		}
-	}
-	
-	option = { name = cf154ever_io.1.a }
-}
-
-#	Истребители авианосец
-country_event = {
-	id = cf154ever_io.11
-	
-	hidden = yes
-	
-	fire_only_once = no
-	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				cv_fighter_equipment > 2000000
-			}
-		}
-	}
-	
-	mean_time_to_happen = { days = 2 }
-	
-	immediate = {
-		every_country = {
-			limit = {
-				has_equipment = {
-					cv_fighter_equipment > 2000000
-				}
-			}
-			add_equipment_to_stockpile = {
-				type = cv_fighter_equipment
-				amount = -1990000
-			}
-		}
-	}
-	
-	option = { name = cf154ever_io.1.a }
-}
-
-#	Истребители реактивные
-country_event = {
-	id = cf154ever_io.12
-	
-	hidden = yes
-	
-	fire_only_once = no
-	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				jet_fighter_equipment > 2000000
-			}
-		}
-	}
-	
-	mean_time_to_happen = { days = 2 }
-	
-	immediate = {
-		every_country = {
-			limit = {
-				has_equipment = {
-					jet_fighter_equipment > 2000000
-				}
-			}
-			add_equipment_to_stockpile = {
-				type = jet_fighter_equipment
-				amount = -1990000
-			}
-		}
-	}
-	
-	option = { name = cf154ever_io.1.a }
-}
-
 #	Штурмовики
 country_event = {
-	id = cf154ever_io.13
+	id = cf154ever_io.30
 	
 	hidden = yes
 	
@@ -470,7 +1065,7 @@ country_event = {
 
 #	Штурмовики авианосец
 country_event = {
-	id = cf154ever_io.14
+	id = cf154ever_io.31
 	
 	hidden = yes
 	
@@ -503,9 +1098,219 @@ country_event = {
 	option = { name = cf154ever_io.1.a }
 }
 
+#	Истребители
+country_event = {
+	id = cf154ever_io.32
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				fighter_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					fighter_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Истребители авианосец
+country_event = {
+	id = cf154ever_io.33
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				cv_fighter_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					cv_fighter_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = cv_fighter_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Истребители реактивные
+country_event = {
+	id = cf154ever_io.34
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				jet_fighter_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					jet_fighter_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = jet_fighter_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Морские бомбардировщики
+country_event = {
+	id = cf154ever_io.35
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				nav_bomber_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					nav_bomber_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = nav_bomber_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Морские бомбардировщики авианосец
+country_event = {
+	id = cf154ever_io.36
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				cv_nav_bomber_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					cv_nav_bomber_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = cv_nav_bomber_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+#	Истребители тяжёлые
+country_event = {
+	id = cf154ever_io.37
+	
+	hidden = yes
+	
+	fire_only_once = no
+	
+	trigger = {
+		any_country = {
+			has_equipment = {
+				heavy_fighter_equipment > 2000000
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					heavy_fighter_equipment > 2000000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = heavy_fighter_equipment
+				amount = -1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
 #	Тактические бомбардировщики
 country_event = {
-	id = cf154ever_io.15
+	id = cf154ever_io.38
 	
 	hidden = yes
 	
@@ -540,7 +1345,7 @@ country_event = {
 
 #	Тактические бомбардировщики реактивные
 country_event = {
-	id = cf154ever_io.16
+	id = cf154ever_io.39
 	
 	hidden = yes
 	
@@ -575,7 +1380,7 @@ country_event = {
 
 #	Стратегические бомбардировщики
 country_event = {
-	id = cf154ever_io.17
+	id = cf154ever_io.40
 	
 	hidden = yes
 	
@@ -610,7 +1415,7 @@ country_event = {
 
 #	Стратегические бомбардировщики реактивные
 country_event = {
-	id = cf154ever_io.18
+	id = cf154ever_io.41
 	
 	hidden = yes
 	
@@ -619,7 +1424,7 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				jet_strat_bomber_equipment > 2000000
+				jet_strat_bomber_equipment_1 > 2000000
 			}
 		}
 	}
@@ -630,11 +1435,11 @@ country_event = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					jet_strat_bomber_equipment > 2000000
+					jet_strat_bomber_equipment_1 > 2000000
 				}
 			}
 			add_equipment_to_stockpile = {
-				type = jet_strat_bomber_equipment
+				type = jet_strat_bomber_equipment_1
 				amount = -1990000
 			}
 		}
@@ -643,9 +1448,9 @@ country_event = {
 	option = { name = cf154ever_io.1.a }
 }
 
-#	Морские бомбардировщики
+#	Самолёты-камикадзе
 country_event = {
-	id = cf154ever_io.19
+	id = cf154ever_io.42
 	
 	hidden = yes
 	
@@ -654,7 +1459,7 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				nav_bomber_equipment > 2000000
+				rocket_suicide_equipment_1 > 2000000
 			}
 		}
 	}
@@ -665,11 +1470,11 @@ country_event = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					nav_bomber_equipment > 2000000
+					rocket_suicide_equipment_1 > 2000000
 				}
 			}
 			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment
+				type = rocket_suicide_equipment_1
 				amount = -1990000
 			}
 		}
@@ -677,9 +1482,10 @@ country_event = {
 	
 	option = { name = cf154ever_io.1.a }
 }
-#	Морские бомбардировщики авианосец
+
+#	Транспортные самолёты
 country_event = {
-	id = cf154ever_io.20
+	id = cf154ever_io.43
 	
 	hidden = yes
 	
@@ -688,7 +1494,7 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				cv_nav_bomber_equipment > 2000000
+				transport_plane_equipment > 2000000
 			}
 		}
 	}
@@ -699,11 +1505,11 @@ country_event = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					cv_nav_bomber_equipment > 2000000
+					transport_plane_equipment > 2000000
 				}
 			}
 			add_equipment_to_stockpile = {
-				type = cv_nav_bomber_equipment
+				type = transport_plane_equipment
 				amount = -1990000
 			}
 		}
