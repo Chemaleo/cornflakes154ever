@@ -103,6 +103,6 @@ units = {
 		ship = { name = "Martian Ship 97" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
 		ship = { name = "Martian Ship 98" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
 		ship = { name = "Martian Ship 99" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
-		ship = { name = "Martian Ship 100" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "Martian Ship 100" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
 	}
 }
