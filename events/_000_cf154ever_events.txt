@@ -148,3 +148,314 @@ country_event = {
 	
 	option = { name = cf154ever_event.2.a }
 }
+
+country_event = {
+	id = cf154ever_event.3
+	title = cf154ever_event.3.t
+	desc = cf154ever_event.3.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cf154ever_event.3.a
+		GER = {
+			if = {
+				limit = {
+					has_idea = all_adults_serve
+					has_manpower < 500000
+				}
+				add_manpower = 500000				
+			}
+			else_if = {
+				limit = {
+					has_idea = scraping_the_barrel
+					has_manpower < 100000
+				}
+				add_manpower = 1000000
+			}
+			
+			if = {
+				limit = {
+					has_tech = advanced_infantry_weapons
+					has_equipment = { infantry_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 50000
+					producer = GER
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = improved_infantry_weapons
+					has_equipment = { infantry_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 50000
+					producer = GER 
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = { infantry_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 50000
+					producer = GER 
+				}
+			}
+			
+			if = {
+				limit = {
+					has_tech = artillery4
+					has_equipment = { artillery_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_3
+					amount = 10000
+					producer = GER
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = artillery1
+					has_equipment = { artillery_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_2
+					amount = 10000
+					producer = GER
+				}
+			}
+			else_if = {
+				limit = { has_equipment = { artillery_equipment < 10000 } }
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 10000
+					producer = GER
+				}
+			}
+			
+			if = {
+				limit = { has_equipment = { support_equipment_1 < 10000 } }
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 10000
+				}
+			}
+		}
+
+		SOV = {
+			if = {
+				limit = {
+					has_idea = all_adults_serve
+					has_manpower < 500000
+				}
+				add_manpower = 500000				
+			}
+			else_if = {
+				limit = {
+					has_idea = scraping_the_barrel
+					has_manpower < 100000
+				}
+				add_manpower = 1000000
+			}
+			
+			if = {
+				limit = {
+					has_tech = advanced_infantry_weapons
+					has_equipment = { infantry_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 50000
+					producer = SOV
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = improved_infantry_weapons
+					has_equipment = { infantry_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 50000
+					producer = SOV 
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = { infantry_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 50000
+					producer = SOV 
+				}
+			}
+			
+			if = {
+				limit = {
+					has_tech = artillery4
+					has_equipment = { artillery_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_3
+					amount = 10000
+					producer = SOV
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = artillery1
+					has_equipment = { artillery_equipment < 10000 }
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_2
+					amount = 10000
+					producer = SOV
+				}
+			}
+			else_if = {
+				limit = { has_equipment = { artillery_equipment < 10000 } }
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 10000
+					producer = SOV
+				}
+			}
+			
+			if = {
+				limit = { has_equipment = { support_equipment_1 < 10000 } }
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 10000
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cf154ever_event.3.b
+		GER = {
+			add_manpower = 500000
+			
+			if = {
+				limit = { has_tech = advanced_infantry_weapons }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 50000
+					producer = GER
+				}
+			}
+			else_if = {
+				limit = { has_tech = improved_infantry_weapons }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 50000
+					producer = GER 
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 50000
+					producer = GER 
+				}
+			}
+			
+			if = {
+				limit = { has_tech = artillery4 }
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_3
+					amount = 10000
+					producer = GER
+				}
+			}
+			else_if = {
+				limit = { has_tech = artillery1 }
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_2
+					amount = 10000
+					producer = GER
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 10000
+					producer = GER
+				}
+			}
+			
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 10000
+			}
+		}
+
+		SOV = {
+			add_manpower = 500000
+			
+			if = {
+				limit = { has_tech = advanced_infantry_weapons }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 50000
+					producer = SOV
+				}
+			}
+			else_if = {
+				limit = { has_tech = improved_infantry_weapons }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 50000
+					producer = SOV 
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 50000
+					producer = SOV 
+				}
+			}
+			
+			if = {
+				limit = { has_tech = artillery4 }
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_3
+					amount = 10000
+					producer = SOV
+				}
+			}
+			else_if = {
+				limit = { has_tech = artillery1 }
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_2
+					amount = 10000
+					producer = SOV
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 10000
+					producer = SOV
+				}
+			}
+			
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 10000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_event.3.c }
+}
