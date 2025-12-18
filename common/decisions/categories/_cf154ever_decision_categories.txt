@@ -41,7 +41,7 @@ rtn_com_category = {
 cf154ever_decisions_category = {
 	icon = GFX_category_icon	#ЗАМЕНИТЬ
 	
-	priority = -1
+	priority = 100
 	
 	allowed = {
 		always = yes
@@ -52,3 +52,4 @@ cf154ever_decisions_category = {
 		is_ai = no
 	}
 }
+
