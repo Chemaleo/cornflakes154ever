@@ -89,31 +89,31 @@ cf154ever_decisions_category = {
 					OR = {
 						FRA = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }
+							is_ai = yes
 						}
 						ENG = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }							
+							is_ai = yes						
 						}
 						USA = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }							
+							is_ai = yes							
 						}
 						GER = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }							
+							is_ai = yes							
 						}
 						ITA = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }							
+							is_ai = yes							
 						}
 						JAP = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }							
+							is_ai = yes							
 						}
 						SOV = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }							
+							is_ai = yes							
 						}
 					}
 				}
