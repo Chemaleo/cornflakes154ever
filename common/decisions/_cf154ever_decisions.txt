@@ -89,31 +89,31 @@ cf154ever_decisions_category = {
 					OR = {
 						FRA = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							is_ai = yes
+							NOT = { tag = ROOT }
 						}
 						ENG = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							is_ai = yes						
+							NOT = { tag = ROOT }				
 						}
 						USA = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							is_ai = yes							
+							NOT = { tag = ROOT }					
 						}
 						GER = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							is_ai = yes							
+							NOT = { tag = ROOT }					
 						}
 						ITA = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							is_ai = yes							
+							NOT = { tag = ROOT }						
 						}
 						JAP = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							is_ai = yes							
+							NOT = { tag = ROOT }					
 						}
 						SOV = {
 							country_exists_AND_is_independent_from_ROOT = yes
-							is_ai = yes							
+							NOT = { tag = ROOT }						
 						}
 					}
 				}
@@ -140,9 +140,6 @@ cf154ever_decisions_category = {
 						has_manpower > 500000						
 						has_army_size = {
 							size > 99
-						}
-						has_navy_size = {
-							size > 0
 						}
 						OR = {
 							has_equipment = {
@@ -732,13 +729,13 @@ cf154ever_decisions_category = {
 		
 		icon = generic_operation
 		
-		allowed = {
-			original_tag = GER
-		}
-		
 		cost = 25
 		
 		fire_only_once = yes
+		
+		allowed = {
+			original_tag = GER
+		}
 		
 		visible = {
 			has_global_flag = ENABLE_CF154EVER_DECISIONS
