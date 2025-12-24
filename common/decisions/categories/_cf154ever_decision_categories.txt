@@ -49,7 +49,6 @@ cf154ever_decisions_category = {
 	
 	visible = {
 		has_global_flag = ENABLE_CF154EVER_DECISIONS
-		is_ai = no
 	}
 }
 
