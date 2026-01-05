@@ -738,16 +738,17 @@ cf154ever_decisions_category = {
 		}
 		
 		visible = {
+			date < 1940.6.10			
 			has_global_flag = ENABLE_CF154EVER_DECISIONS
-			date < 1940.6.10		
+			has_government = fascism
 			is_ai = yes
 			is_historical_focus_on = yes			
-			check_if_cf154ever_crutches_enabled = yes
-			has_war_with = ENG
-			has_war_with = FRA
 			NOR = { is_ai = yes }
 			USA = { is_ai = yes }
 			JAP = { is_ai = yes }
+			check_if_cf154ever_crutches_enabled = yes
+			has_war_with = ENG
+			has_war_with = FRA			
 			NOT = {
 				any_country = {
 					is_ai = no
@@ -755,7 +756,7 @@ cf154ever_decisions_category = {
 						is_on_continent = europe
 					}
 				}
-			}
+			}			
 		}
 		
 		available = {
