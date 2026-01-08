@@ -324,7 +324,6 @@ country_event = {
 			}
 			transfer_state = 146
 			transfer_state = 147
-			transfer_state = 722
 		}
 	}
 
@@ -359,7 +358,12 @@ country_event = {
 		white_peace = FIN
 		transfer_state = 146
 		transfer_state = 147
-		transfer_state = 722
+		if = {
+			limit = {
+				722 = { is_claimed_by = ROOT }
+			}
+			remove_state_claim = 722
+		}
 	}
 
 	#Take it all
