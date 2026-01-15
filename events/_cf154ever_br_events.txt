@@ -26,6 +26,7 @@ country_event = {
 	mean_time_to_happen = { days = 2 }	
 	
 	trigger = {
+		has_global_flag = BATTLE_ROYALE_ON
 		OR = {
 			original_tag = ARG
 			original_tag = URG
@@ -216,6 +217,7 @@ country_event = {
 	mean_time_to_happen = { days = 2 }	
 	
 	trigger = {
+		has_global_flag = BATTLE_ROYALE_ON		
 		OR = {
 			original_tag = MEX
 			original_tag = GUA
@@ -348,12 +350,12 @@ country_event = {
 	mean_time_to_happen = { days = 2 }
 	
 	trigger = {
+		has_global_flag = BATTLE_ROYALE_ON		
 		OR = {
 			original_tag = HAI
 			original_tag = DOM
 		}
 		has_war = no
-
 		date > 1936.4.1
 	}
 	
@@ -409,6 +411,7 @@ country_event = {
 	mean_time_to_happen = { days = 2 }
 	
 	trigger = {
+		has_global_flag = BATTLE_ROYALE_ON		
 		OR = {
 			original_tag = SAU
 			original_tag = OMA
@@ -474,6 +477,7 @@ country_event = {
 	mean_time_to_happen = { days = 2 }
 	
 	trigger = {
+		has_global_flag = BATTLE_ROYALE_ON		
 		OR = {
 			original_tag = TIB
 			original_tag = NEP
