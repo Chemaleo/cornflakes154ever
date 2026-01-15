@@ -558,6 +558,9 @@ cf154ever_decisions_category = {
 				unlock_decision_tooltip = cf154ever_decision_war_with_ussr
 			}
 			set_global_flag = fgsw_decision_fired
+			# ROOT = {
+				# save_global_event_target_as = player_fired_fgsw
+			# }
 		}
 	}
 	
@@ -908,7 +911,10 @@ cf154ever_decisions_category = {
 					is_ai = no
 				}
 				country_event = { id = cf154ever_event.3 }
-			}			
+			}
+			# event_target:player_fired_fgsw = {
+				# country_event = { id = cf154ever_event.3 }
+			# }			
 		}
 		
 		ai_will_do = {
