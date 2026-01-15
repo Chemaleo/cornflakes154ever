@@ -570,6 +570,36 @@ cf154ever_decisions_category = {
 		
 		icon = GFX_decision_ger_reichskommissariats
 		
+		allowed = {
+			OR = {
+				original_tag = FIN 
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = IRE
+				original_tag = SPR
+				original_tag = POR
+				original_tag = POL
+				original_tag = SWI
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = HUN
+				original_tag = YUG
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = TUR
+				original_tag = ICE
+			}
+		}		
+		
 		visible = {
 			date > 1941.6.1
 			OR = {
@@ -612,6 +642,36 @@ cf154ever_decisions_category = {
 		priority = 1		
 		
 		icon = GFX_decision_generic_political_discourse
+		
+		allowed = {
+			OR = {
+				original_tag = FIN 
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = IRE
+				original_tag = SPR
+				original_tag = POR
+				original_tag = POL
+				original_tag = SWI
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = HUN
+				original_tag = YUG
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = TUR
+				original_tag = ICE
+			}
+		}		
 		
 		visible = {
 			date > 1941.6.1
@@ -656,6 +716,36 @@ cf154ever_decisions_category = {
 		
 		icon = GFX_decision_ger_reichskommissariats
 		
+		allowed = {
+			OR = {
+				original_tag = FIN 
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = IRE
+				original_tag = SPR
+				original_tag = POR
+				original_tag = POL
+				original_tag = SWI
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = HUN
+				original_tag = YUG
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = TUR
+				original_tag = ICE
+			}
+		}		
+		
 		visible = {
 			date > 1941.6.1
 			OR = {
@@ -694,6 +784,36 @@ cf154ever_decisions_category = {
 		priority = 1		
 		
 		icon = GFX_decision_generic_political_discourse
+		
+		allowed = {
+			OR = {
+				original_tag = FIN 
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = IRE
+				original_tag = SPR
+				original_tag = POR
+				original_tag = POL
+				original_tag = SWI
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = HUN
+				original_tag = YUG
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = TUR
+				original_tag = ICE
+			}
+		}		
 		
 		visible = {
 			date > 1941.6.1
