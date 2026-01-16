@@ -84,18 +84,6 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				country_exists = ARG
-			}
-			every_owned_state = {
-				add_core_of = ARG
-			}		
-			random_list = {
-				50 = { set_politics = { ruling_party = fascism } add_popularity = { ideology = fascism popularity = 1 } }
-				50 = { set_politics = { ruling_party = communism } add_popularity = { ideology = communism popularity = 1 } }
-			}
-		}
-		else_if = {
-			limit = {
 				country_exists = URG
 			}
 			every_owned_state = {
