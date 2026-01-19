@@ -347,6 +347,7 @@ country_event = {
 	trigger = {
 		has_country_flag = wtt_britain_lease_azores_accepted
 		has_war = no
+		is_subject = no
 	}
 
 	mean_time_to_happen = { days = 2 }
