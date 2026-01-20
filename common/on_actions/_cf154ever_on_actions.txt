@@ -2,12 +2,23 @@
 on_actions = {
     on_startup = {
         effect = {
-			every_country = {
+			set_global_flag = ENABLE_CF154EVER_DECISIONS			
+			every_country = {	#Заменить на ивенты с выбором для игрока
+				limit = {
+					NOT = {
+						original_tag = USA
+						original_tag = ENG
+						original_tag = FRA
+						original_tag = GER
+						original_tag = ITA
+						original_tag = JAP
+						original_tag = SOV
+					}
+				}
 				# limit = { is_ai = no }
 				# country_event = { id = cf154ever_startup.1 }
 				# set_global_flag = CF154EVER_DEV_SETTINGS_TRUE
-				set_global_flag = ENABLE_CF154EVER_DECISIONS
-				enable_kludge_admirals_for_everyone_NOT_majors = yes
+				add_kludge_admirals = yes
 			}
 		}
 	}
