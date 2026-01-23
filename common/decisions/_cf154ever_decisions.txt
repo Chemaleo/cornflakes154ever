@@ -75,207 +75,208 @@ cf154ever_decisions_category = {
 		}
 		
 		available = {
-			if = {
-				limit = {
-					OR = {
-						original_tag = FRA
-						original_tag = ENG
-						original_tag = USA
-						original_tag = GER
-						original_tag = ITA
-						original_tag = JAP
-						original_tag = SOV
-					}
-					OR = {
-						FRA = {
-							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }
-						}
-						ENG = {
-							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }				
-						}
-						USA = {
-							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }					
-						}
-						GER = {
-							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }					
-						}
-						ITA = {
-							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }						
-						}
-						JAP = {
-							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }					
-						}
-						SOV = {
-							country_exists_AND_is_independent_from_ROOT = yes
-							NOT = { tag = ROOT }						
-						}
-					}
-				}
-				OR = {
-					AND = {
-						has_war = yes
-						any_enemy_country = {
-							OR = {
-								original_tag = FRA
-								original_tag = ENG
-								original_tag = USA
-								original_tag = GER
-								original_tag = ITA
-								original_tag = JAP
-								original_tag = SOV
-							}
-							custom_trigger_tooltip = {
-								tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
-								country_capitulated_or_lost_its_capital_to_ROOT = yes
-							}
-						}
-					}
-					AND = {
-						has_manpower > 500000						
-						has_army_size = {
-							size > 99
-						}
-						OR = {
-							has_equipment = {
-								CAS_equipment > 999
-							}
-							has_equipment = {
-								cv_CAS_equipment > 999
-							}							
-							has_equipment = {
-								fighter_equipment > 999
-							}
-							has_equipment = {
-								cv_fighter_equipment > 999
-							}							
-							has_equipment = {
-								nav_bomber_equipment > 999
-							}
-							has_equipment = {
-								cv_nav_bomber_equipment > 999
-							}
-							has_equipment = {
-								heavy_fighter_equipment > 999
-							}
-							has_equipment = {
-								tac_bomber_equipment > 999
-							}
-							has_equipment = {
-								strat_bomber_equipment > 999
-							}
-						}
-					}
-					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
-					date > 1942.1.1
-				}
-			}
-			else_if = {
-				limit = {
-					capital_scope = {
-						OR = {
-							is_on_continent = europe
-							is_on_continent = north_america							
-							is_on_continent = asia
-						}
-					}
-					OR = {
-						FRA = {
-							country_exists_AND_is_independent_from_ROOT = yes
-						}
-						ENG = {
-							country_exists_AND_is_independent_from_ROOT = yes
-						}
-						USA = {
-							country_exists_AND_is_independent_from_ROOT = yes
-						}
-						GER = {
-							country_exists_AND_is_independent_from_ROOT = yes
-						}
-						ITA = {
-							country_exists_AND_is_independent_from_ROOT = yes
-						}
-						JAP = {
-							country_exists_AND_is_independent_from_ROOT = yes
-						}
-						SOV = {
-							country_exists_AND_is_independent_from_ROOT = yes
-						}
-					}
-					NOT = {
-						original_tag = FRA
-						original_tag = ENG
-						original_tag = USA
-						original_tag = GER
-						original_tag = ITA
-						original_tag = JAP
-						original_tag = SOV
-					}
-				}
-				OR = {
-					AND = {
-						has_war = yes
-						any_enemy_country = {
-							OR = {
-								original_tag = FRA
-								original_tag = ENG
-								original_tag = USA
-								original_tag = GER
-								original_tag = ITA
-								original_tag = JAP
-								original_tag = SOV
-							}
-							custom_trigger_tooltip = {
-								tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
-								country_capitulated_or_lost_its_capital_to_ROOT = yes
-							}
-						}
-					}
-					AND = {
-						has_tech = basic_medium_tank
-						has_template_majority_unit = medium_armor
-						has_army_size = {
-							size > 9
-							type = armor
-						}
-					}
-					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
-					date > 1942.1.1
-				}
-			}
-			else_if = {
-				limit = {
-					capital_scope = {
-						OR = {
-							is_on_continent = south_america
-							is_on_continent = australia
-							is_on_continent = africa							
-							is_on_continent = middle_east
-						}
-					}
-				}
-				OR = {
-					AND = {
-						has_war = yes
-						any_enemy_country = {
-							is_major = yes
-						}
-						has_army_size = {
-							size > 23
-						}
-					}
-					date > 1942.1.1					
-				}
-			}
-			else = {
-				date > 1942.1.1					
-			}
+			threat > 0.25
 		}
+			# if = {
+				# limit = {
+					# OR = {
+						# original_tag = FRA
+						# original_tag = ENG
+						# original_tag = USA
+						# original_tag = GER
+						# original_tag = ITA
+						# original_tag = JAP
+						# original_tag = SOV
+					# }
+					# OR = {
+						# FRA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }
+						# }
+						# ENG = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }				
+						# }
+						# USA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }					
+						# }
+						# GER = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }					
+						# }
+						# ITA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }						
+						# }
+						# JAP = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }					
+						# }
+						# SOV = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }						
+						# }
+					# }
+				# }
+				# OR = {
+					# AND = {
+						# has_war = yes
+						# any_enemy_country = {
+							# OR = {
+								# original_tag = FRA
+								# original_tag = ENG
+								# original_tag = USA
+								# original_tag = GER
+								# original_tag = ITA
+								# original_tag = JAP
+								# original_tag = SOV
+							# }
+							# custom_trigger_tooltip = {
+								# tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
+								# country_capitulated_or_lost_its_capital_to_ROOT = yes
+							# }
+						# }
+					# }
+					# AND = {
+						# has_manpower > 500000						
+						# has_army_size = {
+							# size > 99
+						# }
+						# OR = {
+							# has_equipment = {
+								# CAS_equipment > 999
+							# }
+							# has_equipment = {
+								# cv_CAS_equipment > 999
+							# }							
+							# has_equipment = {
+								# fighter_equipment > 999
+							# }
+							# has_equipment = {
+								# cv_fighter_equipment > 999
+							# }							
+							# has_equipment = {
+								# nav_bomber_equipment > 999
+							# }
+							# has_equipment = {
+								# cv_nav_bomber_equipment > 999
+							# }
+							# has_equipment = {
+								# heavy_fighter_equipment > 999
+							# }
+							# has_equipment = {
+								# tac_bomber_equipment > 999
+							# }
+							# has_equipment = {
+								# strat_bomber_equipment > 999
+							# }
+						# }
+					# }
+					# custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					# date > 1942.1.1
+				# }
+			# }
+			# else_if = {
+				# limit = {
+					# capital_scope = {
+						# OR = {
+							# is_on_continent = europe
+							# is_on_continent = north_america							
+							# is_on_continent = asia
+						# }
+					# }
+					# OR = {
+						# FRA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# ENG = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# USA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# GER = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# ITA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# JAP = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# SOV = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+					# }
+					# NOT = {
+						# original_tag = FRA
+						# original_tag = ENG
+						# original_tag = USA
+						# original_tag = GER
+						# original_tag = ITA
+						# original_tag = JAP
+						# original_tag = SOV
+					# }
+				# }
+				# OR = {
+					# AND = {
+						# has_war = yes
+						# any_enemy_country = {
+							# OR = {
+								# original_tag = FRA
+								# original_tag = ENG
+								# original_tag = USA
+								# original_tag = GER
+								# original_tag = ITA
+								# original_tag = JAP
+								# original_tag = SOV
+							# }
+							# custom_trigger_tooltip = {
+								# tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
+								# country_capitulated_or_lost_its_capital_to_ROOT = yes
+							# }
+						# }
+					# }
+					# AND = {
+						# has_tech = basic_medium_tank
+						# has_template_majority_unit = medium_armor
+						# has_army_size = {
+							# size > 9
+							# type = armor
+						# }
+					# }
+					# custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					# date > 1942.1.1
+				# }
+			# }
+			# else_if = {
+				# limit = {
+					# capital_scope = {
+						# OR = {
+							# is_on_continent = south_america
+							# is_on_continent = australia
+							# is_on_continent = africa							
+							# is_on_continent = middle_east
+						# }
+					# }
+				# }
+				# OR = {
+					# AND = {
+						# has_war = yes
+						# any_enemy_country = {
+							# is_major = yes
+						# }
+						# has_army_size = {
+							# size > 23
+						# }
+					# }
+					# date > 1942.1.1					
+				# }
+			# }
+			# else = {
+				# date > 1942.1.1					
+			# }
 			
 		complete_effect = {
 			add_ideas = cf154ever_idea_fast_wargoals
