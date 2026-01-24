@@ -210,3 +210,131 @@ country_capitulated_or_lost_its_capital_to_ROOT = {
 		}
 	}
 }
+
+br_countries_are_intact = {
+	ARG = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	URG = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	PAR = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	CHL = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	BRA = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	BOL = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	PRU = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	ECU = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	COL = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	VEN = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	MEX = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	GUA = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	ELS = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	HON = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	NIC = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	COS = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	# PAN = {
+		# exists = yes
+		# is_subject = no
+		# has_war = no
+	# }
+	HAI = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	DOM = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	SAU = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	OMA = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	YEM = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	TIB = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	NEP = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	BHU = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+}
