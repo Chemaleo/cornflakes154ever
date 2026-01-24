@@ -1,9 +1,9 @@
 
 cf154ever_decisions_category = {	
 
-##########################################
+###########################################
 # Решения разрешённые только для Германии #
-##########################################
+###########################################
 	cf154ever_decision_oob_test = {
 		
 		priority = 9
@@ -388,9 +388,9 @@ cf154ever_decisions_category = {
 		}
 	}
 
-################################
+###############################
 # Решения для остальных стран #
-################################
+###############################
 
 	cf154ever_decision_disable_sad_music = {
 		
@@ -1175,7 +1175,7 @@ cf154ever_decisions_category = {
 		complete_effect = {
 			add_ideas = cf154ever_idea_fast_wargoals
 		}
-	}	
+	}
 	
 	cf154ever_decision_br = {	#Потом нужно всё закомментить, как перенесу в ивенты содержимое
 		icon = GFX_decision_generic_ignite_civil_war
@@ -1214,7 +1214,9 @@ cf154ever_decisions_category = {
 					limit = {
 						LIB = {
 							exists = yes
+							is_subject = no
 							has_war = no
+							is_in_faction = no
 						}
 					}
 					LIB = { country_event = { id = cf154ever_br.1 } }
@@ -1223,7 +1225,9 @@ cf154ever_decisions_category = {
 					limit = {
 						CUB = {
 							exists = yes
+							is_subject = no
 							has_war = no
+							is_in_faction = no							
 						}
 					}
 					CUB = { country_event = { id = cf154ever_br.1 } }
