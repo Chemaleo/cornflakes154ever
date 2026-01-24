@@ -61,7 +61,7 @@ cf154ever_decisions_category = {
 		}
 	}
 	
-	cf154ever_decision_SS_unlock_divisions = {
+	cf154ever_decision_unlock_SS = {
 		
 		priority = -50
 			
