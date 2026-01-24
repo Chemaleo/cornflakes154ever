@@ -46,3 +46,4 @@
     cf154ever_decision_fgsw_GER_party_popularity_add:0 "Add 100 popularity to [GER.GetFascistParty]"
     cf154ever_decision_fgsw_SOV_party_popularity_add:0 "Add 100 popularity to [SOV.GetCommunistParty]"
     cf154ever_decision_war_with_ussr:0 "War with the USSR"
+    no_cheats_allowed:0 "BR countries were not tampered with"
