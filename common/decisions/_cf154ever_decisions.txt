@@ -392,231 +392,6 @@ cf154ever_decisions_category = {
 # Решения для остальных стран #
 ################################
 
-	cf154ever_decision_fast_wargoals = {
-		
-		icon = GFX_decision_generic_ignite_civil_war
-		
-		cost = 300
-		
-		fire_only_once = yes
-		
-		visible = {
-			OR = {
-				has_government = neutrality
-				has_government = communism
-				has_government = fascism
-			}
-		}
-		
-		available = {
-			threat > 0.25
-		}
-			# if = {
-				# limit = {
-					# OR = {
-						# original_tag = FRA
-						# original_tag = ENG
-						# original_tag = USA
-						# original_tag = GER
-						# original_tag = ITA
-						# original_tag = JAP
-						# original_tag = SOV
-					# }
-					# OR = {
-						# FRA = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-							# NOT = { tag = ROOT }
-						# }
-						# ENG = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-							# NOT = { tag = ROOT }				
-						# }
-						# USA = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-							# NOT = { tag = ROOT }					
-						# }
-						# GER = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-							# NOT = { tag = ROOT }					
-						# }
-						# ITA = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-							# NOT = { tag = ROOT }						
-						# }
-						# JAP = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-							# NOT = { tag = ROOT }					
-						# }
-						# SOV = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-							# NOT = { tag = ROOT }						
-						# }
-					# }
-				# }
-				# OR = {
-					# AND = {
-						# has_war = yes
-						# any_enemy_country = {
-							# OR = {
-								# original_tag = FRA
-								# original_tag = ENG
-								# original_tag = USA
-								# original_tag = GER
-								# original_tag = ITA
-								# original_tag = JAP
-								# original_tag = SOV
-							# }
-							# custom_trigger_tooltip = {
-								# tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
-								# country_capitulated_or_lost_its_capital_to_ROOT = yes
-							# }
-						# }
-					# }
-					# AND = {
-						# has_manpower > 500000						
-						# has_army_size = {
-							# size > 99
-						# }
-						# OR = {
-							# has_equipment = {
-								# CAS_equipment > 999
-							# }
-							# has_equipment = {
-								# cv_CAS_equipment > 999
-							# }							
-							# has_equipment = {
-								# fighter_equipment > 999
-							# }
-							# has_equipment = {
-								# cv_fighter_equipment > 999
-							# }							
-							# has_equipment = {
-								# nav_bomber_equipment > 999
-							# }
-							# has_equipment = {
-								# cv_nav_bomber_equipment > 999
-							# }
-							# has_equipment = {
-								# heavy_fighter_equipment > 999
-							# }
-							# has_equipment = {
-								# tac_bomber_equipment > 999
-							# }
-							# has_equipment = {
-								# strat_bomber_equipment > 999
-							# }
-						# }
-					# }
-					# custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
-					# date > 1942.1.1
-				# }
-			# }
-			# else_if = {
-				# limit = {
-					# capital_scope = {
-						# OR = {
-							# is_on_continent = europe
-							# is_on_continent = north_america							
-							# is_on_continent = asia
-						# }
-					# }
-					# OR = {
-						# FRA = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-						# }
-						# ENG = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-						# }
-						# USA = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-						# }
-						# GER = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-						# }
-						# ITA = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-						# }
-						# JAP = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-						# }
-						# SOV = {
-							# country_exists_AND_is_independent_from_ROOT = yes
-						# }
-					# }
-					# NOT = {
-						# original_tag = FRA
-						# original_tag = ENG
-						# original_tag = USA
-						# original_tag = GER
-						# original_tag = ITA
-						# original_tag = JAP
-						# original_tag = SOV
-					# }
-				# }
-				# OR = {
-					# AND = {
-						# has_war = yes
-						# any_enemy_country = {
-							# OR = {
-								# original_tag = FRA
-								# original_tag = ENG
-								# original_tag = USA
-								# original_tag = GER
-								# original_tag = ITA
-								# original_tag = JAP
-								# original_tag = SOV
-							# }
-							# custom_trigger_tooltip = {
-								# tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
-								# country_capitulated_or_lost_its_capital_to_ROOT = yes
-							# }
-						# }
-					# }
-					# AND = {
-						# has_tech = basic_medium_tank
-						# has_template_majority_unit = medium_armor
-						# has_army_size = {
-							# size > 9
-							# type = armor
-						# }
-					# }
-					# custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
-					# date > 1942.1.1
-				# }
-			# }
-			# else_if = {
-				# limit = {
-					# capital_scope = {
-						# OR = {
-							# is_on_continent = south_america
-							# is_on_continent = australia
-							# is_on_continent = africa							
-							# is_on_continent = middle_east
-						# }
-					# }
-				# }
-				# OR = {
-					# AND = {
-						# has_war = yes
-						# any_enemy_country = {
-							# is_major = yes
-						# }
-						# has_army_size = {
-							# size > 23
-						# }
-					# }
-					# date > 1942.1.1					
-				# }
-			# }
-			# else = {
-				# date > 1942.1.1					
-			# }
-			
-		complete_effect = {
-			add_ideas = cf154ever_idea_fast_wargoals
-		}
-	}
-	
 	cf154ever_decision_disable_sad_music = {
 		
 		priority = -100
@@ -664,66 +439,38 @@ cf154ever_decisions_category = {
 			custom_effect_tooltip = cf154ever_decision_enable_sad_music_tt
 			clr_global_flag = NO_SAD_MUSIC
 		}
-	}	
+	}
 	
-	cf154ever_decision_br = {	#Потом нужно всё закомментить, как перенесу в ивенты содержимое
-		icon = GFX_decision_generic_ignite_civil_war
+	cf154ever_decision_unlock_form_eu = {
 		
-		priority = -1
+		priority = 3
+		
+		icon = generic_form_nation
+		
+		allowed = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = WGR
+			}			
+			has_dlc = "Waking the Tiger"
+		}
 		
 		visible = {
-			NOT = { has_global_flag = BATTLE_ROYALE_ON }
-			date < 1936.1.31
+			NOT = {
+				has_government = democratic
+				has_global_flag = form_european_union_flag
+				has_country_flag = CF154EVER_FORM_EU_DECISION_UNLOCKED
+			}			
 		}
-		
-		available = {
-			has_start_date < 1936.01.02
-			date < 1936.1.31
-			custom_trigger_tooltip = {
-				tooltip = no_cheats_allowed
-				br_countries_are_intact = yes
-			}
-		}
-		
-		days_remove = 30
 		
 		complete_effect = {
-			set_global_flag = BATTLE_ROYALE_ON
-			cf154ever_br_politics_effect = yes
+			custom_effect_tooltip = cf154ever_decision_unlock_form_eu_tt
+			set_country_flag = CF154EVER_FORM_EU_DECISION_UNLOCKED
 		}
-		
-		remove_effect = {
-			custom_effect_tooltip = cf154ever_decision_br_start_tt
-			hidden_effect = {
-				cf154ever_br_start_NA = yes
-				cf154ever_br_start_SA = yes
-				cf154ever_br_start_asia = yes
-				cf154ever_br_all_effect = yes
-				if = {
-					limit = {
-						LIB = {
-							exists = yes
-							has_war = no
-						}
-					}
-					LIB = { country_event = { id = cf154ever_br.1 } }
-				}
-				else_if = {
-					limit = {
-						CUB = {
-							exists = yes
-							has_war = no
-						}
-					}
-					CUB = { country_event = { id = cf154ever_br.1 } }
-				}
-				else = {
-					random_country = { country_event = { id = cf154ever_br.1 } }
-				}
-			}
-		}
-	}
-
+	}	
+	
 	cf154ever_decision_fgsw = {
 
 		icon = GFX_decision_generic_prepare_civil_war
@@ -1203,36 +950,288 @@ cf154ever_decisions_category = {
 			SOV = { add_popularity = { ideology = communism popularity = 1 } }
 			set_global_flag = fgsw_SOV_party_popularity_added
 		}
-	}
+	}	
 
-	cf154ever_decision_unlock_form_eu = {
+	cf154ever_decision_fast_wargoals = {
 		
-		priority = 3
+		icon = GFX_decision_generic_ignite_civil_war
 		
-		icon = generic_form_nation
+		cost = 300
 		
-		allowed = {
-			OR = {
-				original_tag = HOL
-				original_tag = BEL
-				original_tag = LUX
-				original_tag = WGR
-			}			
-			has_dlc = "Waking the Tiger"
-		}
+		fire_only_once = yes
 		
 		visible = {
-			NOT = {
-				has_government = democratic
-				has_global_flag = form_european_union_flag
-				has_country_flag = CF154EVER_FORM_EU_DECISION_UNLOCKED
-			}			
+			OR = {
+				has_government = neutrality
+				has_government = communism
+				has_government = fascism
+			}
 		}
 		
+		available = {
+			threat > 0.25
+		}
+			# if = {
+				# limit = {
+					# OR = {
+						# original_tag = FRA
+						# original_tag = ENG
+						# original_tag = USA
+						# original_tag = GER
+						# original_tag = ITA
+						# original_tag = JAP
+						# original_tag = SOV
+					# }
+					# OR = {
+						# FRA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }
+						# }
+						# ENG = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }				
+						# }
+						# USA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }					
+						# }
+						# GER = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }					
+						# }
+						# ITA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }						
+						# }
+						# JAP = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }					
+						# }
+						# SOV = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }						
+						# }
+					# }
+				# }
+				# OR = {
+					# AND = {
+						# has_war = yes
+						# any_enemy_country = {
+							# OR = {
+								# original_tag = FRA
+								# original_tag = ENG
+								# original_tag = USA
+								# original_tag = GER
+								# original_tag = ITA
+								# original_tag = JAP
+								# original_tag = SOV
+							# }
+							# custom_trigger_tooltip = {
+								# tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
+								# country_capitulated_or_lost_its_capital_to_ROOT = yes
+							# }
+						# }
+					# }
+					# AND = {
+						# has_manpower > 500000						
+						# has_army_size = {
+							# size > 99
+						# }
+						# OR = {
+							# has_equipment = {
+								# CAS_equipment > 999
+							# }
+							# has_equipment = {
+								# cv_CAS_equipment > 999
+							# }							
+							# has_equipment = {
+								# fighter_equipment > 999
+							# }
+							# has_equipment = {
+								# cv_fighter_equipment > 999
+							# }							
+							# has_equipment = {
+								# nav_bomber_equipment > 999
+							# }
+							# has_equipment = {
+								# cv_nav_bomber_equipment > 999
+							# }
+							# has_equipment = {
+								# heavy_fighter_equipment > 999
+							# }
+							# has_equipment = {
+								# tac_bomber_equipment > 999
+							# }
+							# has_equipment = {
+								# strat_bomber_equipment > 999
+							# }
+						# }
+					# }
+					# custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					# date > 1942.1.1
+				# }
+			# }
+			# else_if = {
+				# limit = {
+					# capital_scope = {
+						# OR = {
+							# is_on_continent = europe
+							# is_on_continent = north_america							
+							# is_on_continent = asia
+						# }
+					# }
+					# OR = {
+						# FRA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# ENG = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# USA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# GER = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# ITA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# JAP = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# SOV = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+					# }
+					# NOT = {
+						# original_tag = FRA
+						# original_tag = ENG
+						# original_tag = USA
+						# original_tag = GER
+						# original_tag = ITA
+						# original_tag = JAP
+						# original_tag = SOV
+					# }
+				# }
+				# OR = {
+					# AND = {
+						# has_war = yes
+						# any_enemy_country = {
+							# OR = {
+								# original_tag = FRA
+								# original_tag = ENG
+								# original_tag = USA
+								# original_tag = GER
+								# original_tag = ITA
+								# original_tag = JAP
+								# original_tag = SOV
+							# }
+							# custom_trigger_tooltip = {
+								# tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
+								# country_capitulated_or_lost_its_capital_to_ROOT = yes
+							# }
+						# }
+					# }
+					# AND = {
+						# has_tech = basic_medium_tank
+						# has_template_majority_unit = medium_armor
+						# has_army_size = {
+							# size > 9
+							# type = armor
+						# }
+					# }
+					# custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					# date > 1942.1.1
+				# }
+			# }
+			# else_if = {
+				# limit = {
+					# capital_scope = {
+						# OR = {
+							# is_on_continent = south_america
+							# is_on_continent = australia
+							# is_on_continent = africa							
+							# is_on_continent = middle_east
+						# }
+					# }
+				# }
+				# OR = {
+					# AND = {
+						# has_war = yes
+						# any_enemy_country = {
+							# is_major = yes
+						# }
+						# has_army_size = {
+							# size > 23
+						# }
+					# }
+					# date > 1942.1.1					
+				# }
+			# }
+			# else = {
+				# date > 1942.1.1					
+			# }
+			
 		complete_effect = {
-			custom_effect_tooltip = cf154ever_decision_unlock_form_eu_tt
-			set_country_flag = CF154EVER_FORM_EU_DECISION_UNLOCKED
+			add_ideas = cf154ever_idea_fast_wargoals
+		}
+	}	
+	
+	cf154ever_decision_br = {	#Потом нужно всё закомментить, как перенесу в ивенты содержимое
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		priority = -1
+		
+		visible = {
+			NOT = { has_global_flag = BATTLE_ROYALE_ON }
+			date < 1936.1.31
+		}
+		
+		available = {
+			has_start_date < 1936.01.02
+			date < 1936.1.31
+			custom_trigger_tooltip = {
+				tooltip = no_cheats_allowed
+				br_countries_are_intact = yes
+			}
+		}
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_global_flag = BATTLE_ROYALE_ON
+			cf154ever_br_politics_effect = yes
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = cf154ever_decision_br_start_tt
+			hidden_effect = {
+				cf154ever_br_start_NA = yes
+				cf154ever_br_start_SA = yes
+				cf154ever_br_start_asia = yes
+				cf154ever_br_all_effect = yes
+				if = {
+					limit = {
+						LIB = {
+							exists = yes
+							has_war = no
+						}
+					}
+					LIB = { country_event = { id = cf154ever_br.1 } }
+				}
+				else_if = {
+					limit = {
+						CUB = {
+							exists = yes
+							has_war = no
+						}
+					}
+					CUB = { country_event = { id = cf154ever_br.1 } }
+				}
+				else = {
+					random_country = { country_event = { id = cf154ever_br.1 } }
+				}
+			}
 		}
 	}
 }
-
