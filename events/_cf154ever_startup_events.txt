@@ -15,9 +15,9 @@ country_event = {
 		name = cf154ever_startup.1.a
 		custom_effect_tooltip = CF154EVER_DEV_SETTINGS_TT
 		set_global_flag = CF154EVER_DEV_SETTINGS_TRUE
-		hidden_effect = {
-			enable_kludge_admirals_for_everyone_NOT_majors = yes
-		}
+		# hidden_effect = {
+			# enable_kludge_admirals_for_everyone_NOT_majors = yes
+		# }
 	}
 	
 	option = {
