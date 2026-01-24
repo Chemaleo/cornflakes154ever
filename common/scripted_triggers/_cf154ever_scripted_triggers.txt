@@ -216,21 +216,25 @@ br_countries_are_intact = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no
 	}
 	URG = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	PAR = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	CHL = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	BRA = {
 		exists = yes
@@ -241,56 +245,67 @@ br_countries_are_intact = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	PRU = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	ECU = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	COL = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	VEN = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	MEX = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	GUA = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	ELS = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	HON = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	NIC = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	COS = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	# PAN = {
 		# exists = yes
@@ -302,45 +317,54 @@ br_countries_are_intact = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	HAI = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	DOM = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	SAU = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	OMA = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	YEM = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	TIB = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	NEP = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 	BHU = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no		
 	}
 }
