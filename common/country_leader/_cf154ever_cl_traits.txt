@@ -7,12 +7,12 @@ leader_traits = {
 		
 		ai_strategy = {
 			type = antagonize
-			id = "SOV"			
+			id = SOV			
 			value = 200
 		}
 		ai_strategy = {
 			type = conquer
-			id = "SOV"
+			id = SOV
 			value = 200
 		}
 		
