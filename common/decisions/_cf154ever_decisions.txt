@@ -69,7 +69,7 @@ cf154ever_decisions_category = {
 		
 		fire_only_once = no
 		
-		days_re_enable = 60
+		days_re_enable = 15
 		
 		allowed = {
 			original_tag = GER
