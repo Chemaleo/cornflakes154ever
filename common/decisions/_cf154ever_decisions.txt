@@ -5,6 +5,7 @@ cf154ever_decisions_category = {
 # Решения разрешённые только для Германии #
 ##########################################
 	cf154ever_decision_oob_test = {
+		
 		priority = 9
 		
 		icon = GFX_decision_icon_default
@@ -69,7 +70,7 @@ cf154ever_decisions_category = {
 		
 		fire_only_once = no
 		
-		days_re_enable = 15
+		#days_re_enable = 15
 		
 		allowed = {
 			original_tag = GER
@@ -84,6 +85,9 @@ cf154ever_decisions_category = {
 				has_template = "SS Panzer Division (n.A.)"
 				has_template = "SS Panzer Division (vollgep.)"
 				has_template = "SS Waffen-Grenadier-Division"
+			}
+			NOT = {
+				has_country_flag = hide_SS_unlock_decision
 			}
 		}
 		
@@ -151,6 +155,37 @@ cf154ever_decisions_category = {
 					is_locked = no
 				}
 			}
+		}
+	}
+	
+	cf154ever_decision_unlock_SS_2 = {
+		
+		priority = -55
+			
+		icon = generic_army_support
+		
+		allowed = {
+			original_tag = GER
+		}
+		
+		visible = {
+			OR = {
+				has_template = "SS Motorisierte Division"
+				has_template = "SS Panzergrenadier Division"
+				has_template = "SS Panzergrenadier Division (n.A.)"
+				has_template = "SS Panzer Division"
+				has_template = "SS Panzer Division (n.A.)"
+				has_template = "SS Panzer Division (vollgep.)"
+				has_template = "SS Waffen-Grenadier-Division"
+			}
+			NOT = {
+				has_country_flag = hide_SS_unlock_decision
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = hide_SS_unlock_decision_tt
+			set_country_flag = hide_SS_unlock_decision
 		}
 	}
 
