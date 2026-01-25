@@ -446,7 +446,7 @@ POR_send_boys_to_SPR = {
 			any_country = {
 				original_tag = SPR
 				has_government = fascism
-				has_war = no
+				has_civil_war = no
 			}
 			POR = { has_war = yes }
 			is_historical_focus_on = no
