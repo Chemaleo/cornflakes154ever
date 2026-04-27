@@ -1,5 +1,5 @@
 
-cf154ever_decisions_category = {	
+cf154ever_decisions_category = {
 
 ###########################################
 # Решения разрешённые только для Германии #
@@ -247,7 +247,7 @@ cf154ever_decisions_category = {
 			}
 		}
 		
-		days_remove = 90
+		days_remove = 60
 		
 		remove_effect = {
 			set_state_controller = 110
@@ -359,6 +359,12 @@ cf154ever_decisions_category = {
 			is_ai = yes
 		}
 		
+		available = {
+			any_country = {
+				is_ai = no
+			}
+		}
+		
 		target_trigger = { FROM = { tag = SOV } }
 		
 		war_with_target_on_remove = yes
@@ -383,8 +389,21 @@ cf154ever_decisions_category = {
 			# }			
 		}
 		
+		cancel_trigger = {
+			all_country = {
+				is_ai = yes
+			}
+		}
+		
 		ai_will_do = {
 			factor = 200
+			
+			modifier = {	#Не берём если все страны - АИ
+				factor = 0
+				all_country = {
+					is_ai = yes
+				}
+			}
 		}
 	}
 
@@ -510,7 +529,7 @@ cf154ever_decisions_category = {
 		}
 	
 		visible = {
-			date > 1941.6.1
+			# date > 1941.6.1
 			OR = {
 				AND = {
 					has_war_with = GER
@@ -526,40 +545,42 @@ cf154ever_decisions_category = {
 		}
 		
 		available = {
-			is_staging_coup = no
-			political_power_daily > 0.7
-			num_divisions < 49
-			num_of_military_factories < 31
-			num_of_civilian_factories < 31
-			if = {
-				limit = {
-					OR = {
-						has_template_majority_unit = medium_armor
-						has_template_majority_unit = modern_armor
+			ROOT = {
+				is_staging_coup = no
+				political_power_daily > 0.7
+				num_divisions < 49
+				num_of_military_factories < 31
+				num_of_civilian_factories < 31
+				if = {
+					limit = {
+						any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+						num_of_naval_factories > 0
 					}
-					OR = {
-						has_tech = basic_medium_tank
-						has_tech = improved_medium_tank
-						has_tech = advanced_medium_tank
-						has_tech = main_battle_tank
+					has_equipment = {
+						convoy_1 < 2
 					}
 				}
-				has_army_size = {
-					size < 5
-					type = armor
-				}
-			}
-			if = {
-				limit = {
-					any_state = {
-						is_coastal = yes
-						is_controlled_by = ROOT
+				if = {
+					limit = {
+						OR = {
+							has_template_majority_unit = medium_armor
+							has_template_majority_unit = modern_armor
+						}
+						OR = {
+							has_tech = basic_medium_tank
+							has_tech = improved_medium_tank
+							has_tech = advanced_medium_tank
+							has_tech = main_battle_tank
+						}
 					}
-					num_of_naval_factories > 0
-				}
-				has_equipment = {
-					convoy_1 < 2
-				}
+					has_army_size = {
+						size < 5
+						type = armor
+					}
+				}				
 			}
 			
 			GER = {
@@ -705,7 +726,7 @@ cf154ever_decisions_category = {
 		}		
 		
 		visible = {
-			date > 1941.6.1
+			# date > 1941.6.1
 			OR = {
 				AND = {
 					has_war_with = GER
@@ -778,7 +799,7 @@ cf154ever_decisions_category = {
 		}		
 		
 		visible = {
-			date > 1941.6.1
+			# date > 1941.6.1
 			OR = {
 				AND = {
 					has_war_with = GER
@@ -851,7 +872,7 @@ cf154ever_decisions_category = {
 		}		
 		
 		visible = {
-			date > 1941.6.1
+			# date > 1941.6.1
 			OR = {
 				AND = {
 					has_war_with = GER
@@ -920,7 +941,7 @@ cf154ever_decisions_category = {
 		}		
 		
 		visible = {
-			date > 1941.6.1
+			# date > 1941.6.1
 			OR = {
 				AND = {
 					has_war_with = GER
