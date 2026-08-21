@@ -1,0 +1,38 @@
+﻿
+add_namespace = cf154ever_test_event
+
+country_event = {
+	id = cf154ever_test_event.1
+	title = "Test event title 1"
+	desc = "Test event desc 1"
+	picture = GFX_report_event_001
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = CF154EVER_ENABLE_TEST_EVENTS
+		any_country = {
+			has_equipment = {
+				infantry_equipment < 0
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_equipment = {
+					infantry_equipment < 0
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1990000
+			}
+		}
+	}
+	
+	option = { name = cf154ever_io.1.a }
+}
