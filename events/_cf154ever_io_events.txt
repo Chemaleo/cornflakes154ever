@@ -20,7 +20,7 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				infantry_equipment > 2000000
+				infantry_equipment > 2000000 #2147482
 			}
 		}
 	}
@@ -31,12 +31,12 @@ country_event = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					infantry_equipment > 2000000
+					infantry_equipment > 2000000 #2147482
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -1990000
+				amount = -1990000 #-2147482
 			}
 		}
 	}
