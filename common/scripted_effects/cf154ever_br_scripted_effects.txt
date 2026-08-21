@@ -76,7 +76,7 @@ cf154ever_br_all_effect = {
 		air_experience = 500
 		# navy_experience = 500
 		# add_manpower = 1000000
-		add_ideas = { tot_economic_mobilisation closed_economy cf154ever_idea_us_influence_shield }	
+		add_ideas = { tot_economic_mobilisation closed_economy } #cf154ever_idea_us_influence_shield	
 		
 		set_technology = {
 			# motorised_infantry = 1
@@ -156,5 +156,31 @@ cf154ever_br_all_effect = {
 				# instant_build = yes
 			# }
 		}
+	}
+	every_country = {
+		limit = {
+			OR = {
+				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+				original_tag = CHL
+				original_tag = BRA
+				original_tag = BOL
+				original_tag = PRU
+				original_tag = ECU
+				original_tag = COL
+				original_tag = VEN
+				original_tag = MEX
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+				original_tag = PAN
+				original_tag = HAI
+				original_tag = DOM
+			}
+		}
+		add_ideas = { cf154ever_idea_us_influence_shield }
 	}
 }
