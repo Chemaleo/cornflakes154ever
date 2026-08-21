@@ -6,7 +6,7 @@ cf154ever_decisions_category = {
 ###########################################
 	cf154ever_decision_oob_test = {
 		
-		priority = 9
+		priority = 10
 		
 		icon = GFX_decision_icon_default
 		
@@ -58,6 +58,128 @@ cf154ever_decisions_category = {
 			}
 			else = {
 				load_oob = cf154ever_oob_test_2
+			}
+		}
+	}
+	
+	cf154ever_decision_io_test = {
+		
+		priority = 9
+		
+		icon = GFX_decision_icon_default
+		
+		fire_only_once = no
+		
+		allowed = {
+			original_tag = GER
+		}
+		
+		visible = {
+			has_global_flag = CF154EVER_ENABLE_TEST_DECISIONS
+		}
+		
+		available = {
+			OR = {
+				has_equipment = {
+					infantry_equipment < 0
+				}
+				has_equipment = {
+					infantry_equipment > 2147482
+				}
+			}
+		}
+		
+		complete_effect = {
+			if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_0 < 0
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1900000
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_0 > 2147482
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = -2147482
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_1 < 0
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 1900000
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_1 > 2147482
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = -2147482
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_2 < 0
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 1900000
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_2 > 2147482
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = -2147482
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_3 < 0
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 1900000
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_3 > 2147482
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = -2147482
+				}
+			}
+			else = {
+				add_political_power = 2000
 			}
 		}
 	}
@@ -643,10 +765,7 @@ cf154ever_decisions_category = {
 					}
 					NOT = { is_in_faction_with = SOV }
 				}
-				else_if = {
-					limit = {
-						is_in_faction_with = GER
-					}
+				else = {
 					has_civil_war = no
 					has_capitulated = no
 				}
@@ -667,10 +786,7 @@ cf154ever_decisions_category = {
 					}
 					NOT = { is_in_faction_with = SOV }
 				}
-				else_if = {
-					limit = {
-						is_in_faction_with = GER
-					}
+				else = {
 					has_civil_war = no
 					has_capitulated = no				
 				}
