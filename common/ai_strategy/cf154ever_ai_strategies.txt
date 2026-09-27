@@ -1,44 +1,3 @@
-# PRC_dont_join_comintern_when_in_a_civil_war = {
-	# enable = {
-		# date < 1946.1.1
-		# original_tag = PRC
-		# OR = {
-			# has_war_with = CHI
-			# has_decision = PRC_uprising
-		# }
-		# is_historical_focus_on = yes
-	# }
-	
-	# abort = {
-		# OR = {
-			# date > 1946.1.1
-			# NOT = { has_war_with = CHI }
-			# AND = {
-				# CHI = {
-					# OR = {
-						# exists = no
-						# is_subject_of = JAP
-					# }
-				# }
-				# SOV = { NOT = { has_war_with = GER } }
-			# }
-		# }
-	# }
-	
-	# reversed = yes
-	
-	# ai_strategy = {
-		# type = alliance
-		# id = "SOV"
-		# value = -1000
-	# }
-	
-	# ai_strategy = {
-		# type = protect
-		# id = "SOV"
-		# value = -1000
-	# }
-# }
 
 PRC_dont_join_SOV = {
 	enable = {
@@ -461,3 +420,45 @@ POR_send_boys_to_SPR = {
 		value = 100
 	}
 }
+
+# PRC_dont_join_comintern_when_in_a_civil_war = {
+	# enable = {
+		# date < 1946.1.1
+		# original_tag = PRC
+		# OR = {
+			# has_war_with = CHI
+			# has_decision = PRC_uprising
+		# }
+		# is_historical_focus_on = yes
+	# }
+	
+	# abort = {
+		# OR = {
+			# date > 1946.1.1
+			# NOT = { has_war_with = CHI }
+			# AND = {
+				# CHI = {
+					# OR = {
+						# exists = no
+						# is_subject_of = JAP
+					# }
+				# }
+				# SOV = { NOT = { has_war_with = GER } }
+			# }
+		# }
+	# }
+	
+	# reversed = yes
+	
+	# ai_strategy = {
+		# type = alliance
+		# id = "SOV"
+		# value = -1000
+	# }
+	
+	# ai_strategy = {
+		# type = protect
+		# id = "SOV"
+		# value = -1000
+	# }
+# }
