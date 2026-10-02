@@ -1,4 +1,5 @@
-﻿add_namespace = cf154ever_startup
+﻿
+add_namespace = cf154ever_startup
 
 # Главное меню
 country_event = {
