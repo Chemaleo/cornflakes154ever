@@ -16,6 +16,7 @@ country_event = {
 				infantry_equipment < 0
 			}
 		}
+		always = no
 	}
 	
 	mean_time_to_happen = { days = 2 }
@@ -33,6 +34,30 @@ country_event = {
 			}
 		}
 	}
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+country_event = {
+	id = cf154ever_test_event.2
+	title = "Test event title 2"
+	desc = "Test event desc 2"
+	picture = GFX_report_event_001
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = CF154EVER_ENABLE_TEST_EVENTS
+		is_ai = no
+		ROM = {
+			OR = {
+				has_wargoal_against = BUL
+				is_justifying_wargoal_against = BUL
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
 	
 	option = { name = cf154ever_io.1.a }
 }
