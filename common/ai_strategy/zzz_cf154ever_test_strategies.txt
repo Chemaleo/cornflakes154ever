@@ -37,7 +37,11 @@ germany_badass = {
 		}
 	}
 	
-	abort = { NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES } }
+	abort = {
+		NOT = {
+			has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES
+		}
+	}
 	
 	ai_strategy = {
 		type = conquer
@@ -62,7 +66,11 @@ SAU_test_strategy_1 = {
 		date > 1936.4.1
 	}
 	
-	abort = { NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES } }
+	abort = {
+		NOT = {
+			has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES
+		}
+	}
 	
 	ai_strategy = {
 		type = conquer
@@ -97,7 +105,11 @@ SAU_test_strategy_2 = {
 		}
 	}
 	
-	abort = { NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES } }
+	abort = {
+		NOT = {
+			has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES
+		}
+	}
 	
 	ai_strategy = {
 		type = conquer
@@ -127,7 +139,11 @@ SAU_test_strategy_3 = {
 		}
 	}
 	
-	abort = { NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES } }
+	abort = {
+		NOT = {
+			has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES
+		}
+	}
 	
 	ai_strategy = {
 		type = conquer
@@ -162,7 +178,11 @@ BR_test_strategy = {
 		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES		
 	}
 	
-	abort = { NOT = { has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES } }
+	abort = {
+		NOT = {
+			has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES
+		}
+	}
 	
 	ai_strategy = {
 		type = conquer
