@@ -1,4 +1,5 @@
-﻿add_namespace = cf154ever_br
+﻿
+add_namespace = cf154ever_br
 
 country_event = {
 	id = cf154ever_br.1
