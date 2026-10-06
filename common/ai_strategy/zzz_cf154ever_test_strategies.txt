@@ -1,5 +1,6 @@
 
 germany_badass = {
+	
 	enable = {
 		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES
 		date > 1945.1.1		
@@ -78,15 +79,15 @@ SAU_test_strategy_1 = {
 		value = 99999
 	}
 	ai_strategy = {
-		type = consider_weak
-		id = IRQ
-		value = 99999
-	}
-	ai_strategy = {
 		type = antagonize
 		id = IRQ
 		value = 99999
 	}
+	ai_strategy = {
+		type = consider_weak
+		id = IRQ
+		value = 99999
+	}	
 }
 
 SAU_test_strategy_2 = {
@@ -131,6 +132,12 @@ SAU_test_strategy_3 = {
 		NOT = { has_government = neutrality }
 		has_war = no
 		date > 1936.4.1
+		IRQ = {
+			OR = {
+				exists = no
+				is_subject_of = SAU
+			}
+		}		
 		PER = {
 			OR = {
 				exists = no
@@ -158,6 +165,7 @@ SAU_test_strategy_3 = {
 }
 
 BR_test_strategy = {
+	
 	enable = {
 		OR = {
 			original_tag = ARG
@@ -190,15 +198,15 @@ BR_test_strategy = {
 		value = 99999
 	}
 	ai_strategy = {
-		type = consider_weak
-		id = PAN
-		value = 99999
-	}
-	ai_strategy = {
 		type = antagonize
 		id = PAN
 		value = 99999
 	}
+	ai_strategy = {
+		type = consider_weak
+		id = PAN
+		value = 99999
+	}	
 }
 
 # majors_stay_away_from_br_conflicts = {
