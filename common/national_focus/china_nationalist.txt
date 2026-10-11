@@ -64,21 +64,9 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-		
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_stability = 0.05
@@ -105,17 +93,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_war_support = 0.1
@@ -143,17 +123,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_war_support = 0.1
@@ -179,17 +151,9 @@ focus_tree = {
 			has_hyper_inflation = yes
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			CHI_hyper_inflation_level_down = yes 
@@ -210,21 +174,9 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_stability = 0.1
@@ -251,17 +203,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {			
 			add_war_support = 0.1
@@ -290,17 +234,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_war_support = 0.1
@@ -329,17 +265,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1
@@ -361,21 +289,9 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_political_power = 120
@@ -394,14 +310,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -425,14 +333,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -469,14 +369,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -499,14 +391,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -533,14 +417,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -562,14 +438,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -595,14 +463,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -625,14 +485,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -663,14 +515,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -693,14 +537,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -734,21 +570,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_stability = 0.05
@@ -780,10 +604,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			CHI = {
@@ -830,10 +650,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -915,10 +731,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {		
@@ -1025,10 +837,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
 		bypass = {
 			GXC = {
 				OR = {
@@ -1070,10 +878,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			every_other_country = {
@@ -1143,10 +947,6 @@ focus_tree = {
 			has_war = yes
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1176,10 +976,6 @@ focus_tree = {
 				has_idea = CHI_army_corruption_2
 			}
 			has_defensive_war = yes
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1220,10 +1016,6 @@ focus_tree = {
 			has_war = yes
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1255,10 +1047,6 @@ focus_tree = {
 			has_country_flag = CHI_lessons_of_war_completed
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1286,14 +1074,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1317,14 +1097,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1345,14 +1117,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1386,17 +1150,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -1503,17 +1259,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -1653,14 +1401,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1682,14 +1422,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1717,14 +1449,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1746,14 +1470,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1779,14 +1495,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1824,10 +1532,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1854,10 +1558,6 @@ focus_tree = {
 		available = {
 			num_of_factories > 74
 			amount_research_slots < 5
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1887,10 +1587,6 @@ focus_tree = {
 			has_full_control_of_state = 607
 			has_full_control_of_state = 602
 			has_full_control_of_state = 605
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1943,10 +1639,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1977,10 +1669,6 @@ focus_tree = {
 			NOT = {
 				has_idea = CHI_hyper_inflation_5
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2018,10 +1706,6 @@ focus_tree = {
 			NOT = {
 				has_idea = CHI_hyper_inflation_5
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2079,14 +1763,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2116,10 +1792,6 @@ focus_tree = {
 			has_hyper_inflation = yes
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2141,14 +1813,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2178,10 +1842,6 @@ focus_tree = {
 			has_hyper_inflation = yes
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2209,10 +1869,6 @@ focus_tree = {
 			has_hyper_inflation = yes
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2221,5 +1877,5 @@ focus_tree = {
 			unlock_decision_tooltip = CHI_forced_loans
 		}
 	}
-
+	
 }
