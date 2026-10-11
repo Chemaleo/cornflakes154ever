@@ -1,41 +1,16 @@
 
-rtn_fas_category = {
-	icon = generic_fascism
-
+cf154ever_test_decisions_category = {
+	icon = GFX_category_icon
+	
+	priority = 999
+	
 	allowed = {
 		always = yes
 	}
 	
-	#visible = {
-	#	NOT = { has_government = fascism }
-	#	has_idea_with_trait = fascist_demagogue
-	#}
-}
-
-rtn_dem_category = {
-	icon = generic_democracy
-
-	allowed = {
-		always = yes
+	visible = {
+		has_global_flag = ENABLE_CF154EVER_TEST_DECISIONS
 	}
-	
-	#visible = {
-	#	NOT = { has_government = democratic }
-	#	has_idea_with_trait = democratic_reformer
-	#}
-}
-
-rtn_com_category = {
-	icon = generic_communism
-
-	allowed = {
-		always = yes
-	}
-	
-	#visible = {
-	#	NOT = { has_government = communism }
-	#	has_idea_with_trait = communist_revolutionary
-	#}
 }
 
 cf154ever_decisions_category = {
@@ -52,3 +27,41 @@ cf154ever_decisions_category = {
 	}
 }
 
+rtn_dem_category = {
+	icon = generic_democracy
+
+	allowed = {
+		always = yes
+	}
+	
+	#visible = {
+	#	NOT = { has_government = democratic }
+	#	has_idea_with_trait = democratic_reformer
+	#}
+}
+
+rtn_fas_category = {
+	icon = generic_fascism
+
+	allowed = {
+		always = yes
+	}
+	
+	#visible = {
+	#	NOT = { has_government = fascism }
+	#	has_idea_with_trait = fascist_demagogue
+	#}
+}
+
+rtn_com_category = {
+	icon = generic_communism
+
+	allowed = {
+		always = yes
+	}
+	
+	#visible = {
+	#	NOT = { has_government = communism }
+	#	has_idea_with_trait = communist_revolutionary
+	#}
+}
