@@ -68,21 +68,9 @@ focus_tree = {
 			factor = 200
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_political_power = 120
@@ -112,17 +100,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			ITA = {
@@ -162,17 +142,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			ENG = {
@@ -222,21 +194,9 @@ focus_tree = {
 			factor = 80
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_idea_foreign_capital
@@ -258,21 +218,9 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			remove_ideas = YUG_idea_slovene_nationalism
@@ -300,21 +248,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_idea_orthodox_church_support
@@ -337,21 +273,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_state_claim = 48
@@ -375,21 +299,9 @@ focus_tree = {
 			factor = 80
 		}
 
-		available = {
-		
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_idea_all_yugoslavian_regiments
@@ -419,17 +331,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -471,17 +375,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			remove_ideas = anti_german_military
@@ -525,10 +421,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			if = {
 				limit = {
@@ -554,21 +446,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -604,17 +484,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = YUG_naval_research_group
@@ -644,21 +516,9 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -683,21 +543,9 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_idea_religious_freedoms_guaranteed
@@ -718,21 +566,9 @@ focus_tree = {
 			factor = 80
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_idea_local_militias
@@ -761,18 +597,10 @@ focus_tree = {
 				has_capitulated = no
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			remove_ideas = YUG_idea_macedonian_opposition
@@ -798,18 +626,10 @@ focus_tree = {
 			controls_state = 109
 			controls_state = 103
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			remove_ideas = YUG_idea_croatian_opposition
@@ -836,21 +656,9 @@ focus_tree = {
 			factor = 80
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 				swap_ideas = { remove_idea = YUG_idea_serbian_general_staff add_idea = YUG_idea_yugoslavian_general_staff }
@@ -893,10 +701,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			ENG = { country_event = generic.2 }
 			if = {
@@ -925,18 +729,10 @@ focus_tree = {
 		available = {
 			has_war_with = ITA
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_state_core = 736
@@ -968,17 +764,9 @@ focus_tree = {
 			is_in_faction_with = ENG
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = YUG_air_research_group
@@ -1014,17 +802,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			SOV = {
@@ -1051,21 +831,9 @@ focus_tree = {
 			factor = 200
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_idea_peasant_councils
@@ -1094,17 +862,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_timed_idea = { idea = YUG_idea_economic_aid days = 720 }
@@ -1134,21 +894,9 @@ focus_tree = {
 			factor = 150
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_idea_peasant_councils add_idea = YUG_idea_empowered_peasant_councils }
@@ -1193,10 +941,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			SOV = {
 				country_event = generic.2
@@ -1231,10 +975,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_idea_empowered_peasant_councils add_idea = YUG_idea_very_empowered_peasant_councils }
 		}
@@ -1254,21 +994,9 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			remove_ideas = YUG_idea_croatian_opposition
@@ -1291,21 +1019,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
@@ -1332,17 +1048,9 @@ focus_tree = {
 			is_in_faction_with = SOV
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = YUG_SOV_research_group
@@ -1366,21 +1074,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -1421,19 +1117,11 @@ focus_tree = {
 				has_government = communism
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			BUL = {
 				country_event = generic.5
@@ -1464,19 +1152,11 @@ focus_tree = {
 				has_government = communism
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			ALB = {
 				country_event = generic.5
@@ -1500,22 +1180,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 80
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1546,22 +1214,10 @@ focus_tree = {
 					}
 				}
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_idea_expanded_mining_industry
@@ -1595,19 +1251,11 @@ focus_tree = {
 				has_full_control_of_state = 109
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -1659,19 +1307,11 @@ focus_tree = {
 		available = {
 			has_full_control_of_state = 45
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -1708,23 +1348,11 @@ focus_tree = {
 					}
 				}
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 102 }
@@ -1786,19 +1414,11 @@ focus_tree = {
 				has_idea = YUG_idea_croatian_opposition
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -1825,23 +1445,11 @@ focus_tree = {
 					}
 				}
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			every_owned_state = {
 				limit = {
@@ -1877,22 +1485,10 @@ focus_tree = {
 					}
 				}
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1937,22 +1533,10 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
 		
-		}
-
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 102 }
@@ -1995,22 +1579,10 @@ focus_tree = {
 				}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_ideas = YUG_idea_local_self_management
 		}
@@ -2035,19 +1607,11 @@ focus_tree = {
 				has_idea = YUG_idea_slovene_nationalism
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -2072,21 +1636,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -2132,17 +1684,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -2212,18 +1756,10 @@ focus_tree = {
 		available = {
 			has_full_control_of_state = 108
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			108 = {
@@ -2248,22 +1784,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1
@@ -2284,21 +1808,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_idea_central_management
@@ -2322,18 +1834,10 @@ focus_tree = {
 		available = {
 			has_full_control_of_state = 104
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			104 = {
@@ -2368,21 +1872,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2408,23 +1900,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_ideas = HUN_indigenous_designs #emergency fix
 		}
@@ -2444,21 +1924,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = YUG_designer_tt
@@ -2492,21 +1960,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = YUG_designer_tt
@@ -2539,21 +1995,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = YUG_designer_tt
@@ -2586,21 +2030,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2627,21 +2059,9 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2667,21 +2087,9 @@ focus_tree = {
 			factor = 20
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2708,21 +2116,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -2773,21 +2169,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_license_production
@@ -2862,19 +2246,11 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			country_event = DOD_yugoslavia.150
 		}
@@ -2950,19 +2326,10 @@ focus_tree = {
 			}
 		}
 		
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			country_event = DOD_yugoslavia.160
 		}
@@ -2987,22 +2354,10 @@ focus_tree = {
 				is_in_faction_with = GER
 			}
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			army_experience = 25
@@ -3027,21 +2382,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3070,22 +2413,10 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_motorized_logistics
@@ -3115,21 +2446,9 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3159,23 +2478,11 @@ focus_tree = {
 				is_in_faction_with = GER
 			}
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_ideas = YUG_idea_tank_conversions
 		}
@@ -3199,22 +2506,10 @@ focus_tree = {
 				is_in_faction_with = GER
 			}
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3243,23 +2538,11 @@ focus_tree = {
 				is_in_faction_with = GER
 			}
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_ideas = YUG_tank_licenses
 		}
@@ -3278,22 +2561,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3319,21 +2590,9 @@ focus_tree = {
 			factor = 70
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3358,22 +2617,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3398,23 +2645,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_mountain_brigades
@@ -3439,21 +2674,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3479,21 +2702,9 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3519,21 +2730,9 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3559,21 +2758,9 @@ focus_tree = {
 			factor = 70
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3599,22 +2786,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 30
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3642,21 +2817,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3683,21 +2846,9 @@ focus_tree = {
 			factor = 70
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = YUG_artillery_regiments
@@ -3724,19 +2875,11 @@ focus_tree = {
 		available = {
 			has_full_control_of_state = 103
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			103 = {
 				add_extra_state_shared_building_slots = 2
@@ -3768,18 +2911,10 @@ focus_tree = {
 				is_coastal = yes
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3810,19 +2945,11 @@ focus_tree = {
 				is_coastal = yes
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_replace_the_dalmacija
@@ -3852,19 +2979,11 @@ focus_tree = {
 				is_coastal = yes
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_naval_bombers
@@ -3894,18 +3013,10 @@ focus_tree = {
 				is_coastal = yes
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3936,18 +3047,10 @@ focus_tree = {
 				is_coastal = yes
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3976,18 +3079,10 @@ focus_tree = {
 		available = {
 			has_full_control_of_state = 105
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			105 = {
@@ -4022,18 +3117,10 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			#forts on coast and harbor
 			if = {
@@ -4113,19 +3200,11 @@ focus_tree = {
 				is_coastal = yes
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_expand_the_submarine_fleet
@@ -4135,5 +3214,4 @@ focus_tree = {
 			}
 		}
 	}
-
 }
