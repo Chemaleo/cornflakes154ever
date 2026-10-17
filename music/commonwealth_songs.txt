@@ -43,7 +43,7 @@ music = {
 			factor = 5
 			is_in_faction_with = ENG
 		}
-		modifier = {
+		modifier = {	#cf154ever
 			factor = 0
 			has_global_flag = NO_SAD_MUSIC
 		}
