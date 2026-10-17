@@ -42,8 +42,8 @@
     
     
     #   Секция прочих решений/Etc
-    cf154ever_event.2.t:0 "POTUS is replaced by a Martian!"
-    cf154ever_event.2.d:0 "For some reason martians attacked [USA.GetNameDef] and killed the President to take over the nation and wage total war against us!"
+    cf154ever_event.2.t:0 "POTUS is replaced by a martian!"
+    cf154ever_event.2.d:0 "For some odd reason the martians attacked [USA.GetNameDef] and killed the President to take over the nation and wage total war against us!"
     cf154ever_event.2.a:0 "All according to secret martian documents! Get Stalin on the line!"
     cf154ever_event.3.t:0 "Goodies for the AI"
     cf154ever_event.3.d:0 "Should the mod give some goodies to the AI?"
