@@ -1,6 +1,6 @@
 ﻿l_english:
 
-    #   Секция стартапа
+    #   Секция стартапа/Startup
     cf154ever_startup.1.t:0 "Welcome to Cornflakes 1.5.4 Ever!"
     cf154ever_startup.1.d:0 "Select one of the options to continue:"
     cf154ever_startup.1.a:0 "Run the mod as it was intended by the developer"
@@ -21,7 +21,7 @@
     CF154EVER_PUPPET_WARNING:0 "§YPuppet§! the country.\n\n§RThis will cause a crash if you don't pause the game, save and restart§!!"
     
     
-    #   Секция баттлрояля
+    #   Секция баттлрояля/Battle royale
     cf154ever_br.1.t:0 "Welcome to Minor's Free For All!"
     cf154ever_br.1.d:0 "Select one of the options to continue:"
     cf154ever_br.1.a:0 "Options"
@@ -40,7 +40,8 @@
     br_faction_9:0 "BR Side 9"
     br_faction_10:0 "BR Side 10"
     
-    #   Секция прочих решений
+    
+    #   Секция прочих решений/Etc
     cf154ever_event.2.t:0 "POTUS is replaced by a Martian!"
     cf154ever_event.2.d:0 "For some reason martians attacked [USA.GetNameDef] and killed the President to take over the nation and wage total war against us!"
     cf154ever_event.2.a:0 "All according to secret martian documents! Get Stalin on the line!"
@@ -49,3 +50,5 @@
     cf154ever_event.3.a:0 "Give goodies to the AI as the author originally intended"
     cf154ever_event.3.b:0 "Give goodies to the AI regardless of the author's original intent"
     cf154ever_event.3.c:0 "Give no goodies to the AI"
+    
+    
