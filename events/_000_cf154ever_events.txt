@@ -45,8 +45,8 @@ country_event = {
 		is_historical_focus_on = no		
 		has_war = no
 		has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
-		has_full_control_of_state = 516	#	Северозападная Сибирь
-		has_full_control_of_state = 644	#	Северовосточная Сибирь
+		has_full_control_of_state = 516	#Северозападная Сибирь
+		has_full_control_of_state = 644	#Северовосточная Сибирь
 		has_tech = mechanised_infantry2
 		has_tech = improved_medium_tank
 		has_tech = advanced_centimetric_radar
