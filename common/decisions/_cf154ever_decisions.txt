@@ -4,186 +4,6 @@ cf154ever_decisions_category = {
 ###########################################
 # Решения разрешённые только для Германии #
 ###########################################
-	cf154ever_decision_oob_test = {
-		
-		priority = 10
-		
-		icon = GFX_decision_icon_default
-		
-		fire_only_once = no
-		
-		allowed = {
-			original_tag = GER
-		}
-		
-		visible = {
-			has_global_flag = CF154EVER_ENABLE_TEST_DECISIONS
-		}
-		
-		available = {
-			has_full_control_of_state = 64
-			has_tech = main_battle_tank
-			has_tech = mechanised_infantry3
-			has_tech = tech_maintenance_company4			
-			has_tech = tech_logistics_company4
-			has_manpower > 15599			
-			has_equipment = {
-				modern_tank_equipment > 749
-			}
-			has_equipment = {
-				infantry_equipment > 549
-			}			
-			has_equipment = {
-				mechanized_equipment > 249
-			}
-			has_equipment = {
-				support_equipment > 84
-			}			
-			has_equipment = {
-				artillery_equipment > 11
-			}
-			has_equipment = {
-				motorized_equipment > 9
-			}
-		}
-		
-		complete_effect = {
-			if = {
-				limit = {
-					NOT = {
-						has_template = "ideal 40-width armor"
-					}
-				}
-				load_oob = cf154ever_oob_test_1
-			}
-			else = {
-				load_oob = cf154ever_oob_test_2
-			}
-		}
-	}
-	
-	cf154ever_decision_io_test = {
-		
-		priority = 9
-		
-		icon = GFX_decision_icon_default
-		
-		fire_only_once = no
-		
-		allowed = {
-			original_tag = GER
-		}
-		
-		visible = {
-			has_global_flag = CF154EVER_ENABLE_TEST_DECISIONS
-		}
-		
-		available = {
-			OR = {
-				has_equipment = {
-					infantry_equipment < 0
-				}
-				has_equipment = {
-					infantry_equipment > 2147482
-				}
-			}
-		}
-		
-		complete_effect = {
-			if = {
-				limit = {
-					has_equipment = {
-						infantry_equipment_0 < 0
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 1900000
-				}
-			}
-			else_if = {
-				limit = {
-					has_equipment = {
-						infantry_equipment_0 > 2147482
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = -2147482
-				}
-			}
-			else_if = {
-				limit = {
-					has_equipment = {
-						infantry_equipment_1 < 0
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 1900000
-				}
-			}
-			else_if = {
-				limit = {
-					has_equipment = {
-						infantry_equipment_1 > 2147482
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = -2147482
-				}
-			}
-			else_if = {
-				limit = {
-					has_equipment = {
-						infantry_equipment_2 < 0
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_2
-					amount = 1900000
-				}
-			}
-			else_if = {
-				limit = {
-					has_equipment = {
-						infantry_equipment_2 > 2147482
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_2
-					amount = -2147482
-				}
-			}
-			else_if = {
-				limit = {
-					has_equipment = {
-						infantry_equipment_3 < 0
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_3
-					amount = 1900000
-				}
-			}
-			else_if = {
-				limit = {
-					has_equipment = {
-						infantry_equipment_3 > 2147482
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_3
-					amount = -2147482
-				}
-			}
-			else = {
-				add_political_power = 2000
-			}
-		}
-	}
-	
 	cf154ever_decision_unlock_SS = {
 		
 		priority = -50
@@ -191,8 +11,6 @@ cf154ever_decisions_category = {
 		icon = generic_army_support
 		
 		fire_only_once = no
-		
-		#days_re_enable = 15
 		
 		allowed = {
 			original_tag = GER
@@ -278,6 +96,8 @@ cf154ever_decisions_category = {
 				}
 			}
 		}
+		
+		#days_re_enable = 15		
 	}
 	
 	cf154ever_decision_unlock_SS_2 = {
@@ -326,17 +146,17 @@ cf154ever_decisions_category = {
 		}
 		
 		visible = {
-			date < 1940.6.10			
+			date < 1940.6.10
 			has_global_flag = ENABLE_CF154EVER_DECISIONS
 			has_government = fascism
 			is_ai = yes
-			is_historical_focus_on = yes			
+			is_historical_focus_on = yes
 			NOR = { is_ai = yes }
 			USA = { is_ai = yes }
 			JAP = { is_ai = yes }
 			check_if_cf154ever_crutches_enabled = yes
 			has_war_with = ENG
-			has_war_with = FRA			
+			has_war_with = FRA
 			NOT = {
 				any_country = {
 					is_ai = no
@@ -532,6 +352,44 @@ cf154ever_decisions_category = {
 ###############################
 # Решения для остальных стран #
 ###############################
+
+	cf154ever_decision_viriatos = {
+		
+		priority = 50
+		
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		cost = 25
+		
+		fire_only_once = yes
+		
+		allowed = {
+			original_tag = POR
+		}
+		
+		visible = {
+			any_country = {
+				original_tag = SPR
+				has_civil_war = yes
+			}
+		}
+		
+		available = {
+			any_country = {
+				original_tag = SPR
+				has_civil_war = yes
+			}
+		}		
+		
+		complete_effect = {
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = cf154ever_idea_viriatos
+		}
+		
+		ai_will_do = {
+			factor = 100	#50
+		}
+	}
 
 	cf154ever_decision_disable_sad_music = {
 		
@@ -1098,10 +956,8 @@ cf154ever_decisions_category = {
 		fire_only_once = yes
 		
 		visible = {
-			OR = {
-				has_government = neutrality
-				has_government = communism
-				has_government = fascism
+			NOT = {
+				has_government = democratic
 			}
 		}
 		
@@ -1315,6 +1171,7 @@ cf154ever_decisions_category = {
 	}
 	
 	cf154ever_decision_br = {	#Потом нужно всё закомментить, как перенесу в ивенты содержимое
+	
 		icon = GFX_decision_generic_ignite_civil_war
 		
 		priority = -1
