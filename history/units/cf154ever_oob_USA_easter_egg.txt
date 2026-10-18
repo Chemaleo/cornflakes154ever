@@ -1,8 +1,84 @@
 ﻿
+division_template = {
+	name = "Martian armor"
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 3 }
+		medium_armor = { x = 0 y = 4 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		medium_armor = { x = 1 y = 2 }
+		medium_armor = { x = 1 y = 3 }
+		medium_armor = { x = 1 y = 4 }
+		medium_armor = { x = 2 y = 0 }
+		medium_armor = { x = 2 y = 1 }		
+		medium_armor = { x = 2 y = 2 }
+		medium_armor = { x = 2 y = 3 }
+		medium_armor = { x = 2 y = 4 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+		motorized = { x = 3 y = 3 }
+		motorized = { x = 3 y = 4 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }		
+        recon = { x = 0 y = 1 }
+        engineer = { x = 0 y = 2 }
+		maintenance_company	= { x = 0 y = 3 }
+		logistics_company = { x = 0 y = 4 }
+	}
+	division_names_group = USA_ARM_01
+	# is_locked = yes
+	# force_allow_recruiting = yes
+	# division_cap = 12
+	priority = 2
+	# template_counter = 10
+	# override_model = GER_infantry_entity
+}
+
 units = {
+	#Сиэтл (Seattle)
+	division = { name = "Martian armor unit 1" location = 7315 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 2" location = 7315 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 3" location = 7315 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 4" location = 7315 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 5" location = 7315 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 6" location = 7315 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	#Портланд (Portland)
+	division = { name = "Martian armor unit 7" location = 3513 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 8" location = 3513 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 9" location = 3513 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 10" location = 3513 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 11" location = 3513 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 12" location = 3513 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	#Грейт-Фолс (Great Falls)
+	division = { name = "Martian armor unit 13" location = 4860 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 14" location = 4860 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 15" location = 4860 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 16" location = 4860 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 17" location = 4860 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 18" location = 4860 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	#Денвер (Denver)
+	division = { name = "Martian armor unit 19" location = 1827 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 20" location = 1827 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 21" location = 1827 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 22" location = 1827 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 23" location = 1827 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 24" location = 1827 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	#Рапид-Сити (Rapid City)
+	division = { name = "Martian armor unit 25" location = 1747 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 26" location = 1747 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 27" location = 1747 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 28" location = 1747 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 29" location = 1747 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	division = { name = "Martian armor unit 30" location = 1747 division_template = "Martian armor" start_experience_factor = 0.9 start_equipment_factor = 1 start_manpower_factor = 1 }
+	
 	navy = {
 		name = "Martian Fleet"
-		base = 9814	#	Лос-Анджелес
+		base = 9814	#Лос-Анджелес
 		location = 9814
 		ship = { name = "Martian Ship 1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
 		ship = { name = "Martian Ship 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
