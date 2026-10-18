@@ -539,11 +539,7 @@ JAP_invade_INS = {
 	enable = {
 		original_tag = JAP
 		has_war_with = INS
-		# PHI = { has_capitulated = yes }
-		any_country = {
-			original_tag = PHI
-			has_capitulated = yes
-		}
+		"PHI" = { has_capitulated = yes }
 		MAL = { has_capitulated = yes }
 	}
 	
@@ -564,11 +560,7 @@ JAP_invade_AST = {
 	enable = {
 		original_tag = JAP
 		has_war_with = AST
-		# PHI = { has_capitulated = yes }
-		any_country = {
-			original_tag = PHI
-			has_capitulated = yes
-		}		
+		"PHI" = { has_capitulated = yes }	
 		MAL = { has_capitulated = yes }
 		INS = { has_capitulated = yes }
 	}
@@ -590,11 +582,7 @@ JAP_invade_NZL = {
 	enable = {
 		original_tag = JAP
 		has_war_with = NZL
-		# PHI = { has_capitulated = yes }
-		any_country = {
-			original_tag = PHI
-			has_capitulated = yes
-		}		
+		"PHI" = { has_capitulated = yes }		
 		MAL = { has_capitulated = yes }
 		INS = { has_capitulated = yes }
 	}
