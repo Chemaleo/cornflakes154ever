@@ -81,7 +81,7 @@ country_event = {
 					add_popularity = { ideology = fascism popularity = 1 }
 				}
 				else_if = {
-					limit = { fascism < 0.5 }
+					limit = { fascism < 1 }
 					add_popularity = { ideology = fascism popularity = 1 }
 				}
 				set_party_name = { ideology = fascism long_name = USA_martial_order_long name = USA_martial_order }
@@ -131,7 +131,7 @@ country_event = {
 				create_corps_commander = {
 					name = "Martian General"
 					picture = "Portrait_France_Jean_de_Lattre_de_Tassigny.dds"	#Заменить картиночки
-					traits = { commando adaptable organizer trickster naval_invader career_officer skilled_staffer }	#7 навыков
+					traits = { commando adaptable organizer trickster naval_invader skilled_staffer }	#6 навыков
 					skill = 9
 					attack_skill = 9
 					defense_skill = 9
@@ -147,7 +147,7 @@ country_event = {
 				if = { limit = { has_equipment = { artillery_equipment < 370 } } add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 370 } }
 				if = { limit = { has_equipment = { motorized_equipment_1 < 7900 } } add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7900 } }
 				if = { limit = { has_equipment = { support_equipment_1 < 2600 } } add_equipment_to_stockpile = { type = support_equipment_1 amount = 2600 } }
-				if = { limit = { has_manpower < 1000000 } add_manpower = 500000 }
+				add_manpower = 500000
 				load_oob = cf154ever_oob_USA_easter_egg
 			}
 		}
