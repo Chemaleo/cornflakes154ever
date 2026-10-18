@@ -30,7 +30,7 @@ division_template = {
 		maintenance_company	= { x = 0 y = 3 }
 		logistics_company = { x = 0 y = 4 }
 	}
-	division_names_group = USA_ARM_01
+	# division_names_group = USA_ARM_01
 	# is_locked = yes
 	# force_allow_recruiting = yes
 	# division_cap = 12
