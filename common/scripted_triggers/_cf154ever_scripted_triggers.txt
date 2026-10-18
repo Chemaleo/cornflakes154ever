@@ -307,17 +307,10 @@ br_countries_are_intact = {
 		has_war = no
 		is_in_faction = no		
 	}
-	# PAN = {
-		# exists = yes
-		# is_subject = no
-		# has_war = no
-	# }
-	any_country = {
-		original_tag = PAN
+	"PAN" = {
 		exists = yes
 		is_subject = no
 		has_war = no
-		is_in_faction = no		
 	}
 	HAI = {
 		exists = yes
