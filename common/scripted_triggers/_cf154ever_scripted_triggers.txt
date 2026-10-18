@@ -311,6 +311,7 @@ br_countries_are_intact = {
 		exists = yes
 		is_subject = no
 		has_war = no
+		is_in_faction = no
 	}
 	HAI = {
 		exists = yes
