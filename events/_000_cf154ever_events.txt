@@ -159,6 +159,7 @@ country_event = {
 	option = { name = cf154ever_event.2.a }
 }
 
+#	FGSW
 country_event = {
 	id = cf154ever_event.3
 	title = cf154ever_event.3.t
