@@ -21,9 +21,7 @@ country_event = {
 	mean_time_to_happen = { days = 2 }
 	
 	immediate = {
-		ROM = {
-			set_politics = { ruling_party = fascism }
-		}
+		ROM = { set_politics = { ruling_party = fascism } }
 	}
 	
 	option = { name = cf154ever_event.1.a }
@@ -42,47 +40,18 @@ country_event = {
 		date > 1942.5.31
 		original_tag = SOV
 		communism > 0.99
-		is_historical_focus_on = no		
+		is_historical_focus_on = no
 		has_war = no
 		has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
 		has_full_control_of_state = 516	#Северозападная Сибирь
 		has_full_control_of_state = 644	#Северовосточная Сибирь
-		has_tech = mechanised_infantry2
-		has_tech = improved_medium_tank
-		has_tech = advanced_centimetric_radar
-		divisions_in_state = {
-			type = mechanized
-			size > 0
-			state = 516
-		}
-		divisions_in_state = {
-			type = armor
-			size > 0
-			state = 644
-		}
-		516 = {
-			infrastructure > 9
-			radar_station > 5
-		}
+		516 = { infrastructure > 9 radar_station > 5 }
 		644 = {
 			infrastructure > 9
 			radar_station > 5
-			any_province_building_level	= {
-				province = {
-					id = 13204
-				}
-				building = naval_base
-				level > 9
-			}
-			any_province_building_level	= {
-				province = {
-					id = 13204
-				}
-				building = coastal_bunker
-				level > 9
-			}
+			any_province_building_level	= { province = { id = 13204 } building = naval_base level > 9 }
+			any_province_building_level	= { province = { id = 13204 } building = coastal_bunker level > 9 }
 		}
-		NOT = { has_war_with = USA }
 	}
 	
 	mean_time_to_happen = { days = 2 }
@@ -92,29 +61,15 @@ country_event = {
 			USA = {
 				set_cosmetic_tag = USA_MARTIAN
 				if = {
-					limit = {
-						NOT = { has_government = fascism }
-					}
+					limit = { NOT = { has_government = fascism } }
 					set_politics = { ruling_party = fascism }
 					add_popularity = { ideology = fascism popularity = 1 }
 				}
-				if = {
-					limit = {
-						has_government = fascism
-						fascism < 0.5
-					}
+				else_if = {
+					limit = { fascism < 0.5 }
 					add_popularity = { ideology = fascism popularity = 1 }
 				}
 				set_party_name = { ideology = fascism long_name = USA_martial_order_long name = USA_martial_order }
-				kill_country_leader = yes
-				create_country_leader = {
-					name = "Green Martian"
-					picture = GFX_portrait_martian
-					expire = "2009.4.29"
-					ideology = nazism
-					traits = { hates_ussr }
-				}
-				load_oob = cf154ever_oob_USA_easter_egg
 				if = {
 					limit = {
 						is_in_faction_with = ENG
@@ -155,6 +110,30 @@ country_event = {
 						message = cf154ever_easter_egg_activated_tt
 					}
 				}
+				kill_country_leader = yes
+				create_country_leader = { name = "Green Martian" picture = GFX_portrait_martian expire = "2009.4.29" ideology = nazism traits = { hates_ussr } }
+				create_navy_leader = { name = "Martian Admiral" gfx = "GFX_portrait_FRA_francois_darlan" traits = { spotter superior_tactician } skill = 9 }
+				create_corps_commander = {
+					name = "Martian General"
+					picture = "Portrait_France_Jean_de_Lattre_de_Tassigny.dds"	#Заменить картиночки
+					traits = { commando adaptable organizer trickster naval_invader career_officer skilled_staffer }	#7 навыков
+					skill = 9
+					attack_skill = 9
+					defense_skill = 9
+					planning_skill = 9
+					logistics_skill = 9
+				}
+				if = { limit = { NOT = { has_tech = basic_medium_tank } } set_technology = { basic_medium_tank = 1 } }
+				if = { limit = { NOT = { has_tech = motorised_infantry } } set_technology = { motorised_infantry = 1 } }
+				if = { limit = { NOT = { has_tech = tech_maintenance_company } } set_technology = { tech_maintenance_company = 1 } }
+				if = { limit = { NOT = { has_tech = tech_logistics_company } } set_technology = { tech_logistics_company = 1 } }
+				if = { limit = { has_equipment = { medium_tank_equipment < 23000 } } add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = 23000 producer = USA } }
+				if = { limit = { has_equipment = { infantry_equipment < 16600 } } add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 16600 producer = USA } }
+				if = { limit = { has_equipment = { artillery_equipment < 370 } } add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 370 producer = USA } }
+				if = { limit = { has_equipment = { motorized_equipment_1 < 7900 } } add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7900 producer = USA } }
+				if = { limit = { has_equipment = { support_equipment_1 < 2600 } } add_equipment_to_stockpile = { type = support_equipment_1 amount = 2600 producer = USA } }
+				if = { limit = { has_manpower < 1000000 } add_manpower = 500000 }
+				load_oob = cf154ever_oob_USA_easter_egg
 			}
 		}
 	}
@@ -175,179 +154,79 @@ country_event = {
 	option = {
 		name = cf154ever_event.3.a
 		GER = {
-			if = {
-				limit = {
-					has_idea = all_adults_serve
-					has_manpower < 500000
-				}
-				add_manpower = 500000				
+			random_list = {
+				33 = { add_manpower = 100000 }
+				33 = { add_manpower = 250000 }
+				33 = { add_manpower = 500000 }
+				1 = { add_manpower = 1000000 }
 			}
-			else_if = {
-				limit = {
-					has_idea = scraping_the_barrel
-					has_manpower < 100000
+			random_list = {
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 10000
+						producer = GER 
+					}
 				}
-				add_manpower = 1000000
-			}
-			
-			if = {
-				limit = {
-					has_tech = advanced_infantry_weapons
-					has_equipment = { infantry_equipment < 10000 }
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 50000
+						producer = GER 
+					}
 				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_3
-					amount = 50000
-					producer = GER
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 100000
+						producer = GER 
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_tech = improved_infantry_weapons
-					has_equipment = { infantry_equipment < 10000 }
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_2
-					amount = 50000
-					producer = GER 
-				}
-			}
-			else_if = {
-				limit = {
-					has_equipment = { infantry_equipment < 10000 }
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 50000
-					producer = GER 
-				}
-			}
-			
-			if = {
-				limit = {
-					has_tech = artillery4
-					has_equipment = { artillery_equipment < 10000 }
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_3
-					amount = 10000
-					producer = GER
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = artillery1
-					has_equipment = { artillery_equipment < 10000 }
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_2
-					amount = 10000
-					producer = GER
-				}
-			}
-			else_if = {
-				limit = { has_equipment = { artillery_equipment < 10000 } }
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 10000
-					producer = GER
-				}
-			}
-			
-			if = {
-				limit = { has_equipment = { support_equipment_1 < 10000 } }
-				add_equipment_to_stockpile = {
-					type = support_equipment_1
-					amount = 10000
+				1 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 1000000
+						producer = GER 
+					}
 				}
 			}
 		}
-
+		
 		SOV = {
-			if = {
-				limit = {
-					has_idea = all_adults_serve
-					has_manpower < 500000
-				}
-				add_manpower = 500000				
+			random_list = {
+				33 = { add_manpower = 100000 }
+				33 = { add_manpower = 250000 }
+				33 = { add_manpower = 500000 }
+				1 = { add_manpower = 1000000 }
 			}
-			else_if = {
-				limit = {
-					has_idea = scraping_the_barrel
-					has_manpower < 100000
+			random_list = {
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 10000
+						producer = SOV 
+					}
 				}
-				add_manpower = 1000000
-			}
-			
-			if = {
-				limit = {
-					has_tech = advanced_infantry_weapons
-					has_equipment = { infantry_equipment < 10000 }
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 50000
+						producer = SOV 
+					}
 				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_3
-					amount = 50000
-					producer = SOV
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 100000
+						producer = SOV 
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_tech = improved_infantry_weapons
-					has_equipment = { infantry_equipment < 10000 }
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_2
-					amount = 50000
-					producer = SOV 
-				}
-			}
-			else_if = {
-				limit = {
-					has_equipment = { infantry_equipment < 10000 }
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 50000
-					producer = SOV 
-				}
-			}
-			
-			if = {
-				limit = {
-					has_tech = artillery4
-					has_equipment = { artillery_equipment < 10000 }
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_3
-					amount = 10000
-					producer = SOV
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = artillery1
-					has_equipment = { artillery_equipment < 10000 }
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_2
-					amount = 10000
-					producer = SOV
-				}
-			}
-			else_if = {
-				limit = { has_equipment = { artillery_equipment < 10000 } }
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 10000
-					producer = SOV
-				}
-			}
-			
-			if = {
-				limit = { has_equipment = { support_equipment_1 < 10000 } }
-				add_equipment_to_stockpile = {
-					type = support_equipment_1
-					amount = 10000
+				1 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 1000000
+						producer = SOV 
+					}
 				}
 			}
 		}
@@ -357,12 +236,11 @@ country_event = {
 		name = cf154ever_event.3.b
 		GER = {
 			add_manpower = 500000
-			
 			if = {
 				limit = { has_tech = advanced_infantry_weapons }
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_3
-					amount = 50000
+					amount = 100000
 					producer = GER
 				}
 			}
@@ -370,56 +248,26 @@ country_event = {
 				limit = { has_tech = improved_infantry_weapons }
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_2
-					amount = 50000
+					amount = 100000
 					producer = GER 
 				}
 			}
 			else = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 50000
+					amount = 100000
 					producer = GER 
 				}
-			}
-			
-			if = {
-				limit = { has_tech = artillery4 }
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_3
-					amount = 10000
-					producer = GER
-				}
-			}
-			else_if = {
-				limit = { has_tech = artillery1 }
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_2
-					amount = 10000
-					producer = GER
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 10000
-					producer = GER
-				}
-			}
-			
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = 10000
 			}
 		}
 
 		SOV = {
 			add_manpower = 500000
-			
 			if = {
 				limit = { has_tech = advanced_infantry_weapons }
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_3
-					amount = 50000
+					amount = 100000
 					producer = SOV
 				}
 			}
@@ -427,45 +275,16 @@ country_event = {
 				limit = { has_tech = improved_infantry_weapons }
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_2
-					amount = 50000
+					amount = 100000
 					producer = SOV 
 				}
 			}
 			else = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 50000
+					amount = 100000
 					producer = SOV 
 				}
-			}
-			
-			if = {
-				limit = { has_tech = artillery4 }
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_3
-					amount = 10000
-					producer = SOV
-				}
-			}
-			else_if = {
-				limit = { has_tech = artillery1 }
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_2
-					amount = 10000
-					producer = SOV
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 10000
-					producer = SOV
-				}
-			}
-			
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = 10000
 			}
 		}
 	}
