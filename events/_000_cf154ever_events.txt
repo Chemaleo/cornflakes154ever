@@ -43,14 +43,32 @@ country_event = {
 		is_historical_focus_on = no
 		has_war = no
 		has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
-		has_full_control_of_state = 516	#Северозападная Сибирь
-		has_full_control_of_state = 644	#Северовосточная Сибирь
-		516 = { infrastructure > 9 radar_station > 5 }
-		644 = {
+		219 = { infrastructure > 9 }	#Москва
+		253 = { infrastructure > 9 }	#Иваново
+		252 = { infrastructure > 9 }	#Горький
+		256 = { infrastructure > 9 }	#Чебоксары
+		249 = { infrastructure > 9 }	#Казань
+		651 = { infrastructure > 9 }	#Уфа
+		573 = { infrastructure > 9 }	#Златоуст
+		572 = { infrastructure > 9 }	#Челябинск
+		403 = { infrastructure > 9 }	#Тюмень
+		577 = { infrastructure > 9 }	#Сургут
+		516 = {	#Северозападная Сибирь
+			infrastructure > 9
+			radar_station > 5
+		}
+		644 = {	#Северовосточная Сибирь
 			infrastructure > 9
 			radar_station > 5
 			any_province_building_level	= { province = { id = 13204 } building = naval_base level > 9 }
 			any_province_building_level	= { province = { id = 13204 } building = coastal_bunker level > 9 }
+		}
+		USA = {
+			exists = yes
+			if = {
+				limit = { has_war = yes }
+				surrender_progress < 0.01
+			}
 		}
 	}
 	
@@ -127,11 +145,11 @@ country_event = {
 				if = { limit = { NOT = { has_tech = motorised_infantry } } set_technology = { motorised_infantry = 1 } }
 				if = { limit = { NOT = { has_tech = tech_maintenance_company } } set_technology = { tech_maintenance_company = 1 } }
 				if = { limit = { NOT = { has_tech = tech_logistics_company } } set_technology = { tech_logistics_company = 1 } }
-				if = { limit = { has_equipment = { medium_tank_equipment < 23000 } } add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = 23000 producer = USA } }
-				if = { limit = { has_equipment = { infantry_equipment < 16600 } } add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 16600 producer = USA } }
-				if = { limit = { has_equipment = { artillery_equipment < 370 } } add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 370 producer = USA } }
-				if = { limit = { has_equipment = { motorized_equipment_1 < 7900 } } add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7900 producer = USA } }
-				if = { limit = { has_equipment = { support_equipment_1 < 2600 } } add_equipment_to_stockpile = { type = support_equipment_1 amount = 2600 producer = USA } }
+				if = { limit = { has_equipment = { medium_tank_equipment < 23000 } } add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = 23000 } }
+				if = { limit = { has_equipment = { infantry_equipment < 16600 } } add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 16600 } }
+				if = { limit = { has_equipment = { artillery_equipment < 370 } } add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 370 } }
+				if = { limit = { has_equipment = { motorized_equipment_1 < 7900 } } add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7900 } }
+				if = { limit = { has_equipment = { support_equipment_1 < 2600 } } add_equipment_to_stockpile = { type = support_equipment_1 amount = 2600 } }
 				if = { limit = { has_manpower < 1000000 } add_manpower = 500000 }
 				load_oob = cf154ever_oob_USA_easter_egg
 			}
