@@ -43,7 +43,7 @@ l_english:
     cf154ever_decision_unlock_SS_2:0 "Hide SS unlock decisions"
     hide_SS_unlock_decision_tt:0 "Hides this decision and §Y"Unlock SS Divisions"§!. Use it when you're done having your way with SS divisions, since hide effect cannot be undone"
     cf154ever_decision_viriatos:0 "Send Viriatos to Spain"
-    cf154ever_idea_viriatos:0 "Viriatos""
+    cf154ever_idea_viriatos:0 "Viriatos"
     USA_MARTIAN_democratic:0 "United Martian States"
     USA_MARTIAN_democratic_DEF:0 "The United Martian States"
     USA_MARTIAN_democratic_ADJ:0 "Martian"    
