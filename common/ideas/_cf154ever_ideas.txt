@@ -9,18 +9,9 @@ ideas = {
 			allowed = { always = no }
 			
 			cancel = {
-				OR = {
-					any_country = {
-						original_tag = SPR
-						has_civil_war = no
-					}
-					any_country = {
-						NOT = { original_tag = SPR }
-						has_volunteers_amount_from = {
-							tag = POR
-							count > 0
-						}
-					}
+				any_country = {
+					original_tag = SPR
+					has_civil_war = no
 				}
 			}
 			
