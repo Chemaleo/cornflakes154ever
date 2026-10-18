@@ -169,6 +169,7 @@ country_event = {
 	
 	option = {
 		name = cf154ever_event.3.a
+		
 		GER = {
 			random_list = {
 				33 = { add_manpower = 250000 }
@@ -250,6 +251,7 @@ country_event = {
 	
 	option = {
 		name = cf154ever_event.3.b
+		
 		GER = {
 			add_manpower = 500000
 			if = {
