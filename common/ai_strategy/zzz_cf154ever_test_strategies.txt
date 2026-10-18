@@ -46,12 +46,12 @@ germany_badass = {
 	
 	ai_strategy = {
 		type = conquer
-		id = SWE
+		id = "SWE"
 		value = 99999
 	}
 	ai_strategy = {
 		type = antagonize
-		id = SWE
+		id = "SWE"
 		value = 99999
 	}
 }
@@ -75,17 +75,17 @@ SAU_test_strategy_1 = {
 	
 	ai_strategy = {
 		type = conquer
-		id = IRQ
+		id = "IRQ"
 		value = 99999
 	}
 	ai_strategy = {
 		type = antagonize
-		id = IRQ
+		id = "IRQ"
 		value = 99999
 	}
 	ai_strategy = {
 		type = consider_weak
-		id = IRQ
+		id = "IRQ"
 		value = 99999
 	}	
 }
@@ -114,12 +114,12 @@ SAU_test_strategy_2 = {
 	
 	ai_strategy = {
 		type = conquer
-		id = PER
+		id = "PER"
 		value = 100
 	}
 	ai_strategy = {
 		type = antagonize
-		id = PER
+		id = "PER"
 		value = 100
 	}
 }
@@ -154,12 +154,12 @@ SAU_test_strategy_3 = {
 	
 	ai_strategy = {
 		type = conquer
-		id = AFG
+		id = "AFG"
 		value = 100
 	}
 	ai_strategy = {
 		type = antagonize
-		id = AFG
+		id = "AFG"
 		value = 100
 	}
 }
@@ -194,17 +194,17 @@ BR_test_strategy = {
 	
 	ai_strategy = {
 		type = conquer
-		id = PAN
+		id = "PAN"
 		value = 99999
 	}
 	ai_strategy = {
 		type = antagonize
-		id = PAN
+		id = "PAN"
 		value = 99999
 	}
 	ai_strategy = {
 		type = consider_weak
-		id = PAN
+		id = "PAN"
 		value = 99999
 	}	
 }
