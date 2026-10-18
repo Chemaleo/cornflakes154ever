@@ -10,4 +10,5 @@ l_english:
     CAS1:0 "Close Air Support I"
     gain_focus:0 "Continuous focus"
     mainmenumusic:0 "Main Theme - Allies"
+    basic_medium_tank:0 "Medium Tank I"
     
