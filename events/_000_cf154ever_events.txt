@@ -65,10 +65,7 @@ country_event = {
 		}
 		USA = {
 			exists = yes
-			if = {
-				limit = { has_war = yes }
-				surrender_progress < 0.01
-			}
+			all_neighbor_country = { NOT = { has_war_with = PREV } }
 		}
 	}
 	
@@ -174,9 +171,9 @@ country_event = {
 		name = cf154ever_event.3.a
 		GER = {
 			random_list = {
-				33 = { add_manpower = 100000 }
 				33 = { add_manpower = 250000 }
 				33 = { add_manpower = 500000 }
+				33 = { add_manpower = 750000 }
 				1 = { add_manpower = 1000000 }
 			}
 			random_list = {
@@ -213,9 +210,9 @@ country_event = {
 		
 		SOV = {
 			random_list = {
-				33 = { add_manpower = 100000 }
 				33 = { add_manpower = 250000 }
 				33 = { add_manpower = 500000 }
+				33 = { add_manpower = 750000 }
 				1 = { add_manpower = 1000000 }
 			}
 			random_list = {
