@@ -370,109 +370,109 @@ GER_dont_call_ITA_into_war_too_early = {
 	
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = GER
+		id = "GER"
 		value = 200
 		target_country = POL
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = GER
+		id = "GER"
 		value = 200
 		target_country = ENG
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = GER
+		id = "GER"
 		value = 200
 		target_country = FRA
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = GER
+		id = "GER"
 		value = 200
 		target_country = CAN
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = GER
+		id = "GER"
 		value = 200
 		target_country = SAF
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = GER
+		id = "GER"
 		value = 200
 		target_country = RAJ
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = GER
+		id = "GER"
 		value = 200
 		target_country = MAL
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = GER
+		id = "GER"
 		value = 200
 		target_country = AST
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = GER
+		id = "GER"
 		value = 200
 		target_country = NZL
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = SLO
+		id = "SLO"
 		value = 200
 		target_country = POL
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = SLO
+		id = "SLO"
 		value = 200
 		target_country = ENG
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = SLO
+		id = "SLO"
 		value = 200
 		target_country = FRA
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = SLO
+		id = "SLO"
 		value = 200
 		target_country = CAN
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = SLO
+		id = "SLO"
 		value = 200
 		target_country = SAF
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = SLO
+		id = "SLO"
 		value = 200
 		target_country = RAJ
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = SLO
+		id = "SLO"
 		value = 200
 		target_country = MAL
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = SLO
+		id = "SLO"
 		value = 200
 		target_country = AST
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
-		id = SLO
+		id = "SLO"
 		value = 200
 		target_country = NZL
 	}
@@ -482,6 +482,7 @@ GER_invade_NOR = {
 	enable = {
 		original_tag = GER
 		has_war_with = NOR
+		has_completed_focus = GER_weserubung
 	}
 	
 	abort = {
