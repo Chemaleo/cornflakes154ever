@@ -2,6 +2,31 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_portrait_kludge_admiral_5"
+		texturefile = "gfx/leaders/Portrait_Kludge_Admiral_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_kludge_admiral_4"
+		texturefile = "gfx/leaders/Portrait_Kludge_Admiral_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_kludge_admiral_3"
+		texturefile = "gfx/leaders/Portrait_Kludge_Admiral_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_kludge_admiral_2"
+		texturefile = "gfx/leaders/Portrait_Kludge_Admiral_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_kludge_admiral_1"
+		texturefile = "gfx/leaders/Portrait_Kludge_Admiral_1.dds"
+	}
+
+	spriteType = {
 		name = "GFX_trait_cf154ever_kludge_admiral_trait"
 		texturefile = "gfx/interface/traits/trait_cf154ever_kludge_admiral_trait.dds"
 	}
