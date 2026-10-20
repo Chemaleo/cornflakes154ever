@@ -2,12 +2,12 @@
 # Скриптовые эффекты для ивентов #
 ##################################
 
-add_kludge_admirals = {
-	create_navy_leader = { name = "Kludge Admiral 1" gfx = "GFX_europe_generic_land_1" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
-	create_navy_leader = { name = "Kludge Admiral 2" gfx = "GFX_europe_generic_land_2" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
-	create_navy_leader = { name = "Kludge Admiral 3" gfx = "GFX_europe_generic_land_3" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
-	create_navy_leader = { name = "Kludge Admiral 4" gfx = "GFX_europe_generic_land_4" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
-	create_navy_leader = { name = "Kludge Admiral 5" gfx = "GFX_europe_generic_land_5" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
+add_kludge_admirals = {	#Чел на фото - John Madison Hoskins, адмирал ВМФ США. В идеале найти реальных адмиралов и прописать их в history файле стран
+	create_navy_leader = { name = "Kludge Admiral 1" gfx = "GFX_portrait_kludge_admiral_1" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
+	create_navy_leader = { name = "Kludge Admiral 2" gfx = "GFX_portrait_kludge_admiral_2" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
+	create_navy_leader = { name = "Kludge Admiral 3" gfx = "GFX_portrait_kludge_admiral_3" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
+	create_navy_leader = { name = "Kludge Admiral 4" gfx = "GFX_portrait_kludge_admiral_4" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
+	create_navy_leader = { name = "Kludge Admiral 5" gfx = "GFX_portrait_kludge_admiral_5" traits = { cf154ever_kludge_admiral_trait } skill = 1 }
 }
 
 # enable_kludge_admirals_for_everyone_NOT_majors = {
