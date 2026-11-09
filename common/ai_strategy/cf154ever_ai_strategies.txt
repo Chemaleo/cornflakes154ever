@@ -9,11 +9,13 @@ SOV_build_stuff_for_USA_easter_egg_2 = {
 	
 	abort = {
 		OR = {
-			NOT = { has_government = communism }
-			NOT = { has_country_leader = { name = "Joseph Stalin" ruling_only = yes } }
-			NOT = { country_exists = USA }
+			NOT = {
+				has_government = communism
+				has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
+			}
 			USA = {
 				OR = {
+					exists = no
 					is_subject = yes
 					any_neighbor_country = { has_war_with = PREV }
 				}
@@ -52,11 +54,16 @@ SOV_build_stuff_for_USA_easter_egg = {
 	
 	abort = {
 		OR = {
-			NOT = { has_government = communism }
-			NOT = { has_country_leader = { name = "Joseph Stalin" ruling_only = yes } }
-			NOT = { country_exists = USA }
+			NOT = {
+				has_government = communism
+				has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
+			}			
+			# NOT = { has_government = communism }
+			# NOT = { has_country_leader = { name = "Joseph Stalin" ruling_only = yes } }
+			# NOT = { country_exists = USA }
 			USA = {
 				OR = {
+					exists = no
 					is_subject = yes
 					any_neighbor_country = { has_war_with = PREV }
 				}
