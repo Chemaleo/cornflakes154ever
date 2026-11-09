@@ -5,7 +5,7 @@ cf154ever_test_decisions_category = {
 	priority = 999
 	
 	allowed = {
-		always = yes
+		original_tag = GER
 	}
 	
 	visible = {
