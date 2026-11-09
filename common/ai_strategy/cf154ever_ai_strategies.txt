@@ -3,16 +3,7 @@ SOV_build_stuff_for_USA_easter_egg_2 = {
 	
 	enable = {
 		original_tag = SOV
-		is_historical_focus_on = no
-		OR = {
-			USA = {
-				is_researching_technology = tech_special_forces
-				is_researching_technology = mobile_warfare
-				is_researching_technology = atomic_research
-				is_researching_technology = synth_oil_experiments
-			}
-			has_global_flag = cf154ever_SOV_USA_easter_egg_on
-		}
+		has_global_flag = cf154ever_SOV_USA_easter_egg_on
 		has_tech = radio_detection
 	}
 	
@@ -56,16 +47,7 @@ SOV_build_stuff_for_USA_easter_egg = {
 	
 	enable = {
 		original_tag = SOV
-		is_historical_focus_on = no
-		OR = {
-			USA = {
-				is_researching_technology = tech_special_forces
-				is_researching_technology = mobile_warfare
-				is_researching_technology = atomic_research
-				is_researching_technology = synth_oil_experiments
-			}
-			has_global_flag = cf154ever_SOV_USA_easter_egg_on
-		}
+		has_global_flag = cf154ever_SOV_USA_easter_egg_on
 	}
 	
 	abort = {
