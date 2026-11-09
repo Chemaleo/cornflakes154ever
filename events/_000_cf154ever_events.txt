@@ -57,11 +57,22 @@ country_event = {
 			infrastructure > 9
 			radar_station > 5
 		}
-		644 = {	#Северовосточная Сибирь
-			infrastructure > 9
-			radar_station > 5
-			any_province_building_level	= { province = { id = 13204 } building = naval_base level > 9 }
-			any_province_building_level	= { province = { id = 13204 } building = coastal_bunker level > 9 }
+		if = {
+			limit = {
+				is_ai = no
+			}
+			644 = {	#Северовосточная Сибирь
+				infrastructure > 9
+				radar_station > 5
+				any_province_building_level	= { province = { id = 13204 } building = naval_base level > 9 }
+				any_province_building_level	= { province = { id = 13204 } building = coastal_bunker level > 9 }
+			}
+		}
+		else = {
+			644 = {
+				infrastructure > 9
+				radar_station > 5
+			}
 		}
 		USA = {
 			exists = yes
@@ -127,11 +138,11 @@ country_event = {
 				}
 				kill_country_leader = yes
 				create_country_leader = { name = "Green Martian" picture = GFX_portrait_martian expire = "2009.4.29" ideology = nazism traits = { hates_ussr } }
-				create_navy_leader = { name = "Martian Admiral" gfx = "GFX_portrait_FRA_francois_darlan" traits = { spotter superior_tactician } skill = 9 }
+				create_navy_leader = { name = "Martian Admiral" gfx = "GFX_portrait_martian_admiral" traits = { spotter superior_tactician } skill = 9 }
 				create_corps_commander = {
 					name = "Martian General"
-					picture = "Portrait_France_Jean_de_Lattre_de_Tassigny.dds"	#Заменить картиночки
-					traits = { commando adaptable organizer trickster naval_invader skilled_staffer }	#6 навыков
+					picture = "Portrait_Martian_General.dds"
+					traits = { organizer panzer_leader cavalry_leader trait_engineer infantry_leader naval_invader commando trickster skilled_staffer adaptable }	#10 навыков
 					skill = 9
 					attack_skill = 9
 					defense_skill = 9
@@ -147,6 +158,25 @@ country_event = {
 				if = { limit = { has_equipment = { artillery_equipment < 370 } } add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 370 } }
 				if = { limit = { has_equipment = { motorized_equipment_1 < 7900 } } add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7900 } }
 				if = { limit = { has_equipment = { support_equipment_1 < 2600 } } add_equipment_to_stockpile = { type = support_equipment_1 amount = 2600 } }
+				if = {
+					limit = {
+						378 = {
+							any_province_building_level = {
+								province = { id = 9814 }
+								building = naval_base
+								level < 10
+							}
+						}
+					}
+					378 = {
+						add_building_construction = {
+							type = naval_base
+							level = 10
+							instant_build = yes
+							province = 9814
+						}
+					}
+				}
 				add_manpower = 500000
 				load_oob = cf154ever_oob_USA_easter_egg
 			}
@@ -308,4 +338,30 @@ country_event = {
 	}
 	
 	option = { name = cf154ever_event.3.c }
+}
+
+#Активация пасхалки марсиан в США для АИшного СССР
+country_event = {
+	id = cf154ever_event.4
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		USA = {
+			is_researching_technology = tech_special_forces
+			is_researching_technology = mobile_warfare
+			is_researching_technology = atomic_research
+			is_researching_technology = synth_oil_experiments
+		}
+	}
+	
+	mean_time_to_happen = { days = 10 }
+	
+	immediate = {
+		set_global_flag = cf154ever_SOV_USA_easter_egg_on
+	}
+	
+	option = { name = cf154ever_event.1.a }
 }
