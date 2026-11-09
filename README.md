@@ -1,6 +1,6 @@
 # Cornflakes 1.5.4 Ever
 
-An amateur mod for Hearts of Iron IV created in an attempt to fix some of the bugs still present in the Cornflakes 1.5.4 version of the game. Also includes some gameplay changes.
+A mod for Hearts of Iron IV created in an attempt to fix some of the bugs still present in the Cornflakes 1.5.4 version of the game. Also includes some gameplay changes.
 
 Any help is appreciated. The majority of issues are observed on Paradox forums.
 
