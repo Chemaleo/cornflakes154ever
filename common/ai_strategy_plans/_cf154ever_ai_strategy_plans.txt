@@ -1,4 +1,67 @@
 
+SOV_USA_easter_egg = {
+	name = "SOV easter egg plan"
+	desc = "This is SOV easter egg plan"
+	
+	enable = {
+		original_tag = SOV
+		is_historical_focus_on = no
+		OR = {
+			USA = {
+				is_researching_technology = tech_special_forces
+				is_researching_technology = mobile_warfare
+				is_researching_technology = atomic_research
+				is_researching_technology = synth_oil_experiments
+			}
+			has_global_flag = cf154ever_SOV_USA_easter_egg_on
+		}
+	}
+	
+	abort = {
+		OR = {
+			NOT = { has_government = communism }
+			NOT = { has_country_leader = { name = "Joseph Stalin" ruling_only = yes } }
+			NOT = { country_exists = USA }
+			USA = {
+				OR = {
+					is_subject = yes
+					any_neighbor_country = { has_war_with = PREV }
+				}
+			}
+			any_country = {
+				is_neighbor_of = SOV
+				has_war_with = SOV
+				is_major = yes
+			}
+		}
+	}
+	
+	ai_national_focuses = {
+		SOV_great_purge
+	}
+	
+	research = {
+		electronics = 200.0
+		radar_tech = 5000.0
+	}
+	
+	ideas = {
+		nikita_khrushchev = 50
+	}
+	
+	traits = {
+		communist_revolutionary = 50
+	}
+	
+	weight = {
+		factor = 2
+	}
+	
+	focus_factors = {
+		SOV_great_purge = 1.0
+	}
+}
+
 # test_plan = {
 	# name = "test plan"
 	# desc = "this is a test plan"
