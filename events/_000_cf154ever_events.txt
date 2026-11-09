@@ -41,7 +41,6 @@ country_event = {
 		original_tag = SOV
 		communism > 0.99
 		is_historical_focus_on = no
-		has_war = no
 		has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
 		219 = { infrastructure > 9 }	#Москва
 		253 = { infrastructure > 9 }	#Иваново
@@ -53,14 +52,21 @@ country_event = {
 		572 = { infrastructure > 9 }	#Челябинск
 		403 = { infrastructure > 9 }	#Тюмень
 		577 = { infrastructure > 9 }	#Сургут
-		516 = {	#Северозападная Сибирь
-			infrastructure > 9
-			radar_station > 5
+		516 = { infrastructure > 9 radar_station > 5 }	#Северозападная Сибирь
+		if = {
+			limit = { SOV = { is_ai = no } }
+			has_war = no
+		}
+		else = {
+			NOT = {
+				any_country = {
+					has_war_with = SOV
+					is_major = yes
+				}
+			}
 		}
 		if = {
-			limit = {
-				is_ai = no
-			}
+			limit = { SOV = { is_ai = no } }
 			644 = {	#Северовосточная Сибирь
 				infrastructure > 9
 				radar_station > 5
@@ -69,10 +75,7 @@ country_event = {
 			}
 		}
 		else = {
-			644 = {
-				infrastructure > 9
-				radar_station > 5
-			}
+			644 = { infrastructure > 9 radar_station > 5 }
 		}
 		USA = {
 			exists = yes
@@ -349,6 +352,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		is_historical_focus_on = no
 		USA = {
 			is_researching_technology = tech_special_forces
 			is_researching_technology = mobile_warfare
