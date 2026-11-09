@@ -742,6 +742,10 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 30
+			modifier = {	#cf154ever
+				factor = 0
+				has_global_flag = cf154ever_SOV_USA_easter_egg_on
+			}			
 		}
 		name = soviet.25.b
 		custom_effect_tooltip = remove_political_advisor
