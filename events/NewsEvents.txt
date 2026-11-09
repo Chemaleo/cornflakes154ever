@@ -3527,7 +3527,7 @@ news_event = {
 	trigger = {
 		408 = { is_controlled_by = JAP }
 		408 = { is_owned_by = SOV }
-		JAP = { has_war_with = JAP }
+		JAP = { has_war_with = SOV }
 		NOT = { has_global_flag = fall_of_vladivostok }
 	}
 	
