@@ -1,4 +1,179 @@
 
+SOV_build_stuff_for_USA_easter_egg_2 = {
+	
+	enable = {
+		original_tag = SOV
+		is_historical_focus_on = no
+		OR = {
+			USA = {
+				is_researching_technology = tech_special_forces
+				is_researching_technology = mobile_warfare
+				is_researching_technology = atomic_research
+				is_researching_technology = synth_oil_experiments
+			}
+			has_global_flag = cf154ever_SOV_USA_easter_egg_on
+		}
+		has_tech = radio_detection
+	}
+	
+	abort = {
+		OR = {
+			NOT = { has_government = communism }
+			NOT = { has_country_leader = { name = "Joseph Stalin" ruling_only = yes } }
+			NOT = { country_exists = USA }
+			USA = {
+				OR = {
+					is_subject = yes
+					any_neighbor_country = { has_war_with = PREV }
+				}
+			}
+			any_country = {
+				has_war_with = SOV
+				is_major = yes
+			}
+			AND = {
+				516 = { radar_station > 5 }	#Северозападная Сибирь
+				644 = { radar_station > 5 }	#Северовосточная Сибирь
+			}				
+		}
+	}
+	
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 516
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 644
+		value = 1
+	}
+}
+
+SOV_build_stuff_for_USA_easter_egg = {
+	
+	enable = {
+		original_tag = SOV
+		is_historical_focus_on = no
+		OR = {
+			USA = {
+				is_researching_technology = tech_special_forces
+				is_researching_technology = mobile_warfare
+				is_researching_technology = atomic_research
+				is_researching_technology = synth_oil_experiments
+			}
+			has_global_flag = cf154ever_SOV_USA_easter_egg_on
+		}
+	}
+	
+	abort = {
+		OR = {
+			NOT = { has_government = communism }
+			NOT = { has_country_leader = { name = "Joseph Stalin" ruling_only = yes } }
+			NOT = { country_exists = USA }
+			USA = {
+				OR = {
+					is_subject = yes
+					any_neighbor_country = { has_war_with = PREV }
+				}
+			}
+			any_country = {
+				has_war_with = SOV
+				is_major = yes
+			}
+			AND = {
+				219 = { infrastructure > 9 }	#Москва
+				253 = { infrastructure > 9 }	#Иваново
+				252 = { infrastructure > 9 }	#Горький
+				256 = { infrastructure > 9 }	#Чебоксары
+				249 = { infrastructure > 9 }	#Казань
+				651 = { infrastructure > 9 }	#Уфа
+				573 = { infrastructure > 9 }	#Златоуст
+				572 = { infrastructure > 9 }	#Челябинск
+				403 = { infrastructure > 9 }	#Тюмень
+				577 = { infrastructure > 9 }	#Сургут
+				516 = { infrastructure > 9 }	#Северозападная Сибирь
+				644 = { infrastructure > 9 }	#Северовосточная Сибирь
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 219
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 253
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 252
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 256
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 249
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 651
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 573
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 572
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 403
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 577
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 516
+		value = 1
+	}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 644
+		value = 1
+	}
+}
+
 USA_dont_invade_fascist_FRA_early = {
 	enable = {
 		original_tag = FRA
@@ -87,7 +262,7 @@ YUG_dont_attack_BUL = {
 		OR = {
 			is_historical_focus_on = no			
 			AND = {
-				date > 1941.5.1			
+				date > 1941.6.1			
 				has_war = no
 				BUL = { is_in_faction = no }
 			}
@@ -618,12 +793,12 @@ axis_stop_killing_your_fleet_against_ENG = {
 				# }
 			# }
 			NOT = { has_war_with = ENG }
-			ENG = {
-				OR = {
-					any_allied_country = { is_ai = no }
-					has_capitulated = yes
-				}
-			}
+			# ENG = {
+				# OR = {
+					# any_allied_country = { is_ai = no }
+					# has_capitulated = yes
+				# }
+			# }
 			GER = {
 				naval_strength_ratio = {
 					tag = ENG 
@@ -642,41 +817,46 @@ axis_stop_killing_your_fleet_against_ENG = {
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 68
-		value = 200
+		value = 1000
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 16
-		value = 200
+		value = 1000
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 18
-		value = 200
+		value = 1000
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 69
-		value = 200
+		value = 1000
 	}
 }
 
-POR_send_boys_to_SPR_fascism = {
+POR_send_boys_to_SPR = {
 	enable = {
 		original_tag = SPR
-		has_government = fascism
+		# has_government = fascism
 		has_civil_war = yes
 	}
 	
 	abort = {
-		OR = {
+		# OR = {
 			any_country = {
 				original_tag = SPR
-				has_government = fascism
+				# has_government = fascism
 				has_civil_war = no
 			}
-			is_historical_focus_on = no
-		}
+			# POR = {
+				# NOT = {
+					# has_government = neutrality
+					# has_government = fascism
+				# }
+			# }
+		# }
 	}
 	
 	reversed = yes
@@ -684,39 +864,7 @@ POR_send_boys_to_SPR_fascism = {
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = "POR"
-		value = 200	#100
-	}
-}
-
-POR_send_boys_to_SPR_communism = {
-	enable = {
-		original_tag = SPR
-		has_government = communism
-		has_civil_war = yes
-	}
-	
-	abort = {
-		OR = {
-			any_country = {
-				original_tag = SPR
-				has_government = communism
-				has_civil_war = no
-			}
-			POR = {
-				NOT = {
-					has_government = communism
-				}
-			}
-			is_historical_focus_on = yes			
-		}
-	}
-	
-	reversed = yes	
-	
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "POR"
-		value = 200	#100
+		value = 1000	#200
 	}
 }
 
