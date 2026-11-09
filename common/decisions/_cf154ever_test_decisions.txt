@@ -3,21 +3,21 @@ cf154ever_test_decisions_category = {
 
 	cf154ever_decision_oob_test = {
 		
-		priority = 10
+		priority = 2
 		
 		icon = GFX_decision_icon_default
 		
-		fire_only_once = no
-		
-		allowed = {
-			original_tag = GER
-		}
-		
 		available = {
 			has_full_control_of_state = 64
+			has_tech = night_vision
+			has_tech = infantry_at2
+			has_tech = advanced_infantry_weapons2
 			has_tech = main_battle_tank
 			has_tech = mechanised_infantry3
-			has_tech = tech_maintenance_company4			
+			has_tech = artillery5
+			has_tech = tech_recon4
+			has_tech = tech_engineers4
+			has_tech = tech_maintenance_company4
 			has_tech = tech_logistics_company4
 			has_manpower > 15599			
 			has_equipment = {
@@ -57,15 +57,9 @@ cf154ever_test_decisions_category = {
 	
 	cf154ever_decision_io_test = {
 		
-		priority = 9
+		priority = 1
 		
 		icon = GFX_decision_icon_default
-		
-		fire_only_once = no
-		
-		allowed = {
-			original_tag = GER
-		}
 		
 		available = {
 			OR = {
@@ -167,6 +161,28 @@ cf154ever_test_decisions_category = {
 					amount = -2147482
 				}
 			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment < 0
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1900000
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment > 2147482
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = -2147482
+				}
+			}			
 			else = {
 				add_political_power = 2000
 			}
