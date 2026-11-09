@@ -8,6 +8,9 @@ Any help is appreciated. The majority of issues are observed on Paradox forums.
 
 ## Update history
 
+### U6.1 - 2026-11-09
+Fixed Fall of Vladivostok event not triggering for Japan
+
 ### U6 - 2026-10-18
 1. Removed unused sections in national focuses so they will show completion effects
 2. "Align Hungary/Romania" focuses can no longer be taken when at war with them as in 1.6 patch
@@ -21,10 +24,10 @@ Any help is appreciated. The majority of issues are observed on Paradox forums.
 10. Numerous small tweaks across the board
 
 ### U5.2 - 2025-12-07
-1. Battle royale hotfix
+Battle royale hotfix
 
 ### U5.1 - 2025-12-04
-1. Localisation file error hotfix
+Localisation file error hotfix
 
 ### U5 - 2025-12-04
 1. Numerous changes to national focuses, decisions, events and AI behavior (credit: Paradox Interactive, Mefisto1029)
