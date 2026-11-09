@@ -689,7 +689,10 @@ country_event = {
 					is_subject_of = event_target:communist_china
 				}
 				event_target:warlord = {
-					puppet = PREV
+					set_autonomy = {
+						target = PREV
+						autonomous_state = autonomy_puppet
+					}
 				}
 			}
 			if = {
@@ -1039,7 +1042,10 @@ country_event = {
 			base = 10
 		}
 		FROM = {
-			puppet = ROOT
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_puppet
+			}
 			country_event = { id = wtt_warlord_vs_prc.32 }
 		}
 	}

@@ -1,0 +1,23 @@
+
+leader_traits = {
+	hates_ussr = {
+		random = no
+		
+		communism_acceptance = -100
+		
+		ai_strategy = {
+			type = antagonize
+			id = "SOV"			
+			value = 200
+		}
+		ai_strategy = {
+			type = conquer
+			id = "SOV"
+			value = 200
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

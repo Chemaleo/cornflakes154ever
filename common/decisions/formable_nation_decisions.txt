@@ -1178,39 +1178,6 @@ form_european_union_category = {
 			}
 		}
 	}
-	
-	cf154ever_unlock_form_eu_decision = {
-		
-		allowed = {
-			OR = {
-				original_tag = HOL
-				original_tag = BEL
-				original_tag = LUX
-				original_tag = WGR
-			}
-			has_dlc = "Waking the Tiger"
-		}
-		
-		visible = {
-			is_ai = no
-			OR = {
-				original_tag = HOL
-				original_tag = BEL
-				original_tag = LUX
-				original_tag = WGR
-			}
-			NOT = {
-				has_government = democratic
-				has_global_flag = form_european_union_flag
-				has_country_flag = CF154EVER_FORM_EU_DECISION_UNLOCKED
-			}
-		}
-		
-		complete_effect = {
-			custom_effect_tooltip = cf154ever_unlock_form_eu_decision_tt
-			set_country_flag = CF154EVER_FORM_EU_DECISION_UNLOCKED
-		}
-	}
 }
 
 form_mutapa_category = {

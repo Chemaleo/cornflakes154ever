@@ -390,6 +390,7 @@ ideas = {
 						is_doing_fascist_focus_or_completed_it = yes
 						is_doing_democratic_focus_or_completed_it = yes
 						is_doing_neutrality_focus_or_completed_it = yes
+						is_historical_focus_on = yes						
 					}
 				}
 				modifier = {
@@ -423,6 +424,7 @@ ideas = {
 						is_doing_communist_focus_or_completed_it = yes
 						is_doing_fascist_focus_or_completed_it = yes
 						is_doing_neutrality_focus_or_completed_it = yes
+						is_historical_focus_on = yes						
 					}
 				}
 				modifier = {
@@ -452,6 +454,7 @@ ideas = {
 						is_doing_communist_focus_or_completed_it = yes
 						is_doing_democratic_focus_or_completed_it = yes
 						is_doing_neutrality_focus_or_completed_it = yes
+						is_historical_focus_on = yes
 					}
 				}
 				modifier = {

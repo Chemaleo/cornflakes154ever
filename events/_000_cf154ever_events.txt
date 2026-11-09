@@ -1,0 +1,371 @@
+﻿
+add_namespace = cf154ever_event
+
+country_event = {
+	id = cf154ever_event.1
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ROM
+		is_ai = yes
+		is_historical_focus_on = yes
+		has_idea_with_trait = fascist_demagogue
+		fascism > 0.5
+		has_political_power < 100
+		NOT = { has_government = fascism }
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		ROM = { set_politics = { ruling_party = fascism } }
+	}
+	
+	option = { name = cf154ever_event.1.a }
+}
+
+#	Пасхальный ивент, написанный под вдохновлением от Tom Blaine
+country_event = {
+	id = cf154ever_event.2
+	title = cf154ever_event.2.t
+	desc = cf154ever_event.2.d
+	picture = GFX_report_event_stalin_vs_martians
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1942.5.31
+		original_tag = SOV
+		communism > 0.99
+		is_historical_focus_on = no
+		has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
+		219 = { infrastructure > 9 }	#Москва
+		253 = { infrastructure > 9 }	#Иваново
+		252 = { infrastructure > 9 }	#Горький
+		256 = { infrastructure > 9 }	#Чебоксары
+		249 = { infrastructure > 9 }	#Казань
+		651 = { infrastructure > 9 }	#Уфа
+		573 = { infrastructure > 9 }	#Златоуст
+		572 = { infrastructure > 9 }	#Челябинск
+		403 = { infrastructure > 9 }	#Тюмень
+		577 = { infrastructure > 9 }	#Сургут
+		516 = { infrastructure > 9 radar_station > 5 }	#Северозападная Сибирь
+		if = {
+			limit = { SOV = { is_ai = no } }
+			has_war = no
+		}
+		else = {
+			NOT = {
+				any_country = {
+					has_war_with = SOV
+					is_major = yes
+				}
+			}
+		}
+		if = {
+			limit = { SOV = { is_ai = no } }
+			644 = {	#Северовосточная Сибирь
+				infrastructure > 9
+				radar_station > 5
+				any_province_building_level	= { province = { id = 13204 } building = naval_base level > 9 }
+				any_province_building_level	= { province = { id = 13204 } building = coastal_bunker level > 9 }
+			}
+		}
+		else = {
+			644 = { infrastructure > 9 radar_station > 5 }
+		}
+		USA = {
+			exists = yes
+			all_neighbor_country = { NOT = { has_war_with = PREV } }
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		hidden_effect = {
+			USA = {
+				set_cosmetic_tag = USA_MARTIAN
+				if = {
+					limit = { NOT = { has_government = fascism } }
+					set_politics = { ruling_party = fascism }
+					add_popularity = { ideology = fascism popularity = 1 }
+				}
+				else_if = {
+					limit = { fascism < 1 }
+					add_popularity = { ideology = fascism popularity = 1 }
+				}
+				set_party_name = { ideology = fascism long_name = USA_martial_order_long name = USA_martial_order }
+				if = {
+					limit = {
+						is_in_faction_with = ENG
+						ENG = { NOT = { has_government = fascism } }
+					}
+					leave_faction = yes
+				}
+				if = {
+					limit = {
+						has_war_with = GER
+						GER = { has_government = fascism }
+						ENG = { NOT = { has_government = fascism } }						
+					}
+					white_peace = {
+						tag = GER
+						message = cf154ever_easter_egg_activated_tt
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = ITA
+						ITA = { has_government = fascism }
+						ENG = { NOT = { has_government = fascism } }						
+					}
+					white_peace = {
+						tag = ITA
+						message = cf154ever_easter_egg_activated_tt
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = JAP
+						JAP = { has_government = fascism }
+						ENG = { NOT = { has_government = fascism } }						
+					}
+					white_peace = {
+						tag = JAP
+						message = cf154ever_easter_egg_activated_tt
+					}
+				}
+				kill_country_leader = yes
+				create_country_leader = { name = "Green Martian" picture = GFX_portrait_martian expire = "2009.4.29" ideology = nazism traits = { hates_ussr } }
+				create_navy_leader = { name = "Martian Admiral" gfx = "GFX_portrait_martian_admiral" traits = { spotter superior_tactician } skill = 9 }
+				create_corps_commander = {
+					name = "Martian General"
+					picture = "Portrait_Martian_General.dds"
+					traits = { organizer panzer_leader cavalry_leader trait_engineer infantry_leader naval_invader commando trickster skilled_staffer adaptable }	#10 навыков
+					skill = 9
+					attack_skill = 9
+					defense_skill = 9
+					planning_skill = 9
+					logistics_skill = 9
+				}
+				if = { limit = { NOT = { has_tech = basic_medium_tank } } set_technology = { basic_medium_tank = 1 } }
+				if = { limit = { NOT = { has_tech = motorised_infantry } } set_technology = { motorised_infantry = 1 } }
+				if = { limit = { NOT = { has_tech = tech_maintenance_company } } set_technology = { tech_maintenance_company = 1 } }
+				if = { limit = { NOT = { has_tech = tech_logistics_company } } set_technology = { tech_logistics_company = 1 } }
+				if = { limit = { has_equipment = { medium_tank_equipment < 23000 } } add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = 23000 } }
+				if = { limit = { has_equipment = { infantry_equipment < 16600 } } add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 16600 } }
+				if = { limit = { has_equipment = { artillery_equipment < 370 } } add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 370 } }
+				if = { limit = { has_equipment = { motorized_equipment_1 < 7900 } } add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7900 } }
+				if = { limit = { has_equipment = { support_equipment_1 < 2600 } } add_equipment_to_stockpile = { type = support_equipment_1 amount = 2600 } }
+				if = {
+					limit = {
+						378 = {
+							any_province_building_level = {
+								province = { id = 9814 }
+								building = naval_base
+								level < 10
+							}
+						}
+					}
+					378 = {
+						add_building_construction = {
+							type = naval_base
+							level = 10
+							instant_build = yes
+							province = 9814
+						}
+					}
+				}
+				add_manpower = 500000
+				load_oob = cf154ever_oob_USA_easter_egg
+			}
+		}
+	}
+	
+	option = { name = cf154ever_event.2.a }
+}
+
+#	FGSW
+country_event = {
+	id = cf154ever_event.3
+	title = cf154ever_event.3.t
+	desc = cf154ever_event.3.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = cf154ever_event.3.a
+		
+		GER = {
+			random_list = {
+				33 = { add_manpower = 250000 }
+				33 = { add_manpower = 500000 }
+				33 = { add_manpower = 750000 }
+				1 = { add_manpower = 1000000 }
+			}
+			random_list = {
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 25000
+						producer = GER 
+					}
+				}
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 50000
+						producer = GER 
+					}
+				}
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 100000
+						producer = GER 
+					}
+				}
+				1 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 1000000
+						producer = GER 
+					}
+				}
+			}
+		}
+		
+		SOV = {
+			random_list = {
+				33 = { add_manpower = 250000 }
+				33 = { add_manpower = 500000 }
+				33 = { add_manpower = 750000 }
+				1 = { add_manpower = 1000000 }
+			}
+			random_list = {
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 25000
+						producer = SOV 
+					}
+				}
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 50000
+						producer = SOV 
+					}
+				}
+				33 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 100000
+						producer = SOV 
+					}
+				}
+				1 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 1000000
+						producer = SOV 
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cf154ever_event.3.b
+		
+		GER = {
+			add_manpower = 500000
+			if = {
+				limit = { has_tech = advanced_infantry_weapons }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 100000
+					producer = GER
+				}
+			}
+			else_if = {
+				limit = { has_tech = improved_infantry_weapons }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 100000
+					producer = GER 
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 100000
+					producer = GER 
+				}
+			}
+		}
+
+		SOV = {
+			add_manpower = 500000
+			if = {
+				limit = { has_tech = advanced_infantry_weapons }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 100000
+					producer = SOV
+				}
+			}
+			else_if = {
+				limit = { has_tech = improved_infantry_weapons }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 100000
+					producer = SOV 
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 100000
+					producer = SOV 
+				}
+			}
+		}
+	}
+	
+	option = { name = cf154ever_event.3.c }
+}
+
+#Активация пасхалки марсиан в США для АИшного СССР
+country_event = {
+	id = cf154ever_event.4
+	
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_historical_focus_on = no
+		USA = {
+			is_researching_technology = tech_special_forces
+			is_researching_technology = mobile_warfare
+			is_researching_technology = atomic_research
+			is_researching_technology = synth_oil_experiments
+		}
+	}
+	
+	mean_time_to_happen = { days = 10 }
+	
+	immediate = {
+		set_global_flag = cf154ever_SOV_USA_easter_egg_on
+	}
+	
+	option = { name = cf154ever_event.1.a }
+}

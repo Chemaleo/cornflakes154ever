@@ -1,0 +1,11 @@
+﻿
+units = {
+	division = {
+		name = "40-width armor"
+		location = 3522	#	Магдебург, Германия
+		division_template = "ideal 40-width armor"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+}

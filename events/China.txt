@@ -1002,7 +1002,12 @@ country_event = {
 	#Nothing
 	option = {
 		ai_chance = { factor = 0 }
-		FROM = { puppet = ROOT }
+		FROM = {
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_puppet
+			}
+		}
 		name = china.105.b
 	}
 }

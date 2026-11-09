@@ -63,21 +63,9 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			unlock_decision_category_tooltip = MAN_banditry_category
@@ -100,21 +88,9 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			army_experience = 30
@@ -134,22 +110,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}	
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = MAN_mukden_military_academy
@@ -173,10 +137,6 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = MAN_banditry }
 			NOT = { has_war_with = JAP }
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -235,21 +195,9 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			every_state = {
@@ -276,21 +224,9 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1
@@ -328,17 +264,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1			
@@ -359,21 +287,9 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -398,15 +314,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 4
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -460,23 +368,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 6
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_political_power = 120
 		}
@@ -495,23 +391,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -531,21 +415,9 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			country_event = wtt_manchukou.11
@@ -569,11 +441,7 @@ focus_tree = {
 		available = {
 			NOT = { has_war_with = JAP }
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -649,17 +517,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -719,22 +579,10 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			if = {
 				limit = { has_tech = excavation1 }
@@ -769,18 +617,10 @@ focus_tree = {
 		available = {
 			716 = { is_fully_controlled_by = ROOT }
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			716 = {
@@ -808,22 +648,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 8
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1
@@ -869,17 +697,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			country_event = wtt_manchukou.11
@@ -900,21 +720,9 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = MAN_national_defense_state
@@ -938,19 +746,11 @@ focus_tree = {
 		available = {
 			716 = { is_fully_controlled_by = ROOT }
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			716 = {
 				add_extra_state_shared_building_slots = 1
@@ -976,23 +776,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = MAN_mamc_light
@@ -1014,23 +802,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			remove_ideas = MAN_kwantung_veto
 			add_tech_bonus = {
@@ -1056,21 +832,9 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			MAN_low_legitimacy_level_down = yes
@@ -1100,18 +864,10 @@ focus_tree = {
 				is_subject_of = JAP
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			annex_country = { target = MEN transfer_troops = yes }
@@ -1131,22 +887,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			every_state = {
@@ -1193,11 +937,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_autonomy_ratio = {
 				value = 0.15
@@ -1219,10 +959,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		available = {
-
 		}
 
 		bypass = {
@@ -1272,11 +1008,7 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1345,15 +1077,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1377,15 +1101,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1449,15 +1165,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 6
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1531,15 +1239,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1566,23 +1266,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_war_support = 0.1
 		}
@@ -1602,21 +1290,9 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = MAN_white_russian_advisers
@@ -1636,15 +1312,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1668,15 +1336,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1745,11 +1405,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available = {
-
-		}
-
+		
 		bypass = {
 			is_subject = no
 		}
@@ -1783,23 +1439,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -1823,11 +1467,7 @@ focus_tree = {
 			}
 			
 		}
-
-		available = {
 		
-		}
-
 		bypass = {
 			is_subject = no
 		}
@@ -1837,11 +1477,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		will_lead_to_war_with = JAP
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			set_autonomy = { target = ROOT autonomy_state = autonomy_free }			
 			if = {
@@ -1875,23 +1511,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			MAN_low_legitimacy_level_down = yes
 		}
@@ -1910,23 +1534,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -1950,18 +1562,10 @@ focus_tree = {
 		available = {
 			608 = { is_fully_controlled_by = ROOT }
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			set_capital = 608
@@ -1996,19 +1600,11 @@ focus_tree = {
 				
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			MAN_low_legitimacy_clear_all = yes	
 			set_cosmetic_tag = MAN_restored
@@ -2058,22 +1654,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_war_support = 0.1
@@ -2099,23 +1683,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -2145,23 +1717,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			every_country = {
 				limit = {

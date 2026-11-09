@@ -1,6 +1,28 @@
+
 ideas = {
 	country = {
-		cf154ever_munich_allied_betrayal = {
+		
+		cf154ever_idea_viriatos = {
+			
+			picture = chi_war_of_resistance
+			
+			allowed = { always = no }
+			
+			cancel = {
+				any_country = {
+					original_tag = SPR
+					has_civil_war = no
+				}
+			}
+			
+			modifier = {
+				send_volunteer_size = 1
+				send_volunteers_tension = -0.5
+				send_volunteer_divisions_required = -0.5				
+			}
+		}
+		
+		cf154ever_idea_munich_allied_betrayal = {
 			
 			picture = CZE_divided_nation
 			
@@ -13,7 +35,7 @@ ideas = {
 		}
 		
 		#БОЛЬШЕ НЕ НУЖНА
-		cf154ever_PRC_civil_war_prevent_comintern = {
+		cf154ever_idea_PRC_civil_war_prevent_comintern = {
 			
 			picture = FRA_matignon_agreements
 			
@@ -23,6 +45,68 @@ ideas = {
 				ai_get_ally_desire_factor = -200
 				join_faction_tension = 1
 			}
+		}
+		
+		cf154ever_idea_fast_wargoals = {
+			
+			picture = chi_war_of_resistance
+			
+			allowed = { always = no }
+			
+			modifier = { justify_war_goal_time = -100 }
+		}
+		
+		cf154ever_idea_us_influence_shield = {
+			
+			picture = FRA_fortification_focus
+			
+			allowed = {
+				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+				original_tag = CHL
+				original_tag = BRA
+				original_tag = BOL
+				original_tag = PRU
+				original_tag = ECU
+				original_tag = COL
+				original_tag = VEN
+				original_tag = MEX
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+				original_tag = PAN
+				original_tag = HAI
+				original_tag = DOM
+			}
+			
+			# cancel = {
+				# NOT = {
+					# original_tag = ARG
+					# original_tag = URG
+					# original_tag = PAR
+					# original_tag = CHL
+					# original_tag = BRA
+					# original_tag = BOL
+					# original_tag = PRU
+					# original_tag = ECU
+					# original_tag = COL
+					# original_tag = VEN
+					# original_tag = MEX
+					# original_tag = GUA
+					# original_tag = ELS
+					# original_tag = HON
+					# original_tag = NIC
+					# original_tag = COS
+					# original_tag = PAN
+					# original_tag = HAI
+					# original_tag = DOM
+				# }
+			# }
+			
+			modifier = { democratic_drift = -100 }
 		}
 	}
 }

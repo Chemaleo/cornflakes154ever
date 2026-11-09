@@ -69,21 +69,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_political_power = 120
@@ -104,21 +92,9 @@ focus_tree = {
 			factor = 80
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = HUN_hungarian_monarchy
@@ -139,22 +115,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 80
 		}
-
+		
 		available = {
 			neutrality > 0.3
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -188,18 +156,10 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			create_navy_leader = {
@@ -265,10 +225,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			AUS = { country_event = { id = DOD_hungary.1 } }
 		}
@@ -296,35 +252,39 @@ focus_tree = {
 
 		available = {
 			4 = {
-				is_controlled_by = OWNER
+				OWNER = {
+					controls_state = PREV
+					NOT = { tag = ROOT }
+				}
 			}
 			is_subject = no
 		}
 
 		bypass = {
-
+			HUN = {
+				owns_state = 4
+				owns_state = 152
+				owns_state = 153
+			}
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
-			random_country = {
-				limit = {
-					owns_state = 4
-				}
-				HUN = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						generator = { 4 152 153 }
+			hidden_effect = {
+				random_country = {
+					limit = {
+						owns_state = 4   
 					}
+					save_event_target_as = state_owner_4
 				}
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = event_target:state_owner_4
+				generator = { 4 152 153 }
 			}
 			add_state_claim = 152
 			add_state_claim = 153
@@ -352,19 +312,11 @@ focus_tree = {
 			controls_state = 4
 			is_subject = no
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			set_cosmetic_tag = HUN_EMPIRE
 			hidden_effect = { AUS = { set_cosmetic_tag = AUS_NOT_WHITE } }
@@ -407,8 +359,8 @@ focus_tree = {
 		}
 
 		bypass = {
-			CZE = {
-				OR = {
+			OR = {
+				CZE = {
 					exists = no
 					is_subject = yes
 				}
@@ -418,10 +370,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			CZE = { country_event = { id = DOD_hungary.10 } }
@@ -461,10 +409,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_state_claim = 76
 			add_state_claim = 83
@@ -486,7 +430,14 @@ focus_tree = {
 					}
 				}
 				ROM = { country_event = DOD_hungary.50 }
-			}	
+			}
+			else = {
+				add_ai_strategy = {
+					type = conquer
+  					id = "ROM"
+  					value = 200
+				}
+			}
 		}
 	}
 
@@ -523,10 +474,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_state_claim = 102
 			add_state_claim = 103
@@ -534,6 +481,20 @@ focus_tree = {
 			add_state_claim = 104
 			add_state_claim = 45
 			add_state_claim = 163
+			if = {
+				limit = {
+					OR = {
+						103 = { is_controlled_by = YUG }
+						103 = { controller = { is_subject_of = YUG } }
+						103 = { controller = { is_in_faction_with = YUG } }
+					}
+				}
+				add_ai_strategy = {
+					type = conquer
+  					id = "YUG"
+  					value = 200
+				}
+			}			
 		}
 	}
 
@@ -566,15 +527,21 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_state_claim = 736
 			add_state_claim = 160
 			add_state_claim = 39
+			if = {
+				limit = {
+					160 = { is_controlled_by = ITA }
+				}
+				add_ai_strategy = {
+					type = conquer
+  					id = "ITA"
+  					value = 200
+				}
+			}			
 		}
 	}
 
@@ -609,14 +576,30 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_state_claim = 88
 			add_state_claim = 89
 			add_state_claim = 91
+			if = {
+				limit = {
+					89 = {
+						OWNER = {
+							NOT = { is_guaranteed_by = GER }
+						}
+					}
+				}
+				89 = {
+					OWNER = {
+						ROOT = {
+							add_ai_strategy = {
+								type = conquer
+								id = PREV
+								value = 200
+							}
+						}
+					}
+				}
+			}			
 		}
 	}
 
@@ -646,14 +629,11 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_state_claim = 80
 		}
 	}
+	
 	focus = {
 		id = HUN_reclaim_the_empire
 		icon = GFX_goal_generic_occupy_states_ongoing_war
@@ -695,31 +675,11 @@ focus_tree = {
 					controls_state = 161
 				}
 			}
-			else = {
-				OR = {
-					controls_state = 455
-					controls_state = 454
-					controls_state = 66 
-					controls_state = 67 
-					controls_state = 162
-					controls_state = 17 
-					controls_state = 159
-					controls_state = 161
-				}
-			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_state_claim = 455
@@ -752,22 +712,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -805,17 +753,9 @@ focus_tree = {
 			democratic > 0.4
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			hold_election = HUN
@@ -839,11 +779,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-
-		available = {
-
-		}
-
+		
 		bypass = {
 			OR = {
 				NOT = { has_idea = HUN_treaty_of_triannon }
@@ -868,10 +804,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -940,17 +872,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			ENG = { country_event = generic.2 }
@@ -975,18 +899,10 @@ focus_tree = {
 		available = {
 			is_in_faction = no
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes } 
@@ -1013,18 +929,10 @@ focus_tree = {
 				is_in_faction = no
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			ROM = { country_event = generic.5 }
@@ -1053,17 +961,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = HUN_joint_oil_exploitation_company_tech_group
@@ -1099,17 +999,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -1181,22 +1073,10 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_ideas = HUN_interventionism
 		}
@@ -1222,23 +1102,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 90
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_ideas = HUN_strengthen_fascists
 			add_popularity = { ideology = fascism popularity = 0.05 }
@@ -1292,11 +1160,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_threat = 1
 			if = {
@@ -1415,10 +1279,7 @@ focus_tree = {
 				}
 			}
 		}
-
-		bypass = {
-
-		}
+		
 		historical_ai = {
 			GER = {
 				OR = {
@@ -1432,10 +1293,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -1474,10 +1331,6 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
 		bypass = {
 			4 = {
 				NOT = { is_owned_by = AUS }
@@ -1493,10 +1346,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			#This modifies the AI change in germany.4 Aschluss event
@@ -1530,18 +1379,10 @@ focus_tree = {
 				is_subject = no
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -1614,17 +1455,9 @@ focus_tree = {
 			NOT = { has_war_with = GER }
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_opinion_modifier = { target = GER modifier = HUN_trade_deal_with_germany }
@@ -1653,18 +1486,10 @@ focus_tree = {
 		available = {
 			ROOT = { has_full_control_of_state = 43 }
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			43 = {
@@ -1729,10 +1554,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			GER = {
 				country_event = generic.2
@@ -1780,17 +1601,9 @@ focus_tree = {
 			is_puppet = no
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_state_core = 76
@@ -1817,7 +1630,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			
 			ROM = {
 				controls_state = 76
 				controls_state = 83
@@ -1855,10 +1668,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {	
 			custom_effect_tooltip = HUN_demands_tt		
@@ -1923,10 +1732,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_demands_tt
@@ -2018,10 +1823,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_demands_tt
@@ -2123,10 +1924,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = HUN_demands_tt
 			if = {
@@ -2150,7 +1947,7 @@ focus_tree = {
 				}
 				70 = {
 					controller = {
-						country_event = DOD_hungary.100
+						country_event = { id = DOD_hungary.100 hours = 5 } 
 					}
 				}
 			}
@@ -2164,7 +1961,7 @@ focus_tree = {
 						}
 					}
 				}
-				SLO = { country_event = DOD_hungary.107 }
+				SLO = { country_event = { id = DOD_hungary.107 hours = 3 } }
 			}
 			if = {
 				limit = {
@@ -2176,10 +1973,10 @@ focus_tree = {
 						}
 					}
 				}
-				SLO = { OVERLORD = { country_event = DOD_hungary.107 } }
+				SLO = { OVERLORD = { country_event = { id = DOD_hungary.107 hours = 4 } } }
 			}
 			hidden_effect = {
-				news_event = { id = news.309 }
+				news_event = { id = news.309 hours = 8 }
 			}
 		}
 	}
@@ -2210,18 +2007,10 @@ focus_tree = {
 			}
 			NOT = { has_global_flag = GER_reformed_austro_hungarian_empire }
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_GREATER_tt
@@ -2252,22 +2041,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 30
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -2305,10 +2082,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			if = {
 				limit = { has_country_leader = { id = 500 } }
@@ -2342,17 +2115,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = HUN_the_hungarian_red_army
@@ -2372,22 +2137,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = HUN_soviet_hungarian_military_academy_tech_group
@@ -2427,18 +2180,10 @@ focus_tree = {
 			communism > 0.5
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			SOV = {
 				country_event = generic.2
@@ -2484,18 +2229,10 @@ focus_tree = {
 			is_in_faction = no
 			is_subject = no
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes } 
@@ -2535,17 +2272,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			SOV = { country_event = DOD_hungary.110 }
@@ -2573,17 +2302,9 @@ focus_tree = {
 			SOV = { is_faction_leader = yes }
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			SOV = { country_event = DOD_hungary.120 }
@@ -2606,21 +2327,9 @@ focus_tree = {
 			factor = 90
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2645,15 +2354,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2769,22 +2470,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		complete_tooltip = {
 			random_state = {
@@ -2833,21 +2522,9 @@ focus_tree = {
 			factor = 90
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			if = {
@@ -2881,21 +2558,9 @@ focus_tree = {
 			factor = 90
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1
@@ -2916,22 +2581,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 90
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2960,14 +2613,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 40
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3024,21 +2669,9 @@ focus_tree = {
 			factor = 70
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = HUN_invite_foreign_investors
@@ -3057,14 +2690,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 70
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3132,18 +2757,10 @@ focus_tree = {
 		available = {
 			ROOT = { has_full_control_of_state = 43 }
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			43 = {
@@ -3170,21 +2787,9 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1
@@ -3208,14 +2813,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 80
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3299,21 +2896,9 @@ focus_tree = {
 			factor = 80
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_research_slot = 1
@@ -3332,14 +2917,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3399,21 +2976,9 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		
-		complete_tooltip = {
-			
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3441,10 +3006,6 @@ focus_tree = {
 
 		available = {
 			has_tech = synth_oil_experiments
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3505,11 +3066,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 80
 		}
-
-		available = {
-
-		}
-
+		
 		bypass = {
 			NOT = { has_idea = HUN_treaty_of_triannon }
 		}
@@ -3517,11 +3074,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_ideas = HUN_secret_rearmament
 		}
@@ -3540,23 +3093,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			army_experience = 25
 		}
@@ -3576,21 +3117,9 @@ focus_tree = {
 			factor = 70
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3615,11 +3144,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-
-		available = {
-
-		}
-
+		
 		bypass = {
 			OR = {
 				AND = {
@@ -3647,11 +3172,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -3686,22 +3207,10 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			air_experience = 25
 			add_tech_bonus = {
@@ -3729,23 +3238,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 30
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_ideas = HUN_indigenous_designs
 		}
@@ -3765,23 +3262,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = HUN_heavy_fighter_effort
@@ -3809,23 +3294,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = HUN_light_fighter_effort
@@ -3855,21 +3328,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3899,21 +3360,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3942,21 +3391,9 @@ focus_tree = {
 			factor = 30
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = HUN_license_foreign
@@ -4031,17 +3468,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			country_event = DOD_hungary.150 
@@ -4116,17 +3545,9 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			country_event = DOD_hungary.160
@@ -4153,17 +3574,9 @@ focus_tree = {
 			is_in_faction = yes
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = HUN_joint_air_development_group
@@ -4194,21 +3607,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			army_experience = 10
@@ -4240,21 +3641,9 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4280,21 +3669,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4320,21 +3697,9 @@ focus_tree = {
 			factor = 30
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4362,21 +3727,9 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4403,21 +3756,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = HUN_assault_gun_focus
@@ -4442,17 +3783,9 @@ focus_tree = {
 			is_in_faction = yes
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = HUN_joint_tank_development_group
@@ -4480,21 +3813,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4520,21 +3841,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4565,21 +3874,9 @@ focus_tree = {
 			factor = 80
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4605,21 +3902,9 @@ focus_tree = {
 			factor = 60
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4645,21 +3930,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4685,22 +3958,10 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
 			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_unit_tt
@@ -4776,22 +4037,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4827,18 +4076,10 @@ focus_tree = {
 				is_coastal = yes
 			}
 		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = HUN_naval_warfare
@@ -4862,20 +4103,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4901,21 +4131,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4944,21 +4163,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4986,20 +4194,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -5026,20 +4223,9 @@ focus_tree = {
 			factor = 50
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -5066,21 +4252,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -5107,22 +4282,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = HUN_carriers

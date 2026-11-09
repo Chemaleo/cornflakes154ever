@@ -1,0 +1,1234 @@
+
+cf154ever_decisions_category = {
+
+###########################################
+# Решения разрешённые только для Германии #
+###########################################
+	cf154ever_decision_unlock_SS = {
+		
+		priority = -50
+			
+		icon = generic_army_support
+		
+		allowed = {
+			original_tag = GER
+		}
+		
+		visible = {
+			OR = {
+				has_template = "SS Motorisierte Division"
+				has_template = "SS Panzergrenadier Division"
+				has_template = "SS Panzergrenadier Division (n.A.)"
+				has_template = "SS Panzer Division"
+				has_template = "SS Panzer Division (n.A.)"
+				has_template = "SS Panzer Division (vollgep.)"
+				has_template = "SS Waffen-Grenadier-Division"
+			}
+			NOT = {
+				has_country_flag = hide_SS_unlock_decision
+			}
+		}
+		
+		complete_effect = {
+			if = {
+				limit = {
+					has_template = "SS Motorisierte Division"
+				}
+				set_division_template_lock = {
+					division_template = "SS Motorisierte Division"
+					is_locked = no
+				}
+			}
+			if = {
+				limit = {
+					has_template = "SS Panzergrenadier Division"
+				}
+				set_division_template_lock = {
+					division_template = "SS Panzergrenadier Division"
+					is_locked = no
+				}
+			}
+			if = {
+				limit = {
+					has_template = "SS Panzergrenadier Division (n.A.)"
+				}
+				set_division_template_lock = {
+					division_template = "SS Panzergrenadier Division (n.A.)"
+					is_locked = no
+				}
+			}
+			if = {
+				limit = {
+					has_template = "SS Panzer Division"
+				}
+				set_division_template_lock = {
+					division_template = "SS Panzer Division"
+					is_locked = no
+				}
+			}
+			if = {
+				limit = {
+					has_template = "SS Panzer Division (n.A.)"
+				}
+				set_division_template_lock = {
+					division_template = "SS Panzer Division (n.A.)"
+					is_locked = no
+				}
+			}
+			if = {
+				limit = {
+					has_template = "SS Panzer Division (vollgep.)"
+				}
+				set_division_template_lock = {
+					division_template = "SS Panzer Division (vollgep.)"
+					is_locked = no
+				}
+			}
+			if = {
+				limit = {
+					has_template = "SS Waffen-Grenadier-Division"
+				}
+				set_division_template_lock = {
+					division_template = "SS Waffen-Grenadier-Division"
+					is_locked = no
+				}
+			}
+		}
+	}
+	
+	cf154ever_decision_unlock_SS_2 = {
+		
+		priority = -55
+			
+		icon = generic_army_support
+		
+		allowed = {
+			original_tag = GER
+		}
+		
+		visible = {
+			OR = {
+				has_template = "SS Motorisierte Division"
+				has_template = "SS Panzergrenadier Division"
+				has_template = "SS Panzergrenadier Division (n.A.)"
+				has_template = "SS Panzer Division"
+				has_template = "SS Panzer Division (n.A.)"
+				has_template = "SS Panzer Division (vollgep.)"
+				has_template = "SS Waffen-Grenadier-Division"
+			}
+			NOT = {
+				has_country_flag = hide_SS_unlock_decision
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = hide_SS_unlock_decision_tt
+			set_country_flag = hide_SS_unlock_decision
+		}
+	}
+
+	cf154ever_decision_norway_op = {
+		
+		priority = 100
+		
+		icon = generic_operation
+		
+		cost = 25
+		
+		fire_only_once = yes
+		
+		allowed = {
+			original_tag = GER
+		}
+		
+		visible = {
+			date < 1940.6.10
+			has_government = fascism
+			is_ai = yes
+			is_historical_focus_on = yes
+			NOR = { is_ai = yes }
+			USA = { is_ai = yes }
+			JAP = { is_ai = yes }
+			check_if_cf154ever_crutches_enabled = yes
+			has_war_with = ENG
+			has_war_with = FRA
+			NOT = {
+				any_country = {
+					is_ai = no
+					any_owned_state = {
+						is_on_continent = europe
+					}
+				}
+			}			
+		}
+		
+		available = {
+			has_manpower > 99999
+			has_equipment = {
+				infantry_equipment > 4999
+			}
+			has_equipment = {
+				convoy_1 > 29
+			}
+			has_navy_size = {
+				size < 30
+			}
+			37 = { is_controlled_by_ROOT_or_ally = yes }
+			99 = { is_controlled_by_ROOT_or_ally = yes }
+			has_war_with = NOR
+			NOR = {
+				has_full_control_of_state = 110
+				has_full_control_of_state = 142
+				has_full_control_of_state = 143
+				has_full_control_of_state = 144
+			}
+		}
+		
+		days_remove = 60
+		
+		remove_effect = {
+			set_state_controller = 110
+			set_state_controller = 142
+			set_state_controller = 143
+			set_state_controller = 144
+			if = {
+				limit = {
+					has_army_experience > 24
+				}
+				army_experience = -25
+			}
+			if = {
+				limit = {
+					has_navy_experience > 24
+				}
+				navy_experience = -25
+			}
+			if = {
+				limit = {
+					has_air_experience > 24
+				}
+				air_experience = -25
+			}
+			if = {
+				limit = {
+					has_manpower > 5299
+				}
+				add_manpower = -5300
+			}
+			if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment > 4999
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -5000
+				}
+			}
+			if = {
+				limit = {
+					has_equipment = {
+						convoy_1 > 19
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = convoy_1
+					amount = -20
+				}
+			}
+		}
+		
+		modifier = {
+			command_power_gain = -0.50
+			political_power_factor = -0.25
+			consumer_goods_factor = 0.15
+		}
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					has_equipment = {
+						infantry_equipment < 5000
+					}
+					has_equipment = {
+						convoy_1 < 30
+					}
+					has_navy_size = {
+						size > 30
+					}
+					surrender_progress > 0.2
+					37 = { controller = { NOT = { is_in_faction_with = GER } } }
+					99 = { controller = { NOT = { is_in_faction_with = GER } } }
+					NOT = { has_war_with = NOR }
+					110 = { NOT = { is_fully_controlled_by = NOR } }
+					142 = { NOT = { is_fully_controlled_by = NOR } }
+					143 = { NOT = { is_fully_controlled_by = NOR } }
+					144 = { NOT = { is_fully_controlled_by = NOR } }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 50
+			
+			modifier = {
+				factor = 50
+				date > 1940.5.1
+			}
+		}
+	}
+	
+	cf154ever_decision_war_with_ussr = {
+		
+		priority = 100
+		
+		icon = generic_operation
+		
+		fire_only_once = yes
+		
+		allowed = {
+			original_tag = GER
+		}
+		
+		visible = {
+			has_global_flag = fgsw_decision_fired
+			is_ai = yes
+		}
+		
+		available = {
+			any_country = {
+				is_ai = no
+			}
+		}
+		
+		target_trigger = { FROM = { tag = SOV } }
+		
+		war_with_target_on_remove = yes
+		
+		days_remove = 30
+		
+		remove_effect = {
+			GER = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+			}
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = { id = cf154ever_event.3 }
+			}
+			# event_target:player_fired_fgsw = {
+				# country_event = { id = cf154ever_event.3 }
+			# }			
+		}
+		
+		cancel_trigger = {
+			all_country = {
+				is_ai = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 200
+			
+			modifier = {	#Не берём если все страны - АИ
+				factor = 0
+				all_country = {
+					is_ai = yes
+				}
+			}
+		}
+	}
+
+###############################
+# Решения для остальных стран #
+###############################
+
+	cf154ever_decision_viriatos = {
+		
+		priority = 50
+		
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		cost = 25
+		
+		fire_only_once = yes
+		
+		allowed = {
+			original_tag = POR
+		}
+		
+		visible = {
+			any_country = {
+				original_tag = SPR
+				has_civil_war = yes
+			}
+		}
+		
+		available = {
+			any_country = {
+				original_tag = SPR
+				has_civil_war = yes
+			}
+		}
+		
+		complete_effect = {
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = cf154ever_idea_viriatos
+		}
+		
+		ai_will_do = {
+			base = 0.1
+			modifier = {
+				add = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cf154ever_decision_disable_sad_music = {
+		
+		priority = -100
+		
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		fire_only_once = no
+		
+		visible = {
+			NOT = {
+				has_global_flag = NO_SAD_MUSIC
+			}
+		}
+		
+		available = {
+			ENG = {
+				OR = {
+					NOT = {
+						controls_state = 126
+					}
+					surrender_progress > 0.7
+				}
+			}
+		}
+				
+		complete_effect = {
+			custom_effect_tooltip = cf154ever_decision_disable_sad_music_tt
+			set_global_flag = NO_SAD_MUSIC
+		}
+	}
+	
+	cf154ever_decision_enable_sad_music = {
+		
+		priority = -100
+		
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		fire_only_once = no
+		
+		visible = {
+			has_global_flag = NO_SAD_MUSIC
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = cf154ever_decision_enable_sad_music_tt
+			clr_global_flag = NO_SAD_MUSIC
+		}
+	}
+	
+	cf154ever_decision_unlock_form_eu = {
+		
+		priority = 3
+		
+		icon = generic_form_nation
+		
+		allowed = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = WGR
+			}			
+			has_dlc = "Waking the Tiger"
+		}
+		
+		visible = {
+			NOT = {
+				has_government = democratic
+				has_global_flag = form_european_union_flag
+				has_country_flag = CF154EVER_FORM_EU_DECISION_UNLOCKED
+			}			
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = cf154ever_decision_unlock_form_eu_tt
+			set_country_flag = CF154EVER_FORM_EU_DECISION_UNLOCKED
+		}
+	}	
+	
+	cf154ever_decision_fgsw = {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		priority = 2
+
+		cost = 500
+		
+		allowed = {
+			OR = {
+				original_tag = FIN 
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = IRE
+				original_tag = SPR
+				original_tag = POR
+				original_tag = POL
+				original_tag = SWI
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = HUN
+				original_tag = YUG
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = TUR
+				original_tag = ICE
+			}
+		}
+	
+		visible = {
+			# date > 1941.6.1
+			OR = {
+				AND = {
+					has_war_with = GER
+					is_neighbor_of = GER
+				}
+				AND = {
+					has_war_with = SOV
+					is_neighbor_of = SOV
+				}
+			}
+			GER = { NOT = { has_war_with = SOV } }
+			NOT = { has_global_flag = fgsw_decision_fired }
+		}
+		
+		available = {
+			ROOT = {
+				is_staging_coup = no
+				political_power_daily > 0.7
+				num_divisions < 49
+				num_of_military_factories < 31
+				num_of_civilian_factories < 31
+				if = {
+					limit = {
+						any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+						num_of_naval_factories > 0
+					}
+					has_equipment = {
+						convoy_1 < 2
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_template_majority_unit = medium_armor
+							has_template_majority_unit = modern_armor
+						}
+						OR = {
+							has_tech = basic_medium_tank
+							has_tech = improved_medium_tank
+							has_tech = advanced_medium_tank
+							has_tech = main_battle_tank
+						}
+					}
+					has_army_size = {
+						size < 5
+						type = armor
+					}
+				}				
+			}
+			
+			GER = {
+				has_civil_war = no
+				has_government = fascism
+				fascism > 0.55
+				has_army_manpower = { size > 999999 }
+				is_neighbor_of = SOV
+				NOT = {
+					has_non_aggression_pact_with = SOV
+					is_in_faction_with = SOV
+				}
+				if = {
+					limit = {
+						has_war = yes
+						any_enemy_country = {
+							is_major = yes
+						}
+					}
+					surrender_progress < 0.1
+				}
+			}
+
+			SOV = {
+				has_civil_war = no
+				has_government = communism
+				communism > 0.55
+				has_army_manpower = { size > 999999 }
+				if = {
+					limit = {
+						has_war = yes
+						any_enemy_country = {
+							is_major = yes
+						}
+					}
+					surrender_progress < 0.1
+				}
+				
+				if = {
+					limit = {
+						owns_state = 408	#Владивосток
+						has_war_with = JAP
+					}
+					controls_state = 408
+				}
+			}
+			
+			ITA = {
+				if = {
+					limit = {
+						has_war_with = GER
+					}
+					has_capitulated = yes
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = { is_in_faction_with = SOV }
+				}
+				else = {
+					has_civil_war = no
+					has_capitulated = no
+				}
+			}
+			
+			FRA = {
+				if = {
+					limit = {
+						has_war_with = GER
+					}
+					has_capitulated = yes
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = { is_in_faction_with = SOV }
+				}
+				else = {
+					has_civil_war = no
+					has_capitulated = no				
+				}
+			}
+			date > 1942.6.22			
+		}
+
+		complete_effect = {
+			GER = {
+				unlock_decision_tooltip = cf154ever_decision_war_with_ussr
+			}
+			set_global_flag = fgsw_decision_fired
+			# ROOT = {
+				# save_global_event_target_as = player_fired_fgsw
+			# }
+		}
+	}
+	
+	cf154ever_decision_fgsw_GER_party_swap = {
+		
+		priority = 1
+		
+		icon = GFX_decision_ger_reichskommissariats
+		
+		allowed = {
+			OR = {
+				original_tag = FIN 
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = IRE
+				original_tag = SPR
+				original_tag = POR
+				original_tag = POL
+				original_tag = SWI
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = HUN
+				original_tag = YUG
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = TUR
+				original_tag = ICE
+			}
+		}		
+		
+		visible = {
+			# date > 1941.6.1
+			OR = {
+				AND = {
+					has_war_with = GER
+					is_neighbor_of = GER
+				}
+				AND = {
+					has_war_with = SOV
+					is_neighbor_of = SOV
+				}
+			}
+			NOT = {
+				has_global_flag = fgsw_decision_fired
+				has_global_flag = fgsw_GER_party_changed
+			}
+			GER = {
+				NOT = {
+					has_war_with = SOV
+					has_government = fascism
+				}
+			}			
+		}
+		
+		available = {
+			date > 1942.6.22
+		}
+		
+		complete_effect = {
+			GER = {
+				set_politics = { ruling_party = fascism }
+				add_popularity = { ideology = fascism popularity = 1 }
+			}
+			set_global_flag = fgsw_GER_party_changed
+		}
+	}
+	
+	cf154ever_decision_fgsw_SOV_party_swap = {
+		
+		priority = 1		
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		allowed = {
+			OR = {
+				original_tag = FIN 
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = IRE
+				original_tag = SPR
+				original_tag = POR
+				original_tag = POL
+				original_tag = SWI
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = HUN
+				original_tag = YUG
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = TUR
+				original_tag = ICE
+			}
+		}		
+		
+		visible = {
+			# date > 1941.6.1
+			OR = {
+				AND = {
+					has_war_with = GER
+					is_neighbor_of = GER
+				}
+				AND = {
+					has_war_with = SOV
+					is_neighbor_of = SOV
+				}
+			}
+			NOT = {
+				has_global_flag = fgsw_decision_fired
+				has_global_flag = fgsw_SOV_party_changed
+			}
+			SOV = {
+				NOT = {
+					has_war_with = GER
+					has_government = communism 
+				}
+			}
+		}
+		
+		available = {
+			date > 1942.6.22
+		}
+		
+		complete_effect = {
+			SOV = {
+				set_politics = { ruling_party = communism }
+				add_popularity = { ideology = communism popularity = 1 }
+			}
+			set_global_flag = fgsw_SOV_party_changed
+		}
+	}
+	
+	cf154ever_decision_fgsw_GER_party_popularity_add = {
+		
+		priority = 1		
+		
+		icon = GFX_decision_ger_reichskommissariats
+		
+		allowed = {
+			OR = {
+				original_tag = FIN 
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = IRE
+				original_tag = SPR
+				original_tag = POR
+				original_tag = POL
+				original_tag = SWI
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = HUN
+				original_tag = YUG
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = TUR
+				original_tag = ICE
+			}
+		}		
+		
+		visible = {
+			# date > 1941.6.1
+			OR = {
+				AND = {
+					has_war_with = GER
+					is_neighbor_of = GER
+				}
+				AND = {
+					has_war_with = SOV
+					is_neighbor_of = SOV
+				}
+			}
+			NOT = {
+				has_global_flag = fgsw_decision_fired				
+				has_global_flag = fgsw_GER_party_popularity_added
+			}
+			GER = {
+				NOT = { has_war_with = SOV }
+				has_government = fascism
+				fascism < 0.55
+			}
+		}
+		
+		available = {
+			date > 1942.6.22
+		}
+		
+		complete_effect = {
+			GER = { add_popularity = { ideology = fascism popularity = 1 } }
+			set_global_flag = fgsw_GER_party_popularity_added
+		}
+	}
+	
+	cf154ever_decision_fgsw_SOV_party_popularity_add = {
+		
+		priority = 1		
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		allowed = {
+			OR = {
+				original_tag = FIN 
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = IRE
+				original_tag = SPR
+				original_tag = POR
+				original_tag = POL
+				original_tag = SWI
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = HUN
+				original_tag = YUG
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = TUR
+				original_tag = ICE
+			}
+		}		
+		
+		visible = {
+			# date > 1941.6.1
+			OR = {
+				AND = {
+					has_war_with = GER
+					is_neighbor_of = GER
+				}
+				AND = {
+					has_war_with = SOV
+					is_neighbor_of = SOV
+				}
+			}
+			NOT = {
+				has_global_flag = fgsw_decision_fired				
+				has_global_flag = fgsw_SOV_party_popularity_added
+			}
+			SOV = {
+				NOT = { has_war_with = GER }
+				has_government = communism
+				communism < 0.55
+			}
+		}
+		
+		available = {
+			date > 1942.6.22
+		}
+		
+		complete_effect = {
+			SOV = { add_popularity = { ideology = communism popularity = 1 } }
+			set_global_flag = fgsw_SOV_party_popularity_added
+		}
+	}	
+
+	cf154ever_decision_fast_wargoals = {
+		
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		cost = 300
+		
+		fire_only_once = yes
+		
+		visible = {
+			NOT = {
+				has_government = democratic
+			}
+		}
+		
+		available = {
+			threat > 0.25
+		}
+			# if = {
+				# limit = {
+					# OR = {
+						# original_tag = FRA
+						# original_tag = ENG
+						# original_tag = USA
+						# original_tag = GER
+						# original_tag = ITA
+						# original_tag = JAP
+						# original_tag = SOV
+					# }
+					# OR = {
+						# FRA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }
+						# }
+						# ENG = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }				
+						# }
+						# USA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }					
+						# }
+						# GER = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }					
+						# }
+						# ITA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }						
+						# }
+						# JAP = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }					
+						# }
+						# SOV = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+							# NOT = { tag = ROOT }						
+						# }
+					# }
+				# }
+				# OR = {
+					# AND = {
+						# has_war = yes
+						# any_enemy_country = {
+							# OR = {
+								# original_tag = FRA
+								# original_tag = ENG
+								# original_tag = USA
+								# original_tag = GER
+								# original_tag = ITA
+								# original_tag = JAP
+								# original_tag = SOV
+							# }
+							# custom_trigger_tooltip = {
+								# tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
+								# country_capitulated_or_lost_its_capital_to_ROOT = yes
+							# }
+						# }
+					# }
+					# AND = {
+						# has_manpower > 500000						
+						# has_army_size = {
+							# size > 99
+						# }
+						# OR = {
+							# has_equipment = {
+								# CAS_equipment > 999
+							# }
+							# has_equipment = {
+								# cv_CAS_equipment > 999
+							# }							
+							# has_equipment = {
+								# fighter_equipment > 999
+							# }
+							# has_equipment = {
+								# cv_fighter_equipment > 999
+							# }							
+							# has_equipment = {
+								# nav_bomber_equipment > 999
+							# }
+							# has_equipment = {
+								# cv_nav_bomber_equipment > 999
+							# }
+							# has_equipment = {
+								# heavy_fighter_equipment > 999
+							# }
+							# has_equipment = {
+								# tac_bomber_equipment > 999
+							# }
+							# has_equipment = {
+								# strat_bomber_equipment > 999
+							# }
+						# }
+					# }
+					# custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					# date > 1942.1.1
+				# }
+			# }
+			# else_if = {
+				# limit = {
+					# capital_scope = {
+						# OR = {
+							# is_on_continent = europe
+							# is_on_continent = north_america							
+							# is_on_continent = asia
+						# }
+					# }
+					# OR = {
+						# FRA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# ENG = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# USA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# GER = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# ITA = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# JAP = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+						# SOV = {
+							# country_exists_AND_is_independent_from_ROOT = yes
+						# }
+					# }
+					# NOT = {
+						# original_tag = FRA
+						# original_tag = ENG
+						# original_tag = USA
+						# original_tag = GER
+						# original_tag = ITA
+						# original_tag = JAP
+						# original_tag = SOV
+					# }
+				# }
+				# OR = {
+					# AND = {
+						# has_war = yes
+						# any_enemy_country = {
+							# OR = {
+								# original_tag = FRA
+								# original_tag = ENG
+								# original_tag = USA
+								# original_tag = GER
+								# original_tag = ITA
+								# original_tag = JAP
+								# original_tag = SOV
+							# }
+							# custom_trigger_tooltip = {
+								# tooltip = country_capitulated_or_lost_its_capital_to_ROOT_tt
+								# country_capitulated_or_lost_its_capital_to_ROOT = yes
+							# }
+						# }
+					# }
+					# AND = {
+						# has_tech = basic_medium_tank
+						# has_template_majority_unit = medium_armor
+						# has_army_size = {
+							# size > 9
+							# type = armor
+						# }
+					# }
+					# custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					# date > 1942.1.1
+				# }
+			# }
+			# else_if = {
+				# limit = {
+					# capital_scope = {
+						# OR = {
+							# is_on_continent = south_america
+							# is_on_continent = australia
+							# is_on_continent = africa							
+							# is_on_continent = middle_east
+						# }
+					# }
+				# }
+				# OR = {
+					# AND = {
+						# has_war = yes
+						# any_enemy_country = {
+							# is_major = yes
+						# }
+						# has_army_size = {
+							# size > 23
+						# }
+					# }
+					# date > 1942.1.1					
+				# }
+			# }
+			# else = {
+				# date > 1942.1.1					
+			# }
+			
+		complete_effect = {
+			add_ideas = cf154ever_idea_fast_wargoals
+		}
+	}
+	
+	cf154ever_decision_br = {	#Потом нужно всё закомментить, как перенесу в ивенты содержимое
+	
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		priority = -1
+		
+		visible = {
+			NOT = { has_global_flag = BATTLE_ROYALE_ON }
+			date < 1936.1.31
+		}
+		
+		available = {
+			has_start_date < 1936.01.02
+			date < 1936.1.31
+			custom_trigger_tooltip = {
+				tooltip = no_cheats_allowed
+				br_countries_are_intact = yes
+			}
+		}
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_global_flag = BATTLE_ROYALE_ON
+			cf154ever_br_politics_effect = yes
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = cf154ever_decision_br_start_tt
+			hidden_effect = {
+				cf154ever_br_start_NA = yes
+				cf154ever_br_start_SA = yes
+				cf154ever_br_start_asia = yes
+				cf154ever_br_all_effect = yes
+				if = {
+					limit = {
+						LIB = {
+							exists = yes
+							is_subject = no
+							has_war = no
+							is_in_faction = no
+						}
+					}
+					LIB = { country_event = { id = cf154ever_br.1 } }
+				}
+				else_if = {
+					limit = {
+						CUB = {
+							exists = yes
+							is_subject = no
+							has_war = no
+							is_in_faction = no							
+						}
+					}
+					CUB = { country_event = { id = cf154ever_br.1 } }
+				}
+				else = {
+					random_country = { country_event = { id = cf154ever_br.1 } }
+				}
+			}
+		}
+	}
+}
