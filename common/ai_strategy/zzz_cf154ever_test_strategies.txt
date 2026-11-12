@@ -1,25 +1,22 @@
 
+@DATE = 1936.4.1
+
+@HIGH_POS_VALUE = 99999
+@POS_VALUE = 100
+
 germany_badass = {
 	
 	enable = {
-		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES
-		date > 1945.1.1		
+		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES	
 		original_tag = GER
 		has_government = fascism
 		is_neighbor_of = SWE
 		num_divisions > 199
-		has_army_size = {
-			size > 9
-			type = armor
-		}
+		has_army_size = { size > 9 type = armor }
 		has_manpower > 99999
 		OR = {
-			has_equipment = {
-				fighter_equipment > 4999
-			}
-			has_equipment = {
-				CAS_equipment > 4999
-			}
+			has_equipment = { fighter_equipment > 4999 }
+			has_equipment = { CAS_equipment > 4999 }
 		}
 		OR = {
 			NOT = {
@@ -47,12 +44,12 @@ germany_badass = {
 	ai_strategy = {
 		type = conquer
 		id = "SWE"
-		value = 99999
+		value = @HIGH_POS_VALUE
 	}
 	ai_strategy = {
 		type = antagonize
 		id = "SWE"
-		value = 99999
+		value = @HIGH_POS_VALUE
 	}
 }
 
@@ -64,7 +61,7 @@ SAU_test_strategy_1 = {
 		original_tag = SAU
 		NOT = { has_government = neutrality }		
 		has_war = no
-		date > 1936.4.1
+		date > @DATE
 	}
 	
 	abort = {
@@ -76,17 +73,17 @@ SAU_test_strategy_1 = {
 	ai_strategy = {
 		type = conquer
 		id = "IRQ"
-		value = 99999
+		value = @HIGH_POS_VALUE
 	}
 	ai_strategy = {
 		type = antagonize
 		id = "IRQ"
-		value = 99999
+		value = @HIGH_POS_VALUE
 	}
 	ai_strategy = {
 		type = consider_weak
 		id = "IRQ"
-		value = 99999
+		value = @HIGH_POS_VALUE
 	}	
 }
 
@@ -97,7 +94,7 @@ SAU_test_strategy_2 = {
 		original_tag = SAU
 		NOT = { has_government = neutrality }
 		has_war = no
-		date > 1936.4.1
+		date > @DATE
 		IRQ = {
 			OR = {
 				exists = no
@@ -115,12 +112,12 @@ SAU_test_strategy_2 = {
 	ai_strategy = {
 		type = conquer
 		id = "PER"
-		value = 100
+		value = @POS_VALUE
 	}
 	ai_strategy = {
 		type = antagonize
 		id = "PER"
-		value = 100
+		value = @POS_VALUE
 	}
 }
 
@@ -131,7 +128,7 @@ SAU_test_strategy_3 = {
 		original_tag = SAU
 		NOT = { has_government = neutrality }
 		has_war = no
-		date > 1936.4.1
+		date > @DATE
 		IRQ = {
 			OR = {
 				exists = no
@@ -155,12 +152,12 @@ SAU_test_strategy_3 = {
 	ai_strategy = {
 		type = conquer
 		id = "AFG"
-		value = 100
+		value = @POS_VALUE
 	}
 	ai_strategy = {
 		type = antagonize
 		id = "AFG"
-		value = 100
+		value = @POS_VALUE
 	}
 }
 
@@ -181,7 +178,7 @@ BR_test_strategy = {
 		}
 		NOT = { has_government = neutrality }
 		has_war = no
-		date > 1936.4.1
+		date > @DATE
 		country_exists = PAN
 		has_global_flag = CF154EVER_ENABLE_TEST_STRATEGIES		
 	}
@@ -195,17 +192,17 @@ BR_test_strategy = {
 	ai_strategy = {
 		type = conquer
 		id = "PAN"
-		value = 99999
+		value = @HIGH_POS_VALUE
 	}
 	ai_strategy = {
 		type = antagonize
 		id = "PAN"
-		value = 99999
+		value = @HIGH_POS_VALUE
 	}
 	ai_strategy = {
 		type = consider_weak
 		id = "PAN"
-		value = 99999
+		value = @HIGH_POS_VALUE
 	}	
 }
 
