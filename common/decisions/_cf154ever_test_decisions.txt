@@ -1,4 +1,8 @@
 
+@2MLN = 2147482
+@NEG_2MLN = -2147482
+@1MLN = 1900000
+
 cf154ever_test_decisions_category = {
 
 	cf154ever_decision_oob_test = {
@@ -20,24 +24,12 @@ cf154ever_test_decisions_category = {
 			has_tech = tech_maintenance_company4
 			has_tech = tech_logistics_company4
 			has_manpower > 15599			
-			has_equipment = {
-				modern_tank_equipment > 749
-			}
-			has_equipment = {
-				infantry_equipment > 549
-			}			
-			has_equipment = {
-				mechanized_equipment > 249
-			}
-			has_equipment = {
-				support_equipment > 84
-			}			
-			has_equipment = {
-				artillery_equipment > 11
-			}
-			has_equipment = {
-				motorized_equipment > 9
-			}
+			has_equipment = { modern_tank_equipment > 749 }
+			has_equipment = { infantry_equipment > 549 }			
+			has_equipment = { mechanized_equipment > 249 }
+			has_equipment = { support_equipment > 84 }			
+			has_equipment = { artillery_equipment > 11 }
+			has_equipment = { motorized_equipment > 9 }
 		}
 		
 		complete_effect = {
@@ -67,7 +59,7 @@ cf154ever_test_decisions_category = {
 					infantry_equipment < 0
 				}
 				has_equipment = {
-					infantry_equipment > 2147482
+					infantry_equipment > @2MLN
 				}
 			}
 		}
@@ -81,18 +73,18 @@ cf154ever_test_decisions_category = {
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
-					amount = 1900000
+					amount = @1MLN
 				}
 			}
 			else_if = {
 				limit = {
 					has_equipment = {
-						infantry_equipment_0 > 2147482
+						infantry_equipment_0 > @2MLN
 					}
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
-					amount = -2147482
+					amount = @NEG_2MLN
 				}
 			}
 			else_if = {
@@ -103,18 +95,18 @@ cf154ever_test_decisions_category = {
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 1900000
+					amount = @1MLN
 				}
 			}
 			else_if = {
 				limit = {
 					has_equipment = {
-						infantry_equipment_1 > 2147482
+						infantry_equipment_1 > @2MLN
 					}
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = -2147482
+					amount = @NEG_2MLN
 				}
 			}
 			else_if = {
@@ -125,18 +117,18 @@ cf154ever_test_decisions_category = {
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_2
-					amount = 1900000
+					amount = @1MLN
 				}
 			}
 			else_if = {
 				limit = {
 					has_equipment = {
-						infantry_equipment_2 > 2147482
+						infantry_equipment_2 > @2MLN
 					}
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_2
-					amount = -2147482
+					amount = @NEG_2MLN
 				}
 			}
 			else_if = {
@@ -147,18 +139,18 @@ cf154ever_test_decisions_category = {
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_3
-					amount = 1900000
+					amount = @1MLN
 				}
 			}
 			else_if = {
 				limit = {
 					has_equipment = {
-						infantry_equipment_3 > 2147482
+						infantry_equipment_3 > @2MLN
 					}
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_3
-					amount = -2147482
+					amount = @NEG_2MLN
 				}
 			}
 			else_if = {
@@ -169,22 +161,22 @@ cf154ever_test_decisions_category = {
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
-					amount = 1900000
+					amount = @1MLN
 				}
 			}
 			else_if = {
 				limit = {
 					has_equipment = {
-						infantry_equipment > 2147482
+						infantry_equipment > @2MLN
 					}
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
-					amount = -2147482
+					amount = @NEG_2MLN
 				}
-			}			
+			}
 			else = {
-				add_political_power = 2000
+				country_event = { id = cf154ever_test_event.3 }
 			}
 		}
 	}
