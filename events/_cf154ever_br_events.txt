@@ -1,4 +1,6 @@
 ﻿
+@DATE = 1936.4.1
+
 add_namespace = cf154ever_br
 
 country_event = {
@@ -41,7 +43,7 @@ country_event = {
 			original_tag = VEN
 		}
 		has_war = no
-		date > 1936.4.1
+		date > @DATE
 	}
 	
 	immediate = {
@@ -217,7 +219,7 @@ country_event = {
 			original_tag = PAN
 		}
 		has_war = no
-		date > 1936.4.1
+		date > @DATE
 	}
 	
 	immediate = {
@@ -345,7 +347,7 @@ country_event = {
 			original_tag = DOM
 		}
 		has_war = no
-		date > 1936.4.1
+		date > @DATE
 	}
 	
 	immediate = {
@@ -407,7 +409,7 @@ country_event = {
 			original_tag = YEM
 		}
 		has_war = no
-		date > 1936.4.1
+		date > @DATE
 	}
 	
 	immediate = {
@@ -473,7 +475,7 @@ country_event = {
 			original_tag = BHU
 		}
 		has_war = no
-		date > 1936.4.1
+		date > @DATE
 	}
 	
 	immediate = {
