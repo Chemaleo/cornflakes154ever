@@ -2,6 +2,36 @@
 # Основные скриптовые триггеры/Primary triggers #
 #################################################
 
+fgsw_is_minor_european_country = {
+	OR = {
+		original_tag = FIN 
+		original_tag = SWE
+		original_tag = NOR
+		original_tag = DEN
+		original_tag = EST
+		original_tag = LAT
+		original_tag = LIT
+		original_tag = HOL
+		original_tag = BEL
+		original_tag = LUX
+		original_tag = IRE
+		original_tag = SPR
+		original_tag = POR
+		original_tag = POL
+		original_tag = SWI
+		original_tag = AUS
+		original_tag = CZE
+		original_tag = HUN
+		original_tag = YUG
+		original_tag = ROM
+		original_tag = BUL
+		original_tag = ALB
+		original_tag = GRE
+		original_tag = TUR
+		original_tag = ICE
+	}
+}
+
 check_if_only_one_china_left = {
 	if = {
 		limit = { original_tag = CHI }
@@ -342,7 +372,7 @@ has_advisor_liberal_or_fascist = { # Для коммунизма
 	}
 }
 
-has_advisor_communist_or_fascist = { # Концлагеря? в моей HOI4?
+has_advisor_communist_or_fascist = { # Концлагеря? В моей HOI4?
 	OR = {
 		has_idea = generic_communist_revolutionary # Коммунизм
 		has_idea = AST_lance_sharkey
