@@ -1,4 +1,20 @@
 ﻿
+@BUILDING_LEVEL_1 = 9
+@BUILDING_LEVEL_2 = 5
+
+@USA_EE_MANPOWER = 500000
+
+@FGSW_MANPOWER_1 = 250000
+@FGSW_MANPOWER_2 = 500000
+@FGSW_MANPOWER_3 = 750000
+@FGSW_MANPOWER_4 = 1000000
+@FGSW_EQUIPMENT_1 = 25000
+@FGSW_EQUIPMENT_2 = 50000
+@FGSW_EQUIPMENT_3 = 100000
+@FGSW_EQUIPMENT_4 = 1000000
+@FGSW_FLAT_MANPOWER = 500000
+@FGSW_FLAT_EQUIPMENT = 100000
+
 add_namespace = cf154ever_event
 
 country_event = {
@@ -42,17 +58,17 @@ country_event = {
 		communism > 0.99
 		is_historical_focus_on = no
 		has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
-		219 = { infrastructure > 9 }	#Москва
-		253 = { infrastructure > 9 }	#Иваново
-		252 = { infrastructure > 9 }	#Горький
-		256 = { infrastructure > 9 }	#Чебоксары
-		249 = { infrastructure > 9 }	#Казань
-		651 = { infrastructure > 9 }	#Уфа
-		573 = { infrastructure > 9 }	#Златоуст
-		572 = { infrastructure > 9 }	#Челябинск
-		403 = { infrastructure > 9 }	#Тюмень
-		577 = { infrastructure > 9 }	#Сургут
-		516 = { infrastructure > 9 radar_station > 5 }	#Северозападная Сибирь
+		219 = { infrastructure > @BUILDING_LEVEL_1 }	#Москва
+		253 = { infrastructure > @BUILDING_LEVEL_1 }	#Иваново
+		252 = { infrastructure > @BUILDING_LEVEL_1 }	#Горький
+		256 = { infrastructure > @BUILDING_LEVEL_1 }	#Чебоксары
+		249 = { infrastructure > @BUILDING_LEVEL_1 }	#Казань
+		651 = { infrastructure > @BUILDING_LEVEL_1 }	#Уфа
+		573 = { infrastructure > @BUILDING_LEVEL_1 }	#Златоуст
+		572 = { infrastructure > @BUILDING_LEVEL_1 }	#Челябинск
+		403 = { infrastructure > @BUILDING_LEVEL_1 }	#Тюмень
+		577 = { infrastructure > @BUILDING_LEVEL_1 }	#Сургут
+		516 = { infrastructure > @BUILDING_LEVEL_1 radar_station > @BUILDING_LEVEL_2 }	#Северозападная Сибирь
 		if = {
 			limit = { SOV = { is_ai = no } }
 			has_war = no
@@ -68,14 +84,14 @@ country_event = {
 		if = {
 			limit = { SOV = { is_ai = no } }
 			644 = {	#Северовосточная Сибирь
-				infrastructure > 9
-				radar_station > 5
+				infrastructure > @BUILDING_LEVEL_1
+				radar_station > @BUILDING_LEVEL_2
 				any_province_building_level	= { province = { id = 13204 } building = naval_base level > 9 }
 				any_province_building_level	= { province = { id = 13204 } building = coastal_bunker level > 9 }
 			}
 		}
 		else = {
-			644 = { infrastructure > 9 radar_station > 5 }
+			644 = { infrastructure > @BUILDING_LEVEL_1 radar_station > @BUILDING_LEVEL_2 }
 		}
 		USA = {
 			exists = yes
@@ -180,7 +196,7 @@ country_event = {
 						}
 					}
 				}
-				add_manpower = 500000
+				add_manpower = @USA_EE_MANPOWER
 				load_oob = cf154ever_oob_USA_easter_egg
 			}
 		}
@@ -205,37 +221,37 @@ country_event = {
 		
 		GER = {
 			random_list = {
-				33 = { add_manpower = 250000 }
-				33 = { add_manpower = 500000 }
-				33 = { add_manpower = 750000 }
-				1 = { add_manpower = 1000000 }
+				33 = { add_manpower = @FGSW_MANPOWER_1 }
+				33 = { add_manpower = @FGSW_MANPOWER_2 }
+				33 = { add_manpower = @FGSW_MANPOWER_3 }
+				1 = { add_manpower = @FGSW_MANPOWER_4 }
 			}
 			random_list = {
 				33 = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 25000
+						amount = @FGSW_EQUIPMENT_1
 						producer = GER 
 					}
 				}
 				33 = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 50000
+						amount = @FGSW_EQUIPMENT_2
 						producer = GER 
 					}
 				}
 				33 = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 100000
+						amount = @FGSW_EQUIPMENT_3
 						producer = GER 
 					}
 				}
 				1 = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 1000000
+						amount = @FGSW_EQUIPMENT_4
 						producer = GER 
 					}
 				}
@@ -244,37 +260,37 @@ country_event = {
 		
 		SOV = {
 			random_list = {
-				33 = { add_manpower = 250000 }
-				33 = { add_manpower = 500000 }
-				33 = { add_manpower = 750000 }
-				1 = { add_manpower = 1000000 }
+				33 = { add_manpower = @FGSW_MANPOWER_1 }
+				33 = { add_manpower = @FGSW_MANPOWER_2 }
+				33 = { add_manpower = @FGSW_MANPOWER_3 }
+				1 = { add_manpower = @FGSW_MANPOWER_4 }
 			}
 			random_list = {
 				33 = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 25000
+						amount = @FGSW_EQUIPMENT_1
 						producer = SOV 
 					}
 				}
 				33 = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 50000
+						amount = @FGSW_EQUIPMENT_2
 						producer = SOV 
 					}
 				}
 				33 = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 100000
+						amount = @FGSW_EQUIPMENT_3
 						producer = SOV 
 					}
 				}
 				1 = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 1000000
+						amount = @FGSW_EQUIPMENT_4
 						producer = SOV 
 					}
 				}
@@ -286,12 +302,12 @@ country_event = {
 		name = cf154ever_event.3.b
 		
 		GER = {
-			add_manpower = 500000
+			add_manpower = @FGSW_FLAT_MANPOWER
 			if = {
 				limit = { has_tech = advanced_infantry_weapons }
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_3
-					amount = 100000
+					amount = @FGSW_FLAT_EQUIPMENT
 					producer = GER
 				}
 			}
@@ -299,26 +315,26 @@ country_event = {
 				limit = { has_tech = improved_infantry_weapons }
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_2
-					amount = 100000
+					amount = @FGSW_FLAT_EQUIPMENT
 					producer = GER 
 				}
 			}
 			else = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 100000
+					amount = @FGSW_FLAT_EQUIPMENT
 					producer = GER 
 				}
 			}
 		}
 
 		SOV = {
-			add_manpower = 500000
+			add_manpower = @FGSW_FLAT_MANPOWER
 			if = {
 				limit = { has_tech = advanced_infantry_weapons }
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_3
-					amount = 100000
+					amount = @FGSW_FLAT_EQUIPMENT
 					producer = SOV
 				}
 			}
@@ -326,14 +342,14 @@ country_event = {
 				limit = { has_tech = improved_infantry_weapons }
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_2
-					amount = 100000
+					amount = @FGSW_FLAT_EQUIPMENT
 					producer = SOV 
 				}
 			}
 			else = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 100000
+					amount = @FGSW_FLAT_EQUIPMENT
 					producer = SOV 
 				}
 			}
