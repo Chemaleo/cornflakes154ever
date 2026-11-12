@@ -1,10 +1,11 @@
 ﻿
+@FLAG = CF154EVER_ENABLE_TEST_EVENTS
 @DAYS = 2
 
-add_namespace = cf154ever_test_event
+add_namespace = cf154ever_test
 
 country_event = {
-	id = cf154ever_test_event.1
+	id = cf154ever_test.1
 	title = "Test event title 1"
 	desc = "Test event desc 1"
 	picture = GFX_report_event_001
@@ -12,7 +13,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_global_flag = CF154EVER_ENABLE_TEST_EVENTS
+		has_global_flag = @FLAG
 		any_country = {
 			has_equipment = {
 				infantry_equipment < 0
@@ -41,7 +42,7 @@ country_event = {
 }
 
 country_event = {
-	id = cf154ever_test_event.2
+	id = cf154ever_test.2
 	title = "Test event title 2"
 	desc = "Test event desc 2"
 	picture = GFX_report_event_001
@@ -49,7 +50,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_global_flag = CF154EVER_ENABLE_TEST_EVENTS
+		has_global_flag = @FLAG
 		is_ai = no
 		ROM = {
 			OR = {
@@ -65,7 +66,7 @@ country_event = {
 }
 
 country_event = {
-	id = cf154ever_test_event.3
+	id = cf154ever_test.3
 	title = "Test event title 3"
 	desc = "Integer overflow test failed"
 	picture = GFX_report_event_001
