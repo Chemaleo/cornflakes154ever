@@ -2,38 +2,11 @@
 # Основные эффекты БР/Primary BR effects #
 ##########################################
 
+@PLANES = 1000 # 50000, 10000
+
 cf154ever_br_politics_effect = {
 	every_country = {
-		limit = {
-			OR = {
-				original_tag = ARG
-				original_tag = URG
-				original_tag = PAR
-				original_tag = CHL
-				original_tag = BRA
-				original_tag = BOL
-				original_tag = PRU
-				original_tag = ECU
-				original_tag = COL
-				original_tag = VEN
-				original_tag = MEX
-				original_tag = GUA
-				original_tag = ELS
-				original_tag = HON
-				original_tag = NIC
-				original_tag = COS
-				original_tag = PAN
-				original_tag = HAI
-				original_tag = DOM
-				original_tag = SAU
-				original_tag = OMA
-				original_tag = YEM
-				original_tag = TIB
-				original_tag = NEP
-				original_tag = BHU
-			}
-			NOT = { has_government = neutrality }
-		}
+		limit = { is_any_br_country = yes }
 		set_politics = { ruling_party = neutrality }
 		random_list = {
 			40 = { add_popularity = { ideology = neutrality popularity = 0.5 } }
@@ -45,35 +18,7 @@ cf154ever_br_politics_effect = {
 
 cf154ever_br_all_effect = {
 	every_country = {
-		limit = {
-			OR = {
-				original_tag = ARG
-				original_tag = URG
-				original_tag = PAR
-				original_tag = CHL
-				original_tag = BRA
-				original_tag = BOL
-				original_tag = PRU
-				original_tag = ECU
-				original_tag = COL
-				original_tag = VEN
-				original_tag = MEX
-				original_tag = GUA
-				original_tag = ELS
-				original_tag = HON
-				original_tag = NIC
-				original_tag = COS
-				original_tag = PAN
-				original_tag = HAI
-				original_tag = DOM
-				original_tag = SAU
-				original_tag = OMA
-				original_tag = YEM
-				original_tag = TIB
-				original_tag = NEP
-				original_tag = BHU
-			}
-		}
+		limit = { is_any_br_country = yes }
 		random_list = {
 			10 = { add_political_power = 150 }	#set_political_power = 2000
 			10 = { set_stability = 1 }
@@ -133,24 +78,16 @@ cf154ever_br_all_effect = {
 			# type = motorized_equipment_1
 			# amount = 50000
 		# }
-		add_equipment_to_stockpile = { type = heavy_fighter_equipment_1 amount = 1000  }	# 50000, 10000
-		add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = 1000 } # 50000, 10000
+		add_equipment_to_stockpile = { type = heavy_fighter_equipment_1 amount = @PLANES  }
+		add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = @PLANES }
 		# add_equipment_to_stockpile = {
 			# type = convoy_1
 			# amount = 1000 # 10000
 		# }
 		
 		every_owned_state = {
-			add_building_construction = {
-				type = infrastructure
-				level = 10
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = air_base
-				level = 10
-				instant_build = yes
-			}
+			add_building_construction = { type = infrastructure level = 10 instant_build = yes }
+			add_building_construction = { type = air_base level = 10 instant_build = yes }
 			# add_building_construction = {
 				# type = anti_air_building
 				# level = 5
@@ -164,29 +101,7 @@ cf154ever_br_all_effect = {
 		}
 	}
 	every_country = {
-		limit = {
-			OR = {
-				original_tag = ARG
-				original_tag = URG
-				original_tag = PAR
-				original_tag = CHL
-				original_tag = BRA
-				original_tag = BOL
-				original_tag = PRU
-				original_tag = ECU
-				original_tag = COL
-				original_tag = VEN
-				original_tag = MEX
-				original_tag = GUA
-				original_tag = ELS
-				original_tag = HON
-				original_tag = NIC
-				original_tag = COS
-				original_tag = PAN
-				original_tag = HAI
-				original_tag = DOM
-			}
-		}
+		limit = { is_any_br_amer_country = yes }
 		add_ideas = { cf154ever_idea_us_influence_shield }
 	}
 }
@@ -195,7 +110,7 @@ cf154ever_br_all_effect = {
 # Североамериканские эффекты/NA #
 #################################
 
-cf154ever_br_start_NA = {	
+cf154ever_br_start_NA = {
 
 	#	Мексика
 	
@@ -296,14 +211,14 @@ cf154ever_br_start_NA = {
 	#	Никарагуа
 	
 	NIC = {
-		if = {
-			limit = {
-				is_ai = yes
-			}
+		# if = {
+			# limit = {
+				# is_ai = yes
+			# }
 			
-			set_politics = { ruling_party = neutrality }
-			add_popularity = { ideology = neutrality popularity = 1 }
-		}
+			# set_politics = { ruling_party = neutrality }
+			# add_popularity = { ideology = neutrality popularity = 1 }
+		# }
 		
 		every_owned_state = {
 			add_claim_by = GUA
@@ -1151,84 +1066,39 @@ cf154ever_br_start_SA = {
 
 cf154ever_br_start_asia = {
 	
-	#	Саудиты
-	
+	#Саудиты
 	SAU = {
-		every_owned_state = {
-			add_claim_by = OMA
-			add_claim_by = YEM
-		}
-		
-		declare_war_on = {
-			target = OMA
-			type = annex_everything
-		}
-		declare_war_on = {
-			target = YEM
-			type = annex_everything
-		}
+		every_owned_state = { add_claim_by = OMA add_claim_by = YEM }
+		declare_war_on = { target = OMA type = annex_everything }
+		declare_war_on = { target = YEM type = annex_everything }
 	}
 	
-	#	Оман
-	
+	#Оман
 	OMA = {
-		every_owned_state = {
-			add_claim_by = SAU
-			add_claim_by = YEM
-		}
-		declare_war_on = {
-			target = YEM
-			type = annex_everything
-		}		
+		every_owned_state = { add_claim_by = SAU add_claim_by = YEM }
+		declare_war_on = { target = YEM type = annex_everything }
 	}
 	
-	# Йемен
-	
+	#Йемен
 	YEM = {
-		every_owned_state = {
-			add_claim_by = SAU
-			add_claim_by = OMA
-		}
+		every_owned_state = { add_claim_by = SAU add_claim_by = OMA }
 	}
 	
-	#	Тибет
-	
+	#Тибет
 	TIB = {
-		every_owned_state = {
-			add_claim_by = NEP
-			add_claim_by = BHU
-		}
-		
-		declare_war_on = {
-			target = NEP
-			type = annex_everything
-		}
-		declare_war_on = {
-			target = BHU
-			type = annex_everything
-		}
+		every_owned_state = { add_claim_by = NEP add_claim_by = BHU }
+		declare_war_on = { target = NEP type = annex_everything }
+		declare_war_on = { target = BHU type = annex_everything }
 	}
 	
-	#	Непал
-	
+	#Непал
 	NEP = {
-		every_owned_state = {
-			add_claim_by = TIB
-			add_claim_by = BHU
-		}
-		
-		declare_war_on = {
-			target = BHU
-			type = annex_everything
-		}
+		every_owned_state = { add_claim_by = TIB add_claim_by = BHU }
+		declare_war_on = { target = BHU type = annex_everything }
 	}
 
-	#	Бутан
-	
+	#Бутан
 	BHU = {
-		every_owned_state = {
-			add_claim_by = TIB
-			add_claim_by = NEP
-		}
+		every_owned_state = { add_claim_by = TIB add_claim_by = NEP }
 	}
 }
