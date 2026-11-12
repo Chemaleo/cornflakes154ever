@@ -1,4 +1,8 @@
 ﻿
+@2MLN = 2000000	#2147482
+@NEG_2MLN = -1990000	#-2147482
+@DAYS = 2 #1
+
 add_namespace = cf154ever_io
 
 ################################################################################ #
@@ -20,23 +24,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				infantry_equipment > 2000000 #2147482
+				infantry_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					infantry_equipment > 2000000 #2147482
+					infantry_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -1990000 #-2147482
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -55,23 +59,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				motorized_equipment_1 > 2000000
+				motorized_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					motorized_equipment_1 > 2000000
+					motorized_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -90,23 +94,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				motorized_rocket_equipment_1 > 2000000
+				motorized_rocket_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					motorized_rocket_equipment_1 > 2000000
+					motorized_rocket_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = motorized_rocket_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -125,23 +129,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				mechanized_equipment > 2000000
+				mechanized_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					mechanized_equipment > 2000000
+					mechanized_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = mechanized_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -160,23 +164,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				support_equipment_1 > 2000000
+				support_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					support_equipment_1 > 2000000
+					support_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -195,23 +199,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				anti_air_equipment > 2000000
+				anti_air_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					anti_air_equipment > 2000000
+					anti_air_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = anti_air_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -230,23 +234,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				artillery_equipment > 2000000
+				artillery_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					artillery_equipment > 2000000
+					artillery_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -265,23 +269,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				rocket_artillery_equipment > 2000000
+				rocket_artillery_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					rocket_artillery_equipment > 2000000
+					rocket_artillery_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = rocket_artillery_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -300,23 +304,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				anti_tank_equipment > 2000000
+				anti_tank_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					anti_tank_equipment > 2000000
+					anti_tank_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -335,23 +339,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				light_tank_equipment > 2000000
+				light_tank_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					light_tank_equipment > 2000000
+					light_tank_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = light_tank_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -370,23 +374,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				light_tank_destroyer_equipment > 2000000
+				light_tank_destroyer_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					light_tank_destroyer_equipment > 2000000
+					light_tank_destroyer_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = light_tank_destroyer_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -405,23 +409,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				light_tank_artillery_equipment > 2000000
+				light_tank_artillery_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					light_tank_artillery_equipment > 2000000
+					light_tank_artillery_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = light_tank_artillery_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -440,23 +444,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				light_tank_aa_equipment > 2000000
+				light_tank_aa_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					light_tank_aa_equipment > 2000000
+					light_tank_aa_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = light_tank_aa_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -475,23 +479,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				medium_tank_equipment > 2000000
+				medium_tank_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					medium_tank_equipment > 2000000
+					medium_tank_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = medium_tank_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -510,23 +514,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				medium_tank_destroyer_equipment > 2000000
+				medium_tank_destroyer_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					medium_tank_destroyer_equipment > 2000000
+					medium_tank_destroyer_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = medium_tank_destroyer_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -545,23 +549,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				medium_tank_artillery_equipment > 2000000
+				medium_tank_artillery_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					medium_tank_artillery_equipment > 2000000
+					medium_tank_artillery_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = medium_tank_artillery_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -580,23 +584,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				medium_tank_aa_equipment > 2000000
+				medium_tank_aa_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					medium_tank_aa_equipment > 2000000
+					medium_tank_aa_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = medium_tank_aa_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -615,23 +619,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				heavy_tank_equipment > 2000000
+				heavy_tank_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					heavy_tank_equipment > 2000000
+					heavy_tank_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = heavy_tank_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -650,23 +654,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				heavy_tank_destroyer_equipment > 2000000
+				heavy_tank_destroyer_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					heavy_tank_destroyer_equipment > 2000000
+					heavy_tank_destroyer_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = heavy_tank_destroyer_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -685,23 +689,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				heavy_tank_artillery_equipment > 2000000
+				heavy_tank_artillery_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					heavy_tank_artillery_equipment > 2000000
+					heavy_tank_artillery_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = heavy_tank_artillery_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -720,23 +724,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				heavy_tank_aa_equipment > 2000000
+				heavy_tank_aa_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					heavy_tank_aa_equipment > 2000000
+					heavy_tank_aa_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = heavy_tank_aa_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -755,23 +759,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				super_heavy_tank_equipment_1 > 2000000
+				super_heavy_tank_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					super_heavy_tank_equipment_1 > 2000000
+					super_heavy_tank_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = super_heavy_tank_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -790,23 +794,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				super_heavy_tank_destroyer_equipment_1 > 2000000
+				super_heavy_tank_destroyer_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					super_heavy_tank_destroyer_equipment_1 > 2000000
+					super_heavy_tank_destroyer_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = super_heavy_tank_destroyer_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -825,23 +829,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				super_heavy_tank_artillery_equipment_1 > 2000000
+				super_heavy_tank_artillery_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					super_heavy_tank_artillery_equipment_1 > 2000000
+					super_heavy_tank_artillery_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = super_heavy_tank_artillery_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -860,23 +864,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				super_heavy_tank_aa_equipment_1 > 2000000
+				super_heavy_tank_aa_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					super_heavy_tank_aa_equipment_1 > 2000000
+					super_heavy_tank_aa_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = super_heavy_tank_aa_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -895,23 +899,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				modern_tank_equipment_1 > 2000000
+				modern_tank_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					modern_tank_equipment_1 > 2000000
+					modern_tank_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = modern_tank_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -930,23 +934,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				modern_tank_destroyer_equipment_1 > 2000000
+				modern_tank_destroyer_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					modern_tank_destroyer_equipment_1 > 2000000
+					modern_tank_destroyer_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = modern_tank_destroyer_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -965,23 +969,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				modern_tank_artillery_equipment_1 > 2000000
+				modern_tank_artillery_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					modern_tank_artillery_equipment_1 > 2000000
+					modern_tank_artillery_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = modern_tank_artillery_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1000,23 +1004,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				modern_tank_aa_equipment_1 > 2000000
+				modern_tank_aa_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					modern_tank_aa_equipment_1 > 2000000
+					modern_tank_aa_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = modern_tank_aa_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1039,23 +1043,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				CAS_equipment > 2000000
+				CAS_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					CAS_equipment > 2000000
+					CAS_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = CAS_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1074,23 +1078,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				cv_CAS_equipment > 2000000
+				cv_CAS_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					cv_CAS_equipment > 2000000
+					cv_CAS_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = cv_CAS_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1109,23 +1113,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				fighter_equipment > 2000000
+				fighter_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					fighter_equipment > 2000000
+					fighter_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = fighter_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1144,23 +1148,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				cv_fighter_equipment > 2000000
+				cv_fighter_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					cv_fighter_equipment > 2000000
+					cv_fighter_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = cv_fighter_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1179,23 +1183,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				jet_fighter_equipment > 2000000
+				jet_fighter_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					jet_fighter_equipment > 2000000
+					jet_fighter_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = jet_fighter_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1214,23 +1218,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				nav_bomber_equipment > 2000000
+				nav_bomber_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					nav_bomber_equipment > 2000000
+					nav_bomber_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = nav_bomber_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1249,23 +1253,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				cv_nav_bomber_equipment > 2000000
+				cv_nav_bomber_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					cv_nav_bomber_equipment > 2000000
+					cv_nav_bomber_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = cv_nav_bomber_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1284,23 +1288,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				heavy_fighter_equipment > 2000000
+				heavy_fighter_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					heavy_fighter_equipment > 2000000
+					heavy_fighter_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = heavy_fighter_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1319,23 +1323,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				tac_bomber_equipment > 2000000
+				tac_bomber_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					tac_bomber_equipment > 2000000
+					tac_bomber_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = tac_bomber_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1354,23 +1358,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				jet_tac_bomber_equipment > 2000000
+				jet_tac_bomber_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					jet_tac_bomber_equipment > 2000000
+					jet_tac_bomber_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = jet_tac_bomber_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1389,23 +1393,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				strat_bomber_equipment > 2000000
+				strat_bomber_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					strat_bomber_equipment > 2000000
+					strat_bomber_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = strat_bomber_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1424,23 +1428,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				jet_strat_bomber_equipment_1 > 2000000
+				jet_strat_bomber_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					jet_strat_bomber_equipment_1 > 2000000
+					jet_strat_bomber_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = jet_strat_bomber_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1459,23 +1463,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				rocket_suicide_equipment_1 > 2000000
+				rocket_suicide_equipment_1 > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					rocket_suicide_equipment_1 > 2000000
+					rocket_suicide_equipment_1 > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = rocket_suicide_equipment_1
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
@@ -1494,23 +1498,23 @@ country_event = {
 	trigger = {
 		any_country = {
 			has_equipment = {
-				transport_plane_equipment > 2000000
+				transport_plane_equipment > @2MLN
 			}
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
 			limit = {
 				has_equipment = {
-					transport_plane_equipment > 2000000
+					transport_plane_equipment > @2MLN
 				}
 			}
 			add_equipment_to_stockpile = {
 				type = transport_plane_equipment
-				amount = -1990000
+				amount = @NEG_2MLN
 			}
 		}
 	}
