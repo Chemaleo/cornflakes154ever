@@ -1,9 +1,10 @@
 
+#Заменить на ивент с выборами для игрока ниже
 on_actions = {
     on_startup = {
         effect = {
-			set_global_flag = ENABLE_CF154EVER_DECISIONS			
-			every_country = {	#Заменить на ивенты с выбором для игрока
+			set_global_flag = CF154EVER_DEV_SETTINGS_TRUE
+			every_country = {
 				limit = {
 					NOT = {
 						original_tag = USA
@@ -15,11 +16,20 @@ on_actions = {
 						original_tag = SOV
 					}
 				}
-				# limit = { is_ai = no }
-				# country_event = { id = cf154ever_startup.1 }
-				# set_global_flag = CF154EVER_DEV_SETTINGS_TRUE
 				add_kludge_admirals = yes
 			}
 		}
 	}
 }
+
+
+# on_actions = {
+    # on_startup = {
+        # effect = {
+			# every_country = {
+				# limit = { is_ai = no }
+				# country_event = { id = cf154ever_startup.1 }
+			# }
+		# }
+	# }
+# }
