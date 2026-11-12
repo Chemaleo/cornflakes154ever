@@ -1,4 +1,6 @@
 ﻿
+@DAYS = 2
+
 add_namespace = cf154ever_test_event
 
 country_event = {
@@ -16,10 +18,10 @@ country_event = {
 				infantry_equipment < 0
 			}
 		}
-		always = no
+		always = no	#Убрать чтобы заработал ивент
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
@@ -57,7 +59,20 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = { days = 2 }
+	mean_time_to_happen = { days = @DAYS }
+	
+	option = { name = cf154ever_io.1.a }
+}
+
+country_event = {
+	id = cf154ever_test_event.3
+	title = "Test event title 3"
+	desc = "Integer overflow test failed"
+	picture = GFX_report_event_001
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
 	
 	option = { name = cf154ever_io.1.a }
 }
