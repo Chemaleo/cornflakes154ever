@@ -8,7 +8,7 @@ Any help is appreciated. The majority of issues are observed on Paradox forums.
 
 ## Update history
 
-### U6.2 - 2026-11-09
+### U6.2 - 2026-11-14
 1. Reverted some changes in general decision file to fix a crash
 2. The Axis powers are now able to invade USA late in the war
 3. Capitalized the letter "S" in the German General Staff description
