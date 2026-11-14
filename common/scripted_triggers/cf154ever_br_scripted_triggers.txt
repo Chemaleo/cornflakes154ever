@@ -1,0 +1,210 @@
+###############################################
+# Скриптовые триггеры БР/BR scripted triggers #
+###############################################
+
+is_any_br_amer_country = {
+	OR = {
+		original_tag = ARG
+		original_tag = URG
+		original_tag = PAR
+		original_tag = CHL
+		original_tag = BRA
+		original_tag = BOL
+		original_tag = PRU
+		original_tag = ECU
+		original_tag = COL
+		original_tag = VEN
+		original_tag = MEX
+		original_tag = GUA
+		original_tag = ELS
+		original_tag = HON
+		original_tag = NIC
+		original_tag = COS
+		original_tag = PAN
+		original_tag = HAI
+		original_tag = DOM
+	}
+}
+
+is_any_br_country = {
+	OR = {
+		original_tag = ARG
+		original_tag = URG
+		original_tag = PAR
+		original_tag = CHL
+		original_tag = BRA
+		original_tag = BOL
+		original_tag = PRU
+		original_tag = ECU
+		original_tag = COL
+		original_tag = VEN
+		original_tag = MEX
+		original_tag = GUA
+		original_tag = ELS
+		original_tag = HON
+		original_tag = NIC
+		original_tag = COS
+		original_tag = PAN
+		original_tag = HAI
+		original_tag = DOM
+		original_tag = SAU
+		original_tag = OMA
+		original_tag = YEM
+		original_tag = TIB
+		original_tag = NEP
+		original_tag = BHU
+	}
+	NOT = { has_government = neutrality }
+}
+
+br_countries_are_intact = {
+	ARG = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no
+	}
+	URG = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	PAR = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	CHL = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	BRA = {
+		exists = yes
+		is_subject = no
+		has_war = no
+	}
+	BOL = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	PRU = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	ECU = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	COL = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	VEN = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	MEX = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	GUA = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	ELS = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	HON = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	NIC = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	COS = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	"PAN" = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no
+	}
+	HAI = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	DOM = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	SAU = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	OMA = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	YEM = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	TIB = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	NEP = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+	BHU = {
+		exists = yes
+		is_subject = no
+		has_war = no
+		is_in_faction = no		
+	}
+}
