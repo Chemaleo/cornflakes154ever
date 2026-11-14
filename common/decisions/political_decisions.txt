@@ -325,7 +325,6 @@ fascism_on_the_rise = {
 			clr_country_flag = preparation_for_fascism_civil_war
 			clr_country_flag = military_support_for_fascism_civil_war
 			clr_country_flag = civil_support_for_fascism_civil_war
-			set_country_flag = ideology_civil_war
 		}
 		
 		ai_will_do = {
@@ -464,12 +463,6 @@ fascism_on_the_rise = {
 			modifier = {
 				fascism > 0.6
 				factor = 10
-			}
-			modifier = {
-				tag = ROM
-				has_idea_with_trait = fascist_demagogue
-				fascism > 0.5
-				factor = 1000
 			}
 		}
 	}
@@ -799,11 +792,9 @@ democratic_on_the_rise = {
 				keep_unit_leaders_trigger = {
 					has_trait = hidden_sympathies
 				}
-			}
 			clr_country_flag = preparation_for_democratic_civil_war
 			clr_country_flag = military_support_for_democratic_civil_war
 			clr_country_flag = civil_support_for_democratic_civil_war
-			set_country_flag = ideology_civil_war
 		}
 		
 		ai_will_do = {
@@ -811,6 +802,7 @@ democratic_on_the_rise = {
 		}
 	}
 
+								  
 	open_up_political_discourse_democratic = {
 
 		icon = generic_political_discourse
