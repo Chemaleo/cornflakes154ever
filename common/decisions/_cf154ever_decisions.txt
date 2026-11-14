@@ -348,7 +348,7 @@ cf154ever_decisions_category = {
 		ai_will_do = {
 			base = 0.1
 			modifier = {
-				add = 200
+				add = 70
 				is_historical_focus_on = yes
 			}
 		}
