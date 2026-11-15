@@ -1,7 +1,6 @@
 ﻿
 @2MLN = 2000000	#2147482
 @NEG_2MLN = -1990000	#-2147482
-@DAYS = 2 #1
 
 add_namespace = cf154ever_io
 
@@ -19,17 +18,7 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
-	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				infantry_equipment > @2MLN
-			}
-		}
-	}
-	
-	mean_time_to_happen = { days = @DAYS }
+	is_triggered_only = yes
 	
 	immediate = {
 		every_country = {
@@ -54,17 +43,9 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				motorized_equipment_1 > @2MLN
-			}
-		}
-	}
 	
-	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
@@ -89,17 +70,8 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				motorized_rocket_equipment_1 > @2MLN
-			}
-		}
-	}
-	
-	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
@@ -124,17 +96,10 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
+
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				mechanized_equipment > @2MLN
-			}
-		}
-	}
 	
-	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
@@ -159,17 +124,9 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				support_equipment_1 > @2MLN
-			}
-		}
-	}
 	
-	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
@@ -194,17 +151,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				anti_air_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -229,17 +180,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				artillery_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -264,17 +209,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				rocket_artillery_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -299,17 +238,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				anti_tank_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -334,17 +267,10 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
+
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				light_tank_equipment > @2MLN
-			}
-		}
-	}
 	
-	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
@@ -369,17 +295,10 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				light_tank_destroyer_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
@@ -404,17 +323,10 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				light_tank_artillery_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
@@ -439,17 +351,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				light_tank_aa_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -474,17 +380,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				medium_tank_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -509,17 +409,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				medium_tank_destroyer_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -544,17 +438,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				medium_tank_artillery_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -579,17 +467,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				medium_tank_aa_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -614,17 +496,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				heavy_tank_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -649,17 +525,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				heavy_tank_destroyer_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -684,17 +554,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				heavy_tank_artillery_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -719,17 +583,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				heavy_tank_aa_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -754,17 +612,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				super_heavy_tank_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -789,17 +641,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				super_heavy_tank_destroyer_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -824,17 +670,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				super_heavy_tank_artillery_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -859,17 +699,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				super_heavy_tank_aa_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -894,17 +728,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				modern_tank_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -929,17 +757,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				modern_tank_destroyer_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -964,17 +786,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				modern_tank_artillery_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -999,17 +815,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				modern_tank_aa_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1038,17 +848,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				CAS_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1073,17 +877,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				cv_CAS_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1108,17 +906,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				fighter_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1143,17 +935,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				cv_fighter_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1178,17 +964,10 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
+
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				jet_fighter_equipment > @2MLN
-			}
-		}
-	}
 	
-	mean_time_to_happen = { days = @DAYS }
 	
 	immediate = {
 		every_country = {
@@ -1213,17 +992,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				nav_bomber_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1248,17 +1021,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				cv_nav_bomber_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1283,17 +1050,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				heavy_fighter_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1318,17 +1079,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				tac_bomber_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1353,17 +1108,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				jet_tac_bomber_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1388,17 +1137,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				strat_bomber_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1423,17 +1166,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				jet_strat_bomber_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1458,17 +1195,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				rocket_suicide_equipment_1 > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
@@ -1493,17 +1224,11 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = no
+	is_triggered_only = yes
 	
-	trigger = {
-		any_country = {
-			has_equipment = {
-				transport_plane_equipment > @2MLN
-			}
-		}
-	}
+
 	
-	mean_time_to_happen = { days = @DAYS }
+	
 	
 	immediate = {
 		every_country = {
