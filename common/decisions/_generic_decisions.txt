@@ -60,7 +60,7 @@ political_actions = {
 		icon = generic_industry
 
 		available = {
-			
+			has_stability < 1
 		}
 
 		visible = {
