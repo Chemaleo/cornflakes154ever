@@ -4,7 +4,7 @@ SOV_USA_easter_egg = {
 	desc = "This is SOV easter egg plan"
 	
 	enable = {
-		original_tag = SOV
+		tag = SOV
 		is_historical_focus_on = no
 		OR = {
 			USA = {
@@ -19,11 +19,13 @@ SOV_USA_easter_egg = {
 	
 	abort = {
 		OR = {
-			NOT = { has_government = communism }
-			NOT = { has_country_leader = { name = "Joseph Stalin" ruling_only = yes } }
-			NOT = { country_exists = USA }
+			NOT = {
+				has_government = communism
+				has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
+			}
 			USA = {
 				OR = {
+					exists = no
 					is_subject = yes
 					any_neighbor_country = { has_war_with = PREV }
 				}
