@@ -1,0 +1,594 @@
+
+@2MLN = 2000000	#2147482
+@NEG_2MLN = -1990000 #-2147482
+
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							infantry_equipment > @2MLN
+						}
+					}
+				}
+				country_event = { id = cf154ever_io.1 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							motorized_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.2 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							motorized_rocket_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.3 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							mechanized_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.4 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							support_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.5 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							anti_air_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.6 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							artillery_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.7 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							rocket_artillery_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.8 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							anti_tank_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.9 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							light_tank_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.10 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							light_tank_destroyer_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.11 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							light_tank_artillery_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.12 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							light_tank_aa_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.13 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							medium_tank_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.14 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							medium_tank_destroyer_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.15 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							medium_tank_artillery_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.16 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							medium_tank_aa_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.17 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							heavy_tank_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.18 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							heavy_tank_destroyer_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.19 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							heavy_tank_artillery_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.20 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							heavy_tank_aa_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.21 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							super_heavy_tank_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.22 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							super_heavy_tank_destroyer_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.23 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							super_heavy_tank_artillery_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.24 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							super_heavy_tank_aa_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.25 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							modern_tank_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.26 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							modern_tank_destroyer_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.27 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							modern_tank_artillery_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.28 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							modern_tank_aa_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.29 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							CAS_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.30 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							cv_CAS_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.31 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							fighter_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.32 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							cv_fighter_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.33 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							jet_fighter_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.34 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							nav_bomber_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.35 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							cv_nav_bomber_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.36 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							heavy_fighter_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.37 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							tac_bomber_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.38 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							jet_tac_bomber_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.39 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							strat_bomber_equipment > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.40 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							jet_strat_bomber_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.41 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						has_equipment = {
+							rocket_suicide_equipment_1 > @2MLN
+						}
+					}					
+				}
+				country_event = { id = cf154ever_io.42 }
+			}
+		}
+	}
+}
