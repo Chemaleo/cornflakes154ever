@@ -8,8 +8,6 @@ country_event = {
 	desc = cf154ever_startup.1.d
 	picture = GFX_report_event_soldiers_marching
 	
-	fire_only_once = no
-	
 	is_triggered_only = yes
 	
 	option = {
@@ -59,9 +57,7 @@ country_event = {
 	title = cf154ever_startup.1.t
 	desc = cf154ever_startup.1.d
 	picture = GFX_report_event_001
-	
-	fire_only_once = no
-	
+
 	is_triggered_only = yes
 	
 	option = {	#Дефолтные настройки
@@ -107,8 +103,6 @@ country_event = {
 	desc = cf154ever_startup.1.d
 	picture = GFX_report_event_soldiers_marching
 	
-	fire_only_once = no
-	
 	is_triggered_only = yes
 	
 	option = {
@@ -133,8 +127,6 @@ country_event = {
 	title = cf154ever_startup.3.t
 	desc = cf154ever_startup.1.d
 	picture = GFX_report_event_romanian_soldiers
-	
-	fire_only_once = no
 	
 	is_triggered_only = yes
 	
@@ -164,8 +156,6 @@ country_event = {
 	desc = cf154ever_startup.1.d
 	picture = GFX_report_event_physics_lab_01
 	
-	fire_only_once = no
-	
 	is_triggered_only = yes
 	
 	option = {
@@ -193,8 +183,6 @@ country_event = {
 	desc = cf154ever_startup.1.d
 	picture = GFX_report_event_soldiers_marching
 	
-	fire_only_once = no
-	
 	is_triggered_only = yes
 	
 	option = {
@@ -215,8 +203,6 @@ country_event = {
 	desc = cf154ever_startup.1.d
 	picture = GFX_report_event_physics_lab_01
 	
-	fire_only_once = no
-	
 	is_triggered_only = yes
 	
 	option = {
@@ -236,9 +222,7 @@ country_event = {
 	title = cf154ever_startup.2.t
 	desc = cf154ever_startup.1.d
 	picture = GFX_report_event_001
-	
-	fire_only_once = no
-	
+
 	is_triggered_only = yes
 	
 	option = {
@@ -279,9 +263,7 @@ country_event = {
 	title = "TODO"
 	desc = "TODO"
 	picture = GFX_report_event_001
-	
-	fire_only_once = no
-	
+
 	is_triggered_only = yes
 	
 	option = { name = cf154ever_startup.1.a }
@@ -293,8 +275,6 @@ country_event = {
 	desc = "TODO"
 	picture = GFX_report_event_001
 	
-	fire_only_once = no
-	
 	is_triggered_only = yes
 	
 	option = { name = cf154ever_startup.1.a }
@@ -305,9 +285,7 @@ country_event = {
 	title = "TODO"
 	desc = "TODO"
 	picture = GFX_report_event_001
-	
-	fire_only_once = no
-	
+
 	is_triggered_only = yes
 	
 	option = { name = cf154ever_startup.1.a }
