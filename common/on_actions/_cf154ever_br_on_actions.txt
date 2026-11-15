@@ -1,0 +1,102 @@
+
+@DATE = 1936.4.1
+
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = BATTLE_ROYALE_ON
+					OR = {
+						original_tag = ARG
+						original_tag = URG
+						original_tag = PAR
+						original_tag = CHL
+						original_tag = BRA
+						original_tag = BOL
+						original_tag = PRU
+						original_tag = ECU
+						original_tag = COL
+						original_tag = VEN
+					}
+					has_war = no
+					date > @DATE
+				}
+				country_event = { id = cf154ever_br.2 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = BATTLE_ROYALE_ON
+					OR = {
+						original_tag = MEX
+						original_tag = GUA
+						original_tag = ELS
+						original_tag = HON
+						original_tag = NIC
+						original_tag = COS
+						original_tag = PAN
+					}
+					has_war = no
+					date > @DATE
+				}
+				country_event = { id = cf154ever_br.3 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = BATTLE_ROYALE_ON
+					OR = {
+						original_tag = HAI
+						original_tag = DOM
+					}
+					has_war = no
+					date > @DATE
+				}
+				country_event = { id = cf154ever_br.4 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = BATTLE_ROYALE_ON
+					OR = {
+						original_tag = SAU
+						original_tag = OMA
+						original_tag = YEM
+					}
+					has_war = no
+					date > @DATE
+				}
+				country_event = { id = cf154ever_br.5 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = BATTLE_ROYALE_ON
+					OR = {
+						original_tag = TIB
+						original_tag = NEP
+						original_tag = BHU
+					}
+					has_war = no
+					date > @DATE
+				}
+				country_event = { id = cf154ever_br.6 }
+			}
+		}
+	}
+	
+}
+	
