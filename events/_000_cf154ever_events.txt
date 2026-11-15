@@ -1,7 +1,4 @@
 ﻿
-@BUILDING_LEVEL_1 = 9
-@BUILDING_LEVEL_2 = 5
-
 @USA_EE_MANPOWER = 500000
 
 @FGSW_MANPOWER_1 = 250000
@@ -22,19 +19,7 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = yes
-	
-	trigger = {
-		original_tag = ROM
-		is_ai = yes
-		is_historical_focus_on = yes
-		has_idea_with_trait = fascist_demagogue
-		fascism > 0.5
-		has_political_power < 100
-		NOT = { has_government = fascism }
-	}
-	
-	mean_time_to_happen = { days = 2 }
+	is_triggered_only = yes
 	
 	immediate = {
 		ROM = { set_politics = { ruling_party = fascism } }
@@ -50,56 +35,7 @@ country_event = {
 	desc = cf154ever_event.2.d
 	picture = GFX_report_event_stalin_vs_martians
 	
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1942.5.31
-		original_tag = SOV
-		communism > 0.99
-		is_historical_focus_on = no
-		has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
-		219 = { infrastructure > @BUILDING_LEVEL_1 }	#Москва
-		253 = { infrastructure > @BUILDING_LEVEL_1 }	#Иваново
-		252 = { infrastructure > @BUILDING_LEVEL_1 }	#Горький
-		256 = { infrastructure > @BUILDING_LEVEL_1 }	#Чебоксары
-		249 = { infrastructure > @BUILDING_LEVEL_1 }	#Казань
-		651 = { infrastructure > @BUILDING_LEVEL_1 }	#Уфа
-		573 = { infrastructure > @BUILDING_LEVEL_1 }	#Златоуст
-		572 = { infrastructure > @BUILDING_LEVEL_1 }	#Челябинск
-		403 = { infrastructure > @BUILDING_LEVEL_1 }	#Тюмень
-		577 = { infrastructure > @BUILDING_LEVEL_1 }	#Сургут
-		516 = { infrastructure > @BUILDING_LEVEL_1 radar_station > @BUILDING_LEVEL_2 }	#Северозападная Сибирь
-		if = {
-			limit = { SOV = { is_ai = no } }
-			has_war = no
-		}
-		else = {
-			NOT = {
-				any_country = {
-					has_war_with = SOV
-					is_major = yes
-				}
-			}
-		}
-		if = {
-			limit = { SOV = { is_ai = no } }
-			644 = {	#Северовосточная Сибирь
-				infrastructure > @BUILDING_LEVEL_1
-				radar_station > @BUILDING_LEVEL_2
-				any_province_building_level	= { province = { id = 13204 } building = naval_base level > 9 }
-				any_province_building_level	= { province = { id = 13204 } building = coastal_bunker level > 9 }
-			}
-		}
-		else = {
-			644 = { infrastructure > @BUILDING_LEVEL_1 radar_station > @BUILDING_LEVEL_2 }
-		}
-		USA = {
-			exists = yes
-			all_neighbor_country = { NOT = { has_war_with = PREV } }
-		}
-	}
-	
-	mean_time_to_happen = { days = 2 }
+	is_triggered_only = yes
 	
 	immediate = {
 		hidden_effect = {
@@ -213,8 +149,6 @@ country_event = {
 	picture = GFX_report_event_german_troops
 	
 	is_triggered_only = yes
-	
-	fire_only_once = yes
 	
 	option = {
 		name = cf154ever_event.3.a
@@ -365,19 +299,7 @@ country_event = {
 	
 	hidden = yes
 	
-	fire_only_once = yes
-	
-	trigger = {
-		is_historical_focus_on = no
-		USA = {
-			is_researching_technology = tech_special_forces
-			is_researching_technology = mobile_warfare
-			is_researching_technology = atomic_research
-			is_researching_technology = synth_oil_experiments
-		}
-	}
-	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes
 	
 	immediate = {
 		set_global_flag = cf154ever_SOV_USA_easter_egg_on
