@@ -1,4 +1,7 @@
 
+@BUILDING_LEVEL_1 = 9
+@BUILDING_LEVEL_2 = 5
+
 #Заменить на ивент с выборами для игрока ниже
 on_actions = {
     on_startup = {
@@ -17,6 +20,115 @@ on_actions = {
 					}
 				}
 				add_kludge_admirals = yes
+			}
+		}
+	}
+	
+	on_generate_wargoal = {
+		effect = {
+			if = {
+				limit = {
+					tag = ROM
+					FROM = { tag = BUL }
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = { id = cf154ever_test.2 }
+				}
+			}
+		}
+	}
+	
+	on_monthly_ROM = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = yes
+					is_historical_focus_on = yes
+					has_idea_with_trait = fascist_demagogue
+					fascism > 0.5
+					has_political_power < 100
+					NOT = {
+						has_government = fascism
+						is_in_faction_with = ENG
+						is_in_faction_with = SOV
+					}
+				}
+				country_event = { id = cf154ever_event.1 }
+			}
+		}
+	}
+	
+	on_monthly_SOV = {
+		effect = {
+			if = {
+				limit = {
+					date > 1942.5.31
+					communism > 0.99
+					is_historical_focus_on = no
+					has_country_leader = { name = "Joseph Stalin" ruling_only = yes }
+					219 = { infrastructure > @BUILDING_LEVEL_1 }	#Москва
+					253 = { infrastructure > @BUILDING_LEVEL_1 }	#Иваново
+					252 = { infrastructure > @BUILDING_LEVEL_1 }	#Горький
+					256 = { infrastructure > @BUILDING_LEVEL_1 }	#Чебоксары
+					249 = { infrastructure > @BUILDING_LEVEL_1 }	#Казань
+					651 = { infrastructure > @BUILDING_LEVEL_1 }	#Уфа
+					573 = { infrastructure > @BUILDING_LEVEL_1 }	#Златоуст
+					572 = { infrastructure > @BUILDING_LEVEL_1 }	#Челябинск
+					403 = { infrastructure > @BUILDING_LEVEL_1 }	#Тюмень
+					577 = { infrastructure > @BUILDING_LEVEL_1 }	#Сургут
+					516 = { infrastructure > @BUILDING_LEVEL_1 radar_station > @BUILDING_LEVEL_2 }	#Северозападная Сибирь
+					if = {
+						limit = { SOV = { is_ai = no } }
+						has_war = no
+					}
+					else = {
+						NOT = {
+							any_country = {
+								has_war_with = SOV
+								is_major = yes
+							}
+						}
+					}
+					if = {
+						limit = { SOV = { is_ai = no } }
+						644 = {	#Северовосточная Сибирь
+							infrastructure > @BUILDING_LEVEL_1
+							radar_station > @BUILDING_LEVEL_2
+							any_province_building_level	= { province = { id = 13204 } building = naval_base level > 9 }
+							any_province_building_level	= { province = { id = 13204 } building = coastal_bunker level > 9 }
+						}
+					}
+					else = {
+						644 = { infrastructure > @BUILDING_LEVEL_1 radar_station > @BUILDING_LEVEL_2 }
+					}
+					USA = {
+						exists = yes
+						all_neighbor_country = { NOT = { has_war_with = PREV } }
+					}
+				}
+				country_event = { id = cf154ever_event.2 }
+			}
+		}
+	}
+	
+	on_monthly_USA = {
+		effect = {
+			if = {
+				limit = {
+					is_historical_focus_on = no
+					is_researching_technology = tech_special_forces
+					is_researching_technology = mobile_warfare
+					is_researching_technology = atomic_research
+					is_researching_technology = synth_oil_experiments
+				}
+				country_event = {
+					id = cf154ever_event.4
+					days = 5
+					random = 5
+				}
 			}
 		}
 	}
